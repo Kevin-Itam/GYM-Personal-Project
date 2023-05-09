@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+/*==== Menu SUperior ====*/
+:root {
+    --underline-height: .5em;
+    --transition-duration: .5s;
+}
+
+nav {
+    height: 10vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+
+.men {
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+
+.nav.full {
+    font-weight: bold;
+    background: #111;
+}
+
+.men:hover {
+    color: #fd951f;
+    background-color: #1111;
+}
