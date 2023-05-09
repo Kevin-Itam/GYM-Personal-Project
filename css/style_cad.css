@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap');
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: darkred !important;
+  }
+  .navbar{
+    padding-left: 50px !important;
+  }
+
+  .bform-inline{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    left: -500px !important;
+  }
+
+.login-wrap{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 60px;
+
+    background-color: black;
+    border-radius: 5px;
+}
