@@ -11,20 +11,98 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Tela Inicial</title>
 </head>
+<style>
+    p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        z-index: 1002;
+    }
+
+    h2 {
+        font-size: 36px;
+        line-height: 1;
+        color: #ffffff;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 20px;
+
+    }
+    span{
+        color:rgba(255, 251, 0, 0.747);
+    }
+</style>
 
 <body>
     <!--========== Menus ==========-->
-    <nav class="full">
-        <a class="men" href="menu.php">Home</a>
-        <a class="men" href="cad_geral.php">Registrar</a>
-        <a class="men" href="consulta_geral.php">Consultar Registros</a>
-        <a class="men" href="menu.php">Voltar </a>
-        <a class="men" href="logout.php">Sair </a>
-    </nav>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(0, 0, 0);">
+            <a class="navbar-brand" href="#" style="color: white;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="margin-left: 400px;">Menu</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Treinadores<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Planos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sobre
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Nós</a>
+                            <a class="dropdown-item" href="#">Local</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Horário</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button type="button" class="btn btn-outline-warning" style="margin-left: 400px;">Cadastrar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
     <!--========== Corpo da Pagina ==========-->
 
     <section class="corpo">
+        <section class="sec_apre"></section>
+        <section class="sobre">
+            <div class="d_img">
+                <div class="corr"></div>
+                <div class="sobre_img"></div>
+            </div>
+            <div class="sobre_txt">
 
+                <h2>
+                    SOBRE <span>LóssFit</span>
+                </h2>
+                <p>Morbi commodo sapien at risus aliquam dapibus. Quisque ullamcorper ex non leo blandit porta. Duis
+                    purus sapien, blandit non sem quis, mollis vehicula sapien. Fusce mollis mauris vitae enim varius
+                    scelerisque id id ex. Maecenas vel iaculis purus, a ornare quam.
+
+                    Morbi commodo sapien at risus aliquam dapibus. Quisque ullamcorper ex non leo blandit porta. Duis
+                    purus sapien, blandit non sem quis, mollis vehicula sapien.</p>
+            </div>
+        </section>
     </section>
 </body>
 
