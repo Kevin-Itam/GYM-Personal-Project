@@ -6,6 +6,12 @@ html, body {
     padding: 0;
     background: darkred !important;
   }
+
+  * {
+    box-sizing: border-box;
+
+  }
+
   .navbar{
     padding-left: 50px !important;
   }
@@ -26,4 +32,9 @@ html, body {
 
     background-color: black;
     border-radius: 5px;
+}
+
+.form-inline{
+  position: absolute;
+    right: 1rem;
 }
