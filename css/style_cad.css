@@ -11,7 +11,7 @@ html, body {
     position: fixed;
     left: 0;
     right: 0;
-    filter: blur(2px);
+    filter: blur(5px);
   }
 
 
