@@ -12,18 +12,85 @@
     <script src="/js/javaScript.js" crossorigin="anonymous"></script>
     <title>Painel de Usuario</title>
 </head>
+<style>
+    .div1 {
+        max-width: 15rem;
+        border: solid 1px black;
+        background-color: black;
+    }
+
+    .la {
+        display: flex;
+        flex-direction: column;
+
+        row-gap: 4vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    .titulo {
+        position: absolute;
+        left: 30vw;
+    }
+</style>
 
 <body>
-    <!--============NAVBAR LATERAL===========-->
-    <nav>
+    <!--============ LATERAL===========-->
+    <section class="la">
+        <div class="div1">
+            <img src="">
+            <div>
+                <h3>Bem-Vindo</h3>
+                <p>zdfgzfdgzdf</p>
+            </div>
+            <button>Sair da Conta</button>
+        </div>
 
-    </nav>
+        <div class="div1">
+            <img src="">
+            <div>
+                <h3>Bem-Vindo</h3>
+                <p>zdfgzfdgzdf</p>
+            </div>
+        </div>
+        <div class="div1">
+            <img src="">
+            <div>
+                <h3>Bem-Vindo</h3>
+                <p>zdfgzfdgzdf</p>
+            </div>
+        </div>
+        <div class="div1">
+            <img src="">
+            <div>
+                <h3>Bem-Vindo</h3>
+                <p>zdfgzfdgzdf</p>
+            </div>
+        </div>
+        <div class="div1">
+            <img src="">
+            <div>
+                <h3>Bem-Vindo</h3>
+                <p>zdfgzfdgzdf</p>
+            </div>
+        </div>
+
+    </section>
     <!--============CORPO DA PAGINA==========-->
-    <section>
+    <section class="corpo">
         <form>
-            <a></a>
-            <h2>Cadastro</h2>
-            <fieldset>
+            <div class="titulo">
+                <img src="/img/icons-userr.png">
+                <h2>Cadastro</h2>
+            </div>
+
+            <section class="fild_1">
                 <header>Dados Pessoais </header>
                 <div>
                     <label>Nome Completo</label>
@@ -68,14 +135,14 @@
 
                 <button type="submit">Confirmar</button>
                 <button type="reset">Limpar</button>
-            </fieldset>
+            </section>
         </form>
         <form>
-            <fieldset>
+            <section>
                 <header>Dados de Acesso</header>
 
                 <button>Alterar Senha</button>
-            </fieldset>
+            </section>
         </form>
     </section>
 </body>

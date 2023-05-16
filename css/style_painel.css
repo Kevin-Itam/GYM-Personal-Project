@@ -13,3 +13,25 @@ body {
     font-family: "Poppins",sans-serif !important;
     
 }
+.corpo{
+    width: 100%;
+    height: 100%;
+    background-color: #0e0e0e;
+}
+
+/*========= CORPO DO FORMULARIO =========*/
+.fild_1{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vw;
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    color: white;
+    background-color: #2b2929;
+    padding:8px;
+}
