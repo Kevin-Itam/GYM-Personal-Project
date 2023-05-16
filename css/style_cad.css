@@ -47,7 +47,7 @@ html, body {
     position: relative;
     margin-top: 20%;
 
-    border: solid 1px yellow;
+    border: solid 2px rgba(255, 251, 0, 0.747);
     background-color: black;
     border-radius: 10px;
 
