@@ -112,10 +112,10 @@ header {
     position: relative;
     top: 2vh;
     left: 2vw;
-    height: 500px;
-    width: 550px;
+    height: 450px;
+    width: 550==px;
     border-radius: 4px;
-    background-image: url(/img/gym.jpg);
+    background-image: url(/img/loss_fora.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
