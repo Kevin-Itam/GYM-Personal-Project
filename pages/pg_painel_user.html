@@ -27,23 +27,23 @@
                 <header>Dados Pessoais </header>
                 <div>
                     <label>Nome Completo</label>
-                    <input type="texto" class="nome" id="nome">
+                    <input name="nome" type="texto" class="nome" id="nome">
                 </div>
 
                 <div>
                     <div>
                         <label>CPF</label>
-                        <input type="texto" class="cpf" id="cf">
+                        <input name="cpf" type="texto" class="cpf" id="cpf">
                     </div>
                     <div>
-                        <label>RG</label>
-                        <input type="texto" class="rg" id="rg">
+                        <label>Email</label>
+                        <input name="email" type="email" class="email" id="email">
                     </div>
                 </div>
                 <div>
                     <div>
                         <label>Sexo</label>
-                        <select id="select">
+                        <select name="select" id="select">
                             <option>Selecionar</option>
                             <option>Masculino</option>
                             <option>Feminino</option>
@@ -52,19 +52,20 @@
                     </div>
                     <div>
                         <label>Data de Nascimento</label>
-                        <input type="data" class="data" id="data">
+                        <input name="data" type="data" class="data" id="data">
                     </div>
                 </div>
                 <div>
                     <div>
                         <label>Telefone</label>
-                        <input type="number" class="numero1" id="n1">
+                        <input name="tel1" type="number" class="numero1" id="n1">
                     </div>
                     <div>
                         <label>Telefone Adicional</label>
-                        <input type="number" class="numero2" id="n2">
+                        <input name="tel2" type="number" class="numero2" id="n2">
                     </div>
                 </div>
+
                 <button type="submit">Confirmar</button>
                 <button type="reset">Limpar</button>
             </fieldset>
