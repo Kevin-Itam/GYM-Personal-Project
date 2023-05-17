@@ -10,28 +10,134 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Poppins",sans-serif !important;
-    
+    font-family: "Poppins", sans-serif !important;
+
 }
-.corpo{
+
+.corpo {
     width: 100%;
     height: 100%;
-    background-color: #0e0e0e;
+    background-color: #141414;
 }
 
 /*========= CORPO DO FORMULARIO =========*/
-.fild_1{
+header {
+    position: relative;
+    top: 2rem;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.titulo {
     display: flex;
     flex-direction: column;
-    row-gap: 4vw;
-    height: auto;
-    width: auto;
     position: absolute;
-    top: 50%;
+    align-items: center;
+    top: 1rem;
+    left: 33vw;
+
+}
+
+.fild_1 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.5vw;
+    height: auto;
+    width: 40vw;
+    position: absolute;
+    top: 55%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    padding: 40px 0;
+    transform: translate(-45%, -50%);
     border-radius: 10px;
     color: white;
-    background-color: #2b2929;
-    padding:8px;
+    border: 0.5px solid yellow;
+    background-color: #000000;
+
+
+}
+
+h2 {
+    color: white;
+}
+
+/*=====================*/
+/*=========== CORPO LATERAL ==========*/
+.div1 {
+    max-width: 15rem;
+    border: solid 1px black;
+}
+
+.la {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-right: 1px solid yellow;
+}
+
+/*========= INPUTS ===========*/
+/*=====================*/
+.dv1 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5vw;
+
+}
+
+.input-container {
+    left: 4rem;
+    height: 50px;
+    position: relative;
+    width: 15vw;
+}
+
+.input {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #000000;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 0px 20px 0;
+    width: 100%;
+}
+
+.input:focus~.cut,
+.input:not(:placeholder-shown)~.cut {
+    transform: translateY(8px);
+}
+
+.placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+.input:focus~.placeholder,
+.input:not(:placeholder-shown)~.placeholder {
+    transform: translateY(-45px) translateX(-10px) scale(0.95);
+}
+
+.input:not(:placeholder-shown)~.placeholder {
+    color: #000000;
+}
+
+.input:focus~.placeholder {
+    color: #ffffff;
 }

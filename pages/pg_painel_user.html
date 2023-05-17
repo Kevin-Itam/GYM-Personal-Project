@@ -13,30 +13,12 @@
     <title>Painel de Usuario</title>
 </head>
 <style>
-    .div1 {
-        max-width: 15rem;
-        border: solid 1px black;
-        background-color: black;
-    }
-
-    .la {
+    .BTN {  
         display: flex;
-        flex-direction: column;
-
-        row-gap: 4vh;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 20vw;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-    }
-
-    .titulo {
-        position: absolute;
-        left: 30vw;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        column-gap: 8vw;
     }
 </style>
 
@@ -85,64 +67,64 @@
     <!--============CORPO DA PAGINA==========-->
     <section class="corpo">
         <form>
+
             <div class="titulo">
                 <img src="/img/icons-userr.png">
                 <h2>Cadastro</h2>
             </div>
 
             <section class="fild_1">
-                <header>Dados Pessoais </header>
-                <div>
-                    <label>Nome Completo</label>
-                    <input name="nome" type="texto" class="nome" id="nome">
-                </div>
+                <header align="center">Dados Pessoais </header>
+                <div class="dv1">
+                    <div class="input-container">
+                        <input id="firstname" name="nome" class="input" type="text" placeholder=" ">
+                        <label for="firstname" class="placeholder">Nome</label>
+                    </div>
 
-                <div>
-                    <div>
-                        <label>CPF</label>
-                        <input name="cpf" type="texto" class="cpf" id="cpf">
-                    </div>
-                    <div>
-                        <label>Email</label>
-                        <input name="email" type="email" class="email" id="email">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <label>Sexo</label>
-                        <select name="select" id="select">
-                            <option>Selecionar</option>
-                            <option>Masculino</option>
-                            <option>Feminino</option>
-                        </select>
-
-                    </div>
-                    <div>
-                        <label>Data de Nascimento</label>
-                        <input name="data" type="data" class="data" id="data">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <label>Telefone</label>
-                        <input name="tel1" type="number" class="numero1" id="n1">
-                    </div>
-                    <div>
-                        <label>Telefone Adicional</label>
-                        <input name="tel2" type="number" class="numero2" id="n2">
+                    <div class="input-container">
+                        <input id="firstname" name="cpf" class="input" type="text" placeholder=" ">
+                        <label for="firstname" class="placeholder">cpf</label>
                     </div>
                 </div>
 
-                <button type="submit">Confirmar</button>
-                <button type="reset">Limpar</button>
+                <div class="dv1">
+                    <div class="input-container">
+                        <input id="firstname" name="email" class="input" type="text" placeholder=" ">
+                        <label for="firstname" class="placeholder">E-mail</label>
+                    </div>
+                    <div class="input-container">
+                        <input id="firstname" name="data" class="input" type="date">
+                    </div>
+                </div>
+
+                <div>
+                    <label>Sexo</label>
+                    <select name="select" id="select">
+                        <option>Selecionar</option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+                </div>
+
+                <div class="dv1">
+                    <div class="input-container">
+                        <input id="firstname" name="tel1" class="input" type="text" placeholder=" ">
+                        <label for="firstname" class="placeholder">Telefone</label>
+                    </div>
+                    <div class="input-container">
+                        <input id="firstname" name="tel2" class="input" type="text" placeholder=" ">
+                        <label for="firstname" class="placeholder">Telefone 2</label>
+                    </div>
+                </div>
+
+                <div class="BTN">
+                    <button type="submit">Confirmar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+
             </section>
-        </form>
-        <form>
-            <section>
-                <header>Dados de Acesso</header>
 
-                <button>Alterar Senha</button>
-            </section>
+
         </form>
     </section>
 </body>
