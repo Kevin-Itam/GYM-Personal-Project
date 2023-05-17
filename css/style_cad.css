@@ -9,9 +9,11 @@ html, body {
   .background-image {
     background-repeat:no-repeat;
     position: fixed;
+    width: 100%;
+    background-size: cover;
     left: 0;
     right: 0;
-    filter: blur(2px);
+    filter: blur(5px);
   }
 
 
@@ -20,34 +22,72 @@ html, body {
 
   }
 
-  .navbar-brand{
-    padding: 0 !important;
-    margin: 0 !important;
-    position: relative;
-    left: 0;
-    min-height: 8vh;
-    min-width: 12vw;
-    height: 10vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: center;
-  }
+ /*==== Menu SUperior ====*/
 
-  .bform-inline{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    left: -500px !important;
-  }
 
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  z-index: 1002;
+}
+
+.navbar {
+  position: fixed !important;
+  padding: 0 !important;
+  width: 100%;
+
+}
+
+.navbar-nav{
+  position: relative;
+  display: flex;
+  flex-direction: row !important;
+  column-gap: 5vw;
+
+}
+
+.bform-inline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  left: -500px !important;
+}
+
+
+
+.form-inline {
+  position: absolute;
+  right: 2rem;
+}
+
+.navbar-brand {
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative;
+  left: 0;
+  min-height: 8vh;
+  min-width: 12vw;
+  height: 10vh;
+  background-image: url(/img/logo.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+
+}
+
+/*==============LOGIN===========*/
 .login-wrap{
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: 20%;
+    margin-top: 50%;
 
-    border: solid 1px yellow;
+    border: solid 2px rgba(255, 251, 0, 0.747);
     background-color: black;
     border-radius: 10px;
 

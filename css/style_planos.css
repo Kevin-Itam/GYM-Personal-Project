@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif !important;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*==== Menu SUperior ====*/
+
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    z-index: 1002;
+}
+
+.navbar {
+    position: fixed !important;
+    padding: 0 !important;
+    width: 100%;
+
+}
+
+.navbar-nav {
+    position: relative;
+    display: flex;
+    flex-direction: row !important;
+    column-gap: 5vw;
+
+}
+
+.bform-inline {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    left: -500px !important;
+}
+
+.login-wrap {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 60px;
+
+    background-color: black;
+    border-radius: 5px;
+}
+
+.form-inline {
+    position: absolute;
+    right: 2rem;
+}
+
+.navbar-brand {
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+    left: 0;
+    min-height: 8vh;
+    min-width: 12vw;
+    height: 10vh;
+    background-image: url(/img/logo.jpg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+
+}
+
+/*===== Corpo da Pagina Principal=====*/
+
+.corpo {
+    width: auto;
+    height: auto;
+    background-color: #f3f3f4;
+}
+
+.ttl {
+    height: 70vh;
+    width: 100%;
+    background-image: url(/img/body_gym.jpg);
+    background-repeat: no-repeat;
+    background-position-y: -10rem;
+}
+
+/*================== Coachs ================*/
+.coach {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0e0e0e;
+}
+
+.linha {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5vw;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: auto;
+}
+
+.im1{
+    height: 450px;
+    width: 350px!important;
+    background-image: url(/img/gym.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+
+}
+
+.img1 {
+
+    padding: 0 !important;
+    height: 500px;
+    width: 550px;
+    margin: 0 !important;
+    background-image: url(/img/gym.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+
+}
+
+/*================== RODAPE ================*/
+
+.footer {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 4vw;
+    background-color: #1a1a1aa4;
+}
+
+.ft1 {
+    height: 500px;
+    width: 340px;
+    background-color: #1a1a1aa4;
+}
+
+.rodape {
+    width: auto;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    font-size: 15px;
+    color: white;
+}
+
+.rodap {
+    font-size: 15px;
+    color: white;
+
+}
+
+p {
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    z-index: 1002;
+}
+
+
+h4 {
+    font-size: 24px;
+    line-height: 1;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+
+}
+
+span {
+    color: rgba(255, 251, 0, 0.747);
+}
+
+/* =======================PLANOS==================== */
+
+.row {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0e0e0e;
+    margin-left: 0 !important;
+}
+
+h1{
+    color:#fff;
+    font-size:30px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.pricing_table{
+    color:#fff;
+    margin:10px 0;
+    background:#0e0e0e;
+    text-align: center;
+    transition: all 0.30s linear 0s;
+}
+.pricing_table:hover{
+    background: #dc3543;
+}
+.pricing_table:hover,
+.pricing_table .pricing_table_plan .btn-info{
+    background: #dc3543;
+}
+.pricing_table:hover .pricing_table_plan .btn-info{
+    background:#dc3543;
+}
+.pricing_table_header{
+    padding:40px;
+}
+.pricing_table_header > i{
+    display: block;
+    font-size:40px;
+}
+.pricing_table_header .title{
+    display:block;
+    text-transform: capitalize;
+}
+.pricing_table_header .price-plan{
+    display:block;
+}
+.pricing_table_header .price-plan i{
+    font-size:16px;
+}
+.pricing_table_header .price{
+    font-size:40px;
+}
+.pricing_table_header .monthly_plan{
+    font-size:20px;
+}
+.pricing_table .pricing_table_plan{
+    border-top-right-radius:30px;
+    border-top-left-radius:30px;
+    padding:40px 20px;
+    background:#0e0e0e;
+}
+.pricing_table .pricing_table_plan ul{
+    margin:0 0 50px;
+    padding:0;
+}
+.pricing_table .pricing_table_plan ul li{
+    list-style:none;
+    margin:15px 0;
+}
+.pricing_table .pricing_table_plan .btn-info{
+    padding:8px 40px;
+    background: transparent;
+    transition: all 0.30s linear 0s;
+}
