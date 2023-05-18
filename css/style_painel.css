@@ -12,12 +12,14 @@ body {
     padding: 0;
     font-family: "Poppins", sans-serif !important;
 
+
 }
 
 .corpo {
     width: 100%;
     height: 100%;
-    background-color: #141414;
+    background-color: #0e0e0e;
+
 }
 
 /*========= CORPO DO FORMULARIO =========*/
@@ -26,6 +28,7 @@ header {
     top: 2rem;
     font-weight: 600;
     font-size: 25px;
+    color: white;
 }
 
 .titulo {
@@ -33,7 +36,7 @@ header {
     flex-direction: column;
     position: absolute;
     align-items: center;
-    top: 1rem;
+    top: 0.5rem;
     left: 33vw;
 
 }
@@ -52,9 +55,6 @@ header {
     border-radius: 10px;
     color: white;
     border: 0.5px solid yellow;
-    background-color: #000000;
-
-
 }
 
 h2 {
@@ -63,22 +63,40 @@ h2 {
 
 /*=====================*/
 /*=========== CORPO LATERAL ==========*/
-.div1 {
+.div_out {
+    position: fixed;
+    right: 0;
     max-width: 15rem;
+    border-radius: 5px;
     border: solid 1px black;
+    background-color: white;
+    color: black;
+    padding: 16px 20px;
+    margin: 0 2rem;
+
+}
+
+.div1 {
+    max-width: 22rem;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: #0e0e0e;
+    color: white;
+    margin: 4px 30px;
+    padding: 5rem 12px;
+
 }
 
 .la {
+    width: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 4vh;
     position: absolute;
     left: 0;
     top: 0;
-    width: 15vw;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    padding: 24px 20px;
     background-color: white;
     border-right: 1px solid yellow;
 }
@@ -100,11 +118,11 @@ h2 {
 }
 
 .input {
-    background-color: #ffffff;
+    background: #222;
     border-radius: 12px;
     border: 0;
     box-sizing: border-box;
-    color: #000000;
+    color: white;
     font-size: 18px;
     height: 100%;
     outline: 0;
@@ -118,7 +136,7 @@ h2 {
 }
 
 .placeholder {
-    color: #65657b;
+    color: white;
     font-family: sans-serif;
     left: 20px;
     line-height: 14px;
@@ -135,9 +153,9 @@ h2 {
 }
 
 .input:not(:placeholder-shown)~.placeholder {
-    color: #000000;
+    color: white;
 }
 
 .input:focus~.placeholder {
-    color: #ffffff;
+    color: white;
 }

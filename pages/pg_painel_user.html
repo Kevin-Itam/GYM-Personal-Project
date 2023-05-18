@@ -13,22 +13,49 @@
     <title>Painel de Usuario</title>
 </head>
 <style>
-    .BTN {  
+    .BTN {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
         column-gap: 8vw;
     }
+
+    button {
+        border: 0;
+        outline: none;
+        padding: 10px 36px;
+        font-size: 17px;
+        font-weight: 600;
+        border-radius: 5px;
+        background-color: #a5a5a5;
+        transition: all 0.5s ease;
+    }
+
+    button:hover {
+        background-color: #ffffff;
+
+    }
+
+    .dv_ig {
+        display: flex;
+        flex-direction: row;
+    }
+
+    p {
+        position: relative;
+        top: 10px;
+    }
 </style>
 
 <body>
     <!--============ LATERAL===========-->
     <section class="la">
-        <div class="div1">
+        <div class="div_out">
             <img src="">
             <div>
-                <h3>Bem-Vindo</h3>
+                <h5>Dados de Acessso</h5>
+                <img src="">
                 <p>zdfgzfdgzdf</p>
             </div>
             <button>Sair da Conta</button>
@@ -37,32 +64,34 @@
         <div class="div1">
             <img src="">
             <div>
-                <h3>Bem-Vindo</h3>
-                <p>zdfgzfdgzdf</p>
+                <h5>Bem-Vindo,<b> Andre Manoel Santana</b></h5>
+                <div class="dv_ig">
+                    <img src="/img/icons-userr.png" style="height: 40px; width: 40px;">
+                    <p>Sair da Conta</p>
+                </div>
+            </div>
+        </div>
+        <hr style="border-bottom: 2px solid #0e0e0e; margin: 1px!important; opacity:1!important;">
+        <div class="div1">
+            <img src="">
+            <div>
+                <h5>Bem-Vindo</h5>
+                <div class="dv_ig">
+                    <img src="/img/icons-userr.png" style="height: 40px; width: 40px;">
+                    <p>Sair da Conta</p>
+                </div>
             </div>
         </div>
         <div class="div1">
             <img src="">
             <div>
-                <h3>Bem-Vindo</h3>
-                <p>zdfgzfdgzdf</p>
+                <h5>Bem-Vindo</h5>
+                <div class="dv_ig">
+                    <img src="/img/icons-userr.png" style="height: 40px; width: 40px;">
+                    <p>Sair da Conta</p>
+                </div>
             </div>
         </div>
-        <div class="div1">
-            <img src="">
-            <div>
-                <h3>Bem-Vindo</h3>
-                <p>zdfgzfdgzdf</p>
-            </div>
-        </div>
-        <div class="div1">
-            <img src="">
-            <div>
-                <h3>Bem-Vindo</h3>
-                <p>zdfgzfdgzdf</p>
-            </div>
-        </div>
-
     </section>
     <!--============CORPO DA PAGINA==========-->
     <section class="corpo">
@@ -83,7 +112,7 @@
 
                     <div class="input-container">
                         <input id="firstname" name="cpf" class="input" type="text" placeholder=" ">
-                        <label for="firstname" class="placeholder">cpf</label>
+                        <label for="firstname" class="placeholder">CPF</label>
                     </div>
                 </div>
 
