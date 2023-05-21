@@ -10,8 +10,8 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Poppins",sans-serif !important;
-    
+    font-family: "Poppins", sans-serif !important;
+
 }
 
 /*==== Menu SUperior ====*/
@@ -33,7 +33,7 @@ header {
 
 }
 
-.navbar-nav{
+.navbar-nav {
     position: relative;
     display: flex;
     flex-direction: row !important;
@@ -87,9 +87,10 @@ header {
     background-color: #f3f3f4;
     width: 100%;
     height: auto;
-    
+
 }
-.sec_apre{
+
+.sec_apre {
     height: 70vh;
     width: 100%;
     background-image: url(/img/body_gym.jpg);
@@ -97,23 +98,26 @@ header {
     background-position-y: -10rem;
     /*filter: blur(2px);*/
 }
-.sobre{
+
+.sobre {
     height: 60vh;
     width: 100%;
     background-color: #0e0e0e;
     margin: 0;
 }
-.crop_so{
+
+.crop_so {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     column-gap: 10vw;
 }
-.sobre_img{
+
+.sobre_img {
     position: relative;
     top: 2vh;
     left: 2vw;
     height: 450px;
-    width: 550==px;
+    width: 550px;
     border-radius: 4px;
     background-image: url(/img/loss_fora.png);
     background-repeat: no-repeat;
@@ -121,7 +125,8 @@ header {
     background-position-x: center;
     background-color: white;
 }
-.d_img{
+
+.d_img {
     position: relative;
     top: 4vh;
     left: 8vw;
@@ -130,11 +135,65 @@ header {
     border-radius: 2px;
     background-color: rgba(255, 251, 0, 0.747);
 }
-.sobre_txt{
+
+.sobre_txt {
     position: relative;
     top: 4vh;
     left: 20%;
     height: 480px;
     width: 550px;
-    color:white;
+    color: white;
 }
+
+/*========= GYM ATIVIDADES =========*/
+h5 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+    color: white;
+}
+
+img {}
+
+.gym_ativ {
+    height: auto;
+    width: auto;
+    padding: 24px;
+    background-color: #0e0e0ef9;
+}
+
+.gym_ativ_header {
+    font-size: 20px;
+    color: white;
+}
+
+.gym_ativ_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gym_ativ_mid_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.gym_ativ_type {
+    margin: 20px;
+}
+
+.gym_ativ_type_txt {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.gym_ativ_type_txt span {
+    color: white;
+
+}
+
+/*========= GYM COACHS =========*/

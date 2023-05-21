@@ -93,10 +93,13 @@ button:hover {
     flex-direction: row;
     text-decoration: none;
     color: white;
+    transition: all 0.5s ease;
 }
 
 .dv_ig a:hover {
     color: white;
+    border-radius: 8px;
+    background-color: #222;
 }
 
 p {
@@ -109,7 +112,7 @@ p {
     position: fixed;
     top: 28px;
     right: 0;
-    max-width: 15rem;
+    max-width: 21rem;
     border-radius: 5px;
     border: solid 1px black;
     background-color: white;
@@ -125,14 +128,14 @@ p {
     border: solid 1px black;
     background-color: #0e0e0e;
     color: white;
-    margin: 4px 30px;
-    padding: 5rem 12px;
+    margin: 12px 30px;
+    padding: 4rem 12px;
 
 }
 
 .la {
     width: auto;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     row-gap: 4vh;
@@ -201,4 +204,13 @@ p {
 
 .input:focus~.placeholder {
     color: white;
+}
+
+/*================= SELECT===============*/
+.dvsec {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2vw;
+    align-items: center;
+    justify-content: center;
 }
