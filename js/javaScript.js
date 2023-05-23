@@ -1,12 +1,9 @@
 const form = document.querySelector("#form");
 const nome = document.querySelector("#firstname");
-const validEmail = document.querySelector("#Email");
+const validEmail = document.querySelector("#E-mail");
 const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-const cepInput = document.querySelector("#cep");
-const cpfUs = document.querySelector("#cpf");
-const comple = document.querySelector("#Complemento");
-const Num = document.querySelector("#Numb");
-const telefone = document.querySelector("#celular");
+const cpfUs = document.querySelector("#CPF");
+const telefone = document.querySelector("#TEl1");
 
 form.addEventListener("submit", (event => {
   event.preventDefault();
@@ -20,7 +17,7 @@ form.addEventListener("submit", (event => {
   }
 
   //Valida o CPF
-  if (cpfUs.value === "") {
+  if (cpfUs.value === "" || cpfUs.value === false ) {
     alert("Preencha o campo do CPF");
     return;
 
@@ -40,29 +37,6 @@ form.addEventListener("submit", (event => {
     return;
   }
 
-  //verefica CEP
-  if (cepInput.value === "") {
-    alert("Por favor Digite seu CEP");
-    return;
-  } else {
-    if (cepInput.value.length != 8) {
-      alert("Por favor Digite o tamanho correto do CEP");
-      return;
-    }
-  }
-
-  //Verefica Complemento
-  if (comple.value === "") {
-    alert("Por favor Digite seu Completeo");
-    return;
-  }
-
-  //Verefica Numero Da Casa
-  if (Num.value === "") {
-    alert("Por favor Digite o Numero da Residencia");
-    return;
-  }
-  
   form.submit();
 }));
 
