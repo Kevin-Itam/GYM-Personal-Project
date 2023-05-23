@@ -210,7 +210,11 @@ p {
 .dvsec {
     display: flex;
     flex-direction: row;
-    column-gap: 2vw;
+    column-gap: 1vw;
     align-items: center;
     justify-content: center;
+    border: none;
+}
+.dvsec:focus{
+    border: none;
 }
