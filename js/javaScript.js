@@ -17,12 +17,16 @@ form.addEventListener("submit", (event => {
   }
 
   //Valida o CPF
-  if (cpfUs.value === "" || cpfUs.value === false ) {
+  if (cpfUs.value === "") {
     alert("Preencha o campo do CPF");
     return;
 
   }
+  if (cpfUs.value != true) {
+    alert("Preencha com um CPF válido");
+    return;
 
+  }
   //Verifica o EMAIL
 
   if (validEmail.value === "" || !isEmailValid(validEmail.value)) {
