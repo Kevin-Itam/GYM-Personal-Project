@@ -62,8 +62,7 @@ form.addEventListener("submit", (event => {
     alert("Por favor Digite o Numero da Residencia");
     return;
   }
-
-
+  
   form.submit();
 }));
 
@@ -78,48 +77,6 @@ function isEmailValid(email) {
   return false;
 
 }
-
-
-cepInput.addEventListener("keypress", (e) => {
-  const onlyNumbers = /[0-9]/;
-  const key = String.fromCharCode(e.keyCode);
-
-  if (!onlyNumbers.test(key)) {
-    e.preventDefault()
-    return;
-  }
-});
-
-
-$(function () {
-  //Usar a API do ViaCep
-  //Url: https://viacep.com.br/
-  $(document).on('keyup change', '#signup-content [name="cep_user"]', function (e) {
-    var _this = this,
-      cep_value = _this.value.replace(/\D/g, '');
-
-    if (cep_value.length == 8) {
-      console.dir('Consultar CEP: ' + cep_value);
-
-      $.getJSON("https://viacep.com.br/ws/" + cep_value + "/json/?callback=?", function (dados) {
-        console.dir(dados);
-        if (!("erro" in dados)) {
-          //Atualiza os campos com os valores da consulta.
-          $('[name="endereco_rua"]').val(dados.localidade);
-          $('[name="bairro_user"]').val(dados.bairro);
-          $('[name="rua_user"]').val(dados.logradouro);
-          $('[name="Cidade_estado"]').val(dados.localidade + '/' + dados.uf);
-
-        } //end if.
-        else {
-          //CEP pesquisado não foi encontrado.
-          limpa_formulário_cep();
-          alert("CEP não encontrado.");
-        }
-      });
-    }
-  });
-});
 
 //Validaçao do CPF
 
