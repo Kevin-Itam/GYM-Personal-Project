@@ -13,7 +13,7 @@
 
 <body class="text-center">
     <div>
-        <img class="background-image" src="/img/loss_lado.png">
+        <img class="background-image" src="../img/loss_lado.png">
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: black;">
             <a class="navbar-brand" href="#" style="color: white;">
             </a>
@@ -47,7 +47,7 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-outline-warning" href="/pages/pg_login.html" role="button">Acessar</a>
+                    <a class="btn btn-outline-warning" href="../pages/pg_login.html" role="button">Acessar</a>
                 </form>
             </div>
         </nav>
@@ -59,9 +59,9 @@
                             <div class="icon d-flex align-items-center justify-content-center">
                                 <span class="fa fa-user-o"></span>
                             </div>
-                            <img src="/img/logo.jpg" width="30" height="30" class="d-inline-block align-top" style="width: 100px; height: 100px;">
+                            <img src="../img/logo.jpg" width="30" height="30" class="d-inline-block align-top" style="width: 100px; height: 100px;">
                             <h3 class="text-center mb-4" style="font-size: 25px; color: white;">Preencher os campos para realizar o seu cadastro</h3>
-                            <form action="/inc/cadastro_user.php" method="post" class="login-form">
+                            <form action="../inc/cadastro_user.php" method="post" class="login-form">
                                 <div class="form-group d-flex" style="margin-top: 10px;">
                                     <input name="name" type="text" class="form-control rounded-left" placeholder="Nome Completo"
                                         required="" >

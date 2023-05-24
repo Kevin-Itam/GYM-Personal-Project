@@ -72,7 +72,7 @@ header {
     min-height: 8vh;
     min-width: 12vw;
     height: 10vh;
-    background-image: url(/img/logo.jpg);
+    background-image: url(../img/logo.jpg);
     background-color: white;
     background-size: cover;
     background-repeat: no-repeat;
@@ -93,7 +93,7 @@ header {
 .sec_apre {
     height: 70vh;
     width: 100%;
-    background-image: url(/img/body_gym.jpg);
+    background-image: url(../img/body_gym.jpg);
     background-repeat: no-repeat;
     background-position-y: -10rem;
     /*filter: blur(2px);*/
@@ -119,7 +119,7 @@ header {
     height: 450px;
     width: 550px;
     border-radius: 4px;
-    background-image: url(/img/loss_fora.png);
+    background-image: url(../img/loss_fora.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;

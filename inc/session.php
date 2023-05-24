@@ -13,7 +13,7 @@ if (isset($_POST['submit']) && !empty($_POST['Usuario']) && !empty($_POST['Senha
     //print_r('<br>');
     //print_r('Senha: ' . $senha);
 
-    $sql = "SELECT * FROM tbl_cadastro WHERE username = '$login' and senha = '$senha'";
+    $sql = "SELECT * FROM tbl_cadastro WHERE cpf = '$login' and senha = '$senha'";
 
     $result = $conn->query($sql);
 

@@ -72,7 +72,7 @@ header {
   min-height: 8vh;
   min-width: 12vw;
   height: 10vh;
-  background-image: url(/img/logo.jpg);
+  background-image: url(../img/logo.jpg);
   background-color: white;
   background-size: cover;
   background-repeat: no-repeat;

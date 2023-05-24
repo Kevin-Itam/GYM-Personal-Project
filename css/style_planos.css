@@ -71,7 +71,7 @@ header {
     min-height: 8vh;
     min-width: 12vw;
     height: 10vh;
-    background-image: url(/img/logo.jpg);
+    background-image: url(../img/logo.jpg);
     background-color: white;
     background-size: cover;
     background-repeat: no-repeat;
@@ -90,7 +90,7 @@ header {
 .ttl {
     height: 70vh;
     width: 100%;
-    background-image: url(/img/body_gym.jpg);
+    background-image: url(../img/body_gym.jpg);
     background-repeat: no-repeat;
     background-position-y: -10rem;
 }
@@ -117,7 +117,7 @@ header {
 .im1{
     height: 450px;
     width: 350px!important;
-    background-image: url(/img/gym.jpg);
+    background-image: url(../img/gym.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -130,7 +130,7 @@ header {
     height: 500px;
     width: 550px;
     margin: 0 !important;
-    background-image: url(/img/gym.jpg);
+    background-image: url(../img/gym.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;

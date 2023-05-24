@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "localhost:8080";
 $database = "bd_academia";
 $username = "root";
 $password = "";
