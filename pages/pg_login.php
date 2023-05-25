@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,7 +64,7 @@
                                 style="width: 150px; height: 150px;">
                             <h3 class="text-center mb-4" style="padding-top: -10px; color: white; font-size: 25px;">Você
                                 tem cadastro?</h3>
-                            <form action="../inc/login_user.php" method="post" class="login-form">
+                            <form action="../inc/session.php" method="post" class="login-form">
                                 <div class="form-group">
                                     <input name="cpf" type="text" class="form-control rounded-left" placeholder="CPF" required=""
                                         style="margin-top: 10px;">

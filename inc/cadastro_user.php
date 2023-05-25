@@ -23,9 +23,13 @@ else{
         echo "<script> window.location='../pages/pg_cadastro.php' </script>";
     }
     else{
-        $sql = "INSERT INTO tbl_cadastro(nome,cpf,email,senha,sexo,nascimento,telefone,telefone_ad) VALUES('$nome','$cpf','$email','$senha','$sexo','$data','$telefone','$telefone_ad')";
+        //$select = "SELECT email, password FROM usuarios WHERE email = '$email' AND password = '$hash'";
+        //$valida_senha = mysqli_query($conn,$select);
+        
+
+        $sql = "INSERT INTO tbl_cadastro(nome,cpf,email,senha,sexo,nascimento,telefone,telefone_ad,perm_acesso) VALUES('$nome','$cpf','$email','$senha','$sexo','$data','$telefone','$telefone_ad','1')";
         $conn->query($sql);
         echo "<script>alert('Cadastrado com sucesso'); </script>";
-        echo "<script> window.location='../pages/pg_login.html' </script>";
+        echo "<script> window.location='../pages/pg_login.php' </script>";
     }
 }

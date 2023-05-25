@@ -1,35 +1,31 @@
 <?php
 
 session_start();
-//print_r($_REQUEST);
 
-if (isset($_POST['submit']) && !empty($_POST['Usuario']) && !empty($_POST['Senha'])) {
-    include_once('connect.php');
-    $login = $_POST['Usuario'];
-    $senha = $_POST['Senha'];
+if (!empty($_POST['cpf']) && !empty($_POST['senha'])) {
+    include_once('../inc/connect.php');
+    $cpf = $_POST['cpf'];
+    $senha = $_POST['senha'];
 
-    //print_r('<br>');
-    //print_r('Login: ' . $login);
-    //print_r('<br>');
-    //print_r('Senha: ' . $senha);
-
-    $sql = "SELECT * FROM tbl_cadastro WHERE cpf = '$login' and senha = '$senha'";
-
+    $sql = "SELECT * FROM tbl_cadastro WHERE cpf = '$cpf' and senha = '$senha'";
     $result = $conn->query($sql);
 
-    //print_r($sql);
-    //print_r($result);
+	if ($sql > 0) {
+		$dados_usuario = mysqli_fetch_assoc($result);
 
-    if (mysqli_num_rows($result) < 1) {
-        unset($_SESSION['Usuario']);
-        unset($_SESSION['Senha']);
-        header('Location: index.php');
-    } else {
-        $_SESSION['Usuario'] = $login;
-        $_SESSION['Senha'] = $senha;
-        header('Location: menu.php');
-    }
+		$_SESSION['id_usuario'] = $dados_usuario['id_cadastro'];
+		$_SESSION['cpf'] = $cpf;
+		header("Location: ../pages/pg_painel_user.php");
+	} else {
+        var_dump($_SESSION);
+        die;
+		$_SESSION["invalido"] = $error;
+		echo "<script> window.location='../pages/pg_login.php' </script>";
+	}
+
 
 } else {
-    header('Location: index.php');
+	echo "<script> window.location='../pages/pg_login.php' </script>";
 }
+
+
