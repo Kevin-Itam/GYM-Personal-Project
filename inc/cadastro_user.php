@@ -7,8 +7,12 @@ $cpf = $_POST['cpf'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 $senha_conf = $_POST['senha_conf'];
+$sexo = $_POST['sexo'];
+$data = $_POST['data'];
+$telefone = $_POST['telefone'];
+$telefone_ad = $_POST['telefone_ad'];
 
-if (empty($nome) || empty($cpf) || empty($email) || empty($senha) || empty($senha_conf))
+if (empty($nome) || empty($cpf) || empty($email) || empty($senha) || empty($senha_conf) || empty($sexo) || empty($data) || empty($telefone))
 {
     echo "<script>alert('Favor preencher os campos solicitatos'); </script>";
     echo "<script> window.location='../pages/pg_cadastro.php' </script>";
@@ -19,9 +23,9 @@ else{
         echo "<script> window.location='../pages/pg_cadastro.php' </script>";
     }
     else{
-        $sql = "INSERT INTO tbl_cadastro(nome,cpf,email,senha) VALUES('$nome','$cpf','$email','$senha')";
+        $sql = "INSERT INTO tbl_cadastro(nome,cpf,email,senha,sexo,nascimento,telefone,telefone_ad) VALUES('$nome','$cpf','$email','$senha','$sexo','$data','$telefone','$telefone_ad')";
+        $conn->query($sql);
         echo "<script>alert('Cadastrado com sucesso'); </script>";
         echo "<script> window.location='../pages/pg_login.html' </script>";
-        $conn->query($sql);
     }
 }
