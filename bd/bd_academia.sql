@@ -33,7 +33,7 @@ CREATE TABLE `tbl_cadastro` (
   `senha` varchar(45) DEFAULT NULL,
   `cpf` int(11) DEFAULT NULL,
   `nome` varchar(45) DEFAULT NULL,
-  `e-mail` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
   `sexo` varchar(15) DEFAULT NULL,
   `nascimento` date DEFAULT NULL,
   `telefone` varchar(45) DEFAULT NULL,

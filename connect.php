@@ -7,6 +7,7 @@ $password = "";
 $conn = mysqli_connect($servername, $username, $password, $database);
 
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("Conexão inválida: " . mysqli_connect_error());
 }
-//echo "Connected successfully";
+//echo "Connectado com sucesso";
+?>

@@ -19,9 +19,7 @@ else{
         echo "<script> window.location='../pages/pg_cadastro.php' </script>";
     }
     else{
-        var_dump($_POST);
-        die;
-        $sql = "INSERT INTO tbl_cadastro(nome,cpf,e-mail,senha) VALUES('$nome','$cpf','$email','$senha')";
+        $sql = "INSERT INTO tbl_cadastro(nome,cpf,email,senha) VALUES('$nome','$cpf','$email','$senha')";
         echo "<script>alert('Cadastrado com sucesso'); </script>";
         echo "<script> window.location='../pages/pg_login.html' </script>";
         $conn->query($sql);

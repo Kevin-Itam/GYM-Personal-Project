@@ -51,7 +51,7 @@
                 </form>
             </div>
         </nav>
-        <section class="ftco-section" >
+        <section class="ftco-section">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-6 col-lg-5">
@@ -59,35 +59,58 @@
                             <div class="icon d-flex align-items-center justify-content-center">
                                 <span class="fa fa-user-o"></span>
                             </div>
-                            <img src="../img/logo.jpg" width="30" height="30" class="d-inline-block align-top" style="width: 100px; height: 100px;">
-                            <h3 class="text-center mb-4" style="font-size: 25px; color: white;">Preencher os campos para realizar o seu cadastro</h3>
+                            <img src="../img/logo.jpg" width="30" height="30" class="d-inline-block align-top"
+                                style="width: 100px; height: 100px;">
+                            <h3 class="text-center mb-4" style="font-size: 25px; color: white;">Preencher os campos para
+                                realizar o seu cadastro</h3>
                             <form action="../inc/cadastro_user.php" method="post" class="login-form">
                                 <div class="form-group d-flex" style="margin-top: 10px;">
-                                    <input name="name" type="text" class="form-control rounded-left" placeholder="Nome Completo"
-                                        required="" >
+                                    <input name="name" type="text" class="form-control rounded-left"
+                                        placeholder="Nome Completo" required="">
                                 </div>
                                 <div class="form-group" style="margin-top: 10px;">
                                     <input name="cpf" type="text" class="form-control rounded-left" placeholder="CPF"
-                                        required="" >
+                                        required="">
                                 </div>
                                 <div class="form-group d-flex" style="margin-top: 10px;">
-                                    <input name="email" type="email" class="form-control rounded-left" placeholder="E-mail"
-                                        required="" >
-                                </div>
-                                <div  class="form-group d-flex" style="margin-top: 10px;">
-                                    <input name="senha" type="password" class="form-control rounded-left" placeholder="Senha"
-                                        required="" >
+                                    <input name="email" type="email" class="form-control rounded-left"
+                                        placeholder="E-mail" required="">
                                 </div>
                                 <div class="form-group d-flex" style="margin-top: 10px;">
-                                    <input name="senha_conf" type="password" class="form-control rounded-left" placeholder=" Confirmar senha"
-                                        required="" >
+                                    <input name="senha" type="password" class="form-control rounded-left"
+                                        placeholder="Senha" required="">
                                 </div>
-                                <div class="form-check form-switch" style="padding-top: 10px;" >
-                                    <input name="notification" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault" style="color: white;">Aceita receber novidades em seu e-mail?</label>
-                                  </div>
+                                <div class="form-group d-flex" style="margin-top: 10px;">
+                                    <input name="senha_conf" type="password" class="form-control rounded-left"
+                                        placeholder=" Confirmar senha" required="">
+                                </div>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                    <option selected value="">-Selecione-</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Nenhum">Nenhum</option>
+                                </select>
+                                <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker"
+                                    inline="true" style="padding-top: 10px;">
+                                    <input id="date" type="date" value="">
+                                </div>
+                                <div class="form-group d-flex" style="margin-top: 10px;">
+                                    <input name="telefone" type="password" class="form-control rounded-left"
+                                        placeholder=" Telefone" required="">
+                                </div>
+                                <div class="form-group d-flex" style="margin-top: 10px;">
+                                    <input name="telefone-ad" type="password" class="form-control rounded-left"
+                                        placeholder=" Telefone Adicional" required="">
+                                </div>
+                                <div class="form-check form-switch" style="padding-top: 10px;">
+                                    <input name="notification" class="form-check-input" type="checkbox"
+                                        id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault"
+                                        style="color: white;">Aceita receber novidades em seu e-mail?</label>
+                                </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-outline-warning" style="width: 150px; margin-top: 25px;">Cadastrar</button>
+                                    <button type="submit" class="btn btn-outline-warning"
+                                        style="width: 150px; margin-top: 25px;">Cadastrar</button>
                                 </div>
                             </form>
                         </div>
