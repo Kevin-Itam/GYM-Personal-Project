@@ -3,10 +3,11 @@
 
 session_start();
 
-ob_start();
-function is_loggedIn()
-{
-    return !empty($_SESSION) && !empty($_SESSION['cpf']);
+if ((!isset($_SESSION['cpf']) == true) and (!isset($_SESSION['senha']) == true)) {
+    unset($_SESSION['cpf']);
+    unset($_SESSION['senha']);
+    echo "<script> window.location='../pages/pg_login.php' </script>";
+  
 }
 
 include_once("../inc/connect.php");
@@ -58,7 +59,7 @@ if (!empty($_SESSION['id_usuario'])) {
         <div class="div_out">
             <h5>Bem-Vindo,<b> <?php echo $nome ?></b></h5><br>
             <div class="dv_ig">
-                <a href="" style="background-color: #0e0e0e; border-radius: 8px;">
+                <a href="../inc/logout.php" style="background-color: #0e0e0e; border-radius: 8px;">
                     <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
                     <p>Sair da Conta</p>
                 </a>
