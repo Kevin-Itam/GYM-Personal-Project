@@ -13,7 +13,7 @@
 
 <body class="text-center">
     <div>
-        <img class="background-image" src="/img/loss_lado.png">
+        <img class="background-image" src="../img/loss_lado.png">
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: black;">
             <a class="navbar-brand" href="#" style="color: white;">
             </a>
@@ -25,13 +25,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/index_Apre.html" style="margin-left: 400px;">Menu</a>
+                        <a class="nav-link" href="../index_Apre.html" style="margin-left: 400px;">Menu</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="pg_treinadores.html">Treinadores<span class="sr-only"></span></a>
+                        <a class="nav-link" href="../pg_treinadores.html">Treinadores<span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pg_planos.html">Planos</a>
+                        <a class="nav-link" href="../pg_planos.html">Planos</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -47,11 +47,11 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-outline-warning" href="/pages/pg_cadastro.html" role="button"
+                    <a class="btn btn-outline-warning" href="../pages/pg_cadastro.php" role="button"
                         style="margin-right: 5.5rem;">Cadastrar</a>
                 </form>
                 <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-outline-warning" href="/pages/pg_login.html" role="button">Acessar</a>
+                    <a class="btn btn-outline-warning" href="../pages/pg_login.php" role="button">Acessar</a>
                 </form>
             </div>
         </nav>
@@ -63,7 +63,7 @@
                             <div class="icon d-flex align-items-center justify-content-center">
                                 <span class="fa fa-user-o"></span>
                             </div>
-                            <img src="/img/logo.jpg" class="d-inline-block align-top"
+                            <img src="../img/logo.jpg" class="d-inline-block align-top"
                                 style="width: 150px; height: 150px;">
                             <h3 class="text-center mb-4" style="padding-top: -10px; color: white; font-size: 30px;">
                                 Recuperação de senha</h3>
