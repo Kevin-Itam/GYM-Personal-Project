@@ -197,3 +197,14 @@ img {}
 }
 
 /*========= GYM COACHS =========*/
+
+.gym_coach{
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #0e0e0e;
+}
+.gym_back_coach{
+
+}
