@@ -16,23 +16,28 @@ if (empty($nome) || empty($cpf) || empty($email) || empty($senha) || empty($senh
     echo "<script>alert('Favor preencher os campos solicitatos'); </script>";
     echo "<script> window.location='../pages/pg_cadastro.php' </script>";
 } else {
-    if (($senha) != ($senha_conf)) {
-        echo "<script>alert('A senha não é igual a primeira, favor corrigir!'); </script>";
+    if (($sexo) == 0){
+        echo "<script>alert('Favor informar o sexo;'); </script>";
         echo "<script> window.location='../pages/pg_cadastro.php' </script>";
-    } else {
-        $select = "SELECT COUNT(cpf) as existe FROM tbl_cadastro WHERE cpf = '{$cpf}' LIMIT 1;";
-        $result = mysqli_query($conn, $select);
-        $cpf_exis = mysqli_fetch_array($result);
-
-        if ($cpf_exis['existe']) {
-            echo "<script>alert('CPF já foi cadastro, caso não lembre a senha clique na opção 'Esqueci minha Senha'. '); </script>";
+    }else{
+        if (($senha) != ($senha_conf)) {
+            echo "<script>alert('A senha não é igual a primeira, favor corrigir!'); </script>";
             echo "<script> window.location='../pages/pg_cadastro.php' </script>";
         } else {
+            $select = "SELECT COUNT(cpf) as existe FROM tbl_cadastro WHERE cpf = '{$cpf}' LIMIT 1;";
+            $result = mysqli_query($conn, $select);
+            $cpf_exis = mysqli_fetch_array($result);
 
-            $sql = "INSERT INTO tbl_cadastro(nome,cpf,email,senha,sexo,nascimento,telefone,telefone_ad,perm_acesso) VALUES('$nome','$cpf','$email','$senha','$sexo','$data','$telefone','$telefone_ad','1')";
-            $conn->query($sql);
-            echo "<script>alert('Cadastrado com sucesso'); </script>";
-            echo "<script> window.location='../pages/pg_login.php' </script>";
+            if ($cpf_exis['existe']) {
+                echo "<script>alert('CPF já foi cadastro, caso não lembre a senha clique na opção 'Esqueci minha Senha'. '); </script>";
+                echo "<script> window.location='../pages/pg_cadastro.php' </script>";
+            } else {
+
+                $sql = "INSERT INTO tbl_cadastro(nome,cpf,email,senha,sexo,nascimento,telefone,telefone_ad,perm_acesso) VALUES('$nome','$cpf','$email','$senha','$sexo','$data','$telefone','$telefone_ad','1')";
+                $conn->query($sql);
+                echo "<script>alert('Cadastrado com sucesso'); </script>";
+                echo "<script> window.location='../pages/pg_login.php' </script>";
+            }
         }
     }
 }

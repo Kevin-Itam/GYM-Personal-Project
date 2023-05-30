@@ -76,10 +76,10 @@
                                     <input name="senha_conf" type="password" class="form-control rounded-left" placeholder=" Confirmar senha" required="">
                                 </div>
                                 <select name="sexo" class="form-select form-select-sm" aria-label=".form-select-sm example" style="margin-top: 10px;">
-                                    <option selected value="">-Selecione-</option>
+                                    <option selected value="0">-Selecione-</option>
                                     <option value="Masculino">Masculino</option>
                                     <option value="Feminino">Feminino</option>
-                                    <option value="Nenhum">Nenhum</option>
+                                    <option value="Outro">Outro</option>
                                 </select>
                                 <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker " inline="true" style="padding-top: 10px;">
                                     <input name="data" id="date" type="date" value="">

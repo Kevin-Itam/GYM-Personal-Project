@@ -7,7 +7,6 @@ if ((!isset($_SESSION['cpf']) == true) and (!isset($_SESSION['senha']) == true))
     unset($_SESSION['cpf']);
     unset($_SESSION['senha']);
     echo "<script> window.location='../pages/pg_login.php' </script>";
-  
 }
 
 include_once("../inc/connect.php");
@@ -85,7 +84,7 @@ if (!empty($_SESSION['id_usuario'])) {
             <div>
                 <h5>Plano Contratado</h5><br>
                 <div class="dv_ig">
-                    <a href="">
+                    <a href="../pages/pg_plano_user.php">
                         <img src="../img/icon_painel.png" style="height: 40px; width: 40px;">
                         <p>Acessar seus planos</p>
                     </a>
@@ -106,7 +105,7 @@ if (!empty($_SESSION['id_usuario'])) {
         </div>
     </section>
     <!--============CORPO DA PAGINA==========-->
-    <form action="" id="form">
+    <form action="../inc/editar_user.php" id="form" autocomplete="off">
 
         <div class="titulo">
             <img src="../img/icons-userr.png">
@@ -114,6 +113,7 @@ if (!empty($_SESSION['id_usuario'])) {
         </div>
 
         <section class="fild_1">
+            <input type="hidden" name="id_user" value="<?php echo $id; ?>">
             <header align="center">Dados Pessoais </header>
             <div class="dv1">
                 <div class="input-container">
@@ -134,26 +134,55 @@ if (!empty($_SESSION['id_usuario'])) {
                 </div>
                 <div class="input-container">
                     <input id="Data" name="data" class="input" type="date" value="<?php echo $nascimento ?>">
+                    <label for="E-mail" class="placeholder">Data de Nascimento</label>
                 </div>
             </div>
+            <?php  
+            if(($sexo) == 'Masculino'){
+                echo'
+                <div class="dvsec">
+                    <label for="select" class="lasec">Sexo</label>
+                    <select name="sexo" id="select">
+                        <option "value='. $sexo .'">' . $sexo .'</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>';
+            }else{
+                    if(($sexo) == 'Feminino'){
+                        echo'
+                        <div class="dvsec">
+                            <label for="select" class="lasec">Sexo</label>
+                            <select name="sexo" id="select">
+                                <option "value='. $sexo .'">' . $sexo .'</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>';
 
-            <div class="dvsec">
-                <label for="select" class="lasec">Sexo</label>
-                <select name="select" id="select" value="<?php echo $nascimento ?>">
-                    <option>Selecionar</option>
-                    <option>Masculino</option>
-                    <option>Feminino</option>
-                </select>
-            </div>
+                    }else{
+                        echo'
+                        <div class="dvsec">
+                            <label for="select" class="lasec">Sexo</label>
+                            <select name="sexo" id="select">
+                                <option "value='. $sexo .'">' . $sexo .'</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                            </select>
+                        </div>';
+                    }
+                }  
+            ?>
+
 
             <div class="dv1">
                 <div class="input-container">
-                    <input id="TEl1" name="tel1" class="input" type="text" placeholder=" " value="<?php echo $telefone ?>">
+                    <input id="TEl1" name="telefone" class="input" type="text" placeholder=" " value="<?php echo $telefone ?>">
                     <label for="TEl1" class="placeholder">Telefone</label>
                 </div>
                 <div class="input-container">
-                    <input id="TEL2" name="tel2" class="input" type="text" placeholder=" " value="<?php echo $telefone_ad ?>">
-                    <label for="TEL2" class="placeholder">Telefone 2</label>
+                    <input id="TEL2" name="telefone_ad" class="input" type="text" placeholder=" " value="<?php echo $telefone_ad ?>">
+                    <label for="TEL2" class="placeholder">Telefone Adicional</label>
                 </div>
             </div>
 
