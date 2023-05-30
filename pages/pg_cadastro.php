@@ -44,7 +44,7 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-outline-warning" href="../pages/pg_login.html" role="button">Acessar</a>
+                    <a class="btn btn-outline-warning" href="../pages/pg_login.php" role="button">Acessar</a>
                 </form>
             </div>
         </nav>
