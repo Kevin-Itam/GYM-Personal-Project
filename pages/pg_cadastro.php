@@ -81,6 +81,7 @@
                                     <option value="Feminino">Feminino</option>
                                     <option value="Nenhum">Nenhum</option>
                                 </select>
+                                <!--
                                 <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker " inline="true" style="padding-top: 10px;">
                                     <input name="data" id="date" type="date" value="">
                                 </div>
@@ -90,6 +91,7 @@
                                 <div class="form-group d-flex" style="margin-top: 10px;">
                                     <input name="telefone_ad" type="text" class="form-control rounded-left" placeholder=" Telefone Adicional">
                                 </div>
+-->
                                 <div class="form-check form-switch" style="padding-top: 10px;">
                                     <input name="notification" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                                     <label class="form-check-label" for="flexSwitchCheckDefault" style="color: white;">Aceita receber novidades em seu e-mail?</label>
