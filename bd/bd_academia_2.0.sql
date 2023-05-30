@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Maio-2023 às 15:35
+-- Tempo de geração: 30-Maio-2023 às 23:48
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -29,16 +29,26 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tbl_cadastro` (
   `id_cadastro` int(11) NOT NULL,
+  `usuario` varchar(45) DEFAULT NULL,
   `senha` varchar(45) DEFAULT NULL,
   `cpf` varchar(20) DEFAULT NULL,
-  `nome` varchar(100) DEFAULT NULL,
+  `nome` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `sexo` varchar(15) DEFAULT NULL,
-  `nascimento` varchar(45) DEFAULT NULL,
+  `nascimento` varchar(50) DEFAULT NULL,
   `telefone` varchar(45) DEFAULT NULL,
   `telefone_ad` varchar(45) DEFAULT NULL,
-  `perm_acesso` varchar(45) DEFAULT '1'
+  `perm_acesso` varchar(45) DEFAULT NULL,
+  `valores` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `tbl_cadastro`
+--
+
+INSERT INTO `tbl_cadastro` (`id_cadastro`, `usuario`, `senha`, `cpf`, `nome`, `email`, `sexo`, `nascimento`, `telefone`, `telefone_ad`, `perm_acesso`, `valores`) VALUES
+(4, NULL, 'asdasd', '123', 'teste', 'entrarhabbo123@hotmail.com', 'Nenhum', '2023-05-24', '4700000000', '', '1', NULL),
+(7, NULL, 'andre31', '12525337999', 'André Manoel de Santana', 'andremanoel.santana31@gmail.com', 'Masculino', '2023-05-31', '4700000000', '', '1', NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -58,17 +68,7 @@ ALTER TABLE `tbl_cadastro`
 -- AUTO_INCREMENT de tabela `tbl_cadastro`
 --
 ALTER TABLE `tbl_cadastro`
-  MODIFY `id_cadastro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- Restrições para despejos de tabelas
---
-
---
--- Limitadores para a tabela `tbl_cadastro`
---
-ALTER TABLE `tbl_cadastro`
-  ADD CONSTRAINT `id_cliente` FOREIGN KEY (`id_cadastro`) REFERENCES `tbl_pedido` (`id_pedido`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  MODIFY `id_cadastro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
