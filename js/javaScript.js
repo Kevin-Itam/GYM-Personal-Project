@@ -165,7 +165,7 @@ function telefone_validation(telefonel) {
     86, 87, 88, 89, 91, 92, 93, 94, 95,
     96, 97, 98, 99];
 
-  if (telefonel.length == 10 && [2, 3, 4, 5, 7].indexOf(parseInt(telefone.substring(2, 3) && telefonel.substring(2,3))) == -1) {
+  if (telefonel.length == 10 && [2, 3, 4, 5, 7].indexOf(parseInt(telefonel.substring(2,3))) == -1) {
     return false;
   }
 
