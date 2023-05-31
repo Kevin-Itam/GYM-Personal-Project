@@ -19,8 +19,12 @@ form.addEventListener("submit", (event => {
   }
 
   //Valida o CPF
-  if (cpfUs.value === "") {
+  if (cpfUs.value === "" || cpfUs.value.length === 11) {
     alert("Preencha o campo do CPF");
+    return;
+  }
+  if (cpfUs.value.length === 11) {
+    alert("Faltando caracteres");
     return;
   }
   if (cpfValid == false) {
