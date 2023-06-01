@@ -18,10 +18,19 @@ if (!empty($_SESSION['id_usuario'])) {
     if ($result->num_rows > 0) {
         while ($usuario_detalhes = mysqli_fetch_array($result)) {
             $nome = $usuario_detalhes['nome'];
+            $permissao = $usuario_detalhes['perm_acesso'];
         }
     } else {
         echo "<script> window.location='../pages/pg_login.php'</script>";
     }
+}
+
+//Permissão de acesso
+
+if(($permissao) == 1){
+
+}else{
+    echo "<script> window.location='../pages/pg_painel_user.php' </script>";
 }
 
 ?>
