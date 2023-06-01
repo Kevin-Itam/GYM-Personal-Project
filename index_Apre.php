@@ -79,17 +79,18 @@ if (!empty($_SESSION['id_usuario'])) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index_Apre.html" style="margin-left: 400px;">Menu</a>
+                        <a class="nav-link" onclick="scrollElement('apresentacao')" style="margin-left: 400px;">Menu</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" onclick="scrollElement()">Treinadores<span class="sr-only"></span></a>
+                        <a class="nav-link" onclick="scrollElement('coach')">Treinadores<span
+                                class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/pg_planos.html">Planos</a>
+                        <a class="nav-link" onclick="scrollElement('planos')">Planos</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             Sobre
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -120,7 +121,7 @@ if (!empty($_SESSION['id_usuario'])) {
     <!--========== Corpo da Pagina ==========-->
 
     <section class="corpo">
-        <section class="sec_apre"></section>
+        <section class="sec_apre" id="apresentacao"></section>
         <section class="sobre">
             <div class="crop_so">
                 <div class="d_img">
@@ -180,131 +181,135 @@ if (!empty($_SESSION['id_usuario'])) {
                     </div>
                 </div>
             </section>
-            <!-- =================================================-->
-            <section class="corpo">
-                <div class="row">
-                    <h1 style="margin-top: 5%;">Planos Disponíveis</h1>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="pricing_table">
-                            <div class="pricing_table_header">
-                                <i class="fa fa-home"></i>
-                                <h2 class="title">Frango</h2>
-                                <span class="price-plan">
-                                    <i class="fa fa-inr"></i>
-                                    <span class="price">R$ 109,99</span>
-                                    <span class="monthly_plan">Mensal</span>
-                                </span>
-                            </div>
-                            <div class="pricing_table_plan">
-                                <ul>
-                                    <li>Confira taxas de matrícula e manutenção na unidade de interesse</li>
-                                    <li>Sem multas ou taxas de cancelamento</li>
-                                    <li>Acesso a todas as aulas coletivas</li>
-                                    <li>Acesso total a estrutura da academia</li>
-                                    <li>Sem restrição de horários</li>
-                                    <li>Leve 2 amigos para treinar</li>
-                                </ul>
-                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
-                                    role="button">MATRICULE-SE</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="pricing_table active">
-                            <div class="pricing_table_header">
-                                <i class="fa fa-puzzle-piece"></i>
-                                <h2 class="title">Rato de Academia</h2>
-                                <span class="price-plan">
-                                    <i class="fa fa-inr"></i>
-                                    <span class="price">R$ 299,99</span>
-                                    <span class="monthly_plan">Trimensal</span>
-                                </span>
-                            </div>
-                            <div class="pricing_table_plan">
-                                <ul>
-                                    <li>Sem taxas de matrícula ou manutenção</li>
-                                    <li>10% de desconto na mensalidade</li>
-                                    <li>Acesso a todas as aulas coletivas</li>
-                                    <li>Acesso total a estrutura da academia</li>
-                                    <li>Sem restrição de horários</li>
-                                    <li>Leve 5 amigos para treinar</li>
-                                </ul>
-                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
-                                    role="button">MATRICULE-SE</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="pricing_table">
-                            <div class="pricing_table_header">
-                                <i class="fa fa-users"></i>
-                                <h2 class="title">Bodybuilder</h2>
-                                <span class="price-plan">
-                                    <i class="fa fa-inr"></i>
-                                    <span class="price">R$ 899,99</span>
-                                    <span class="monthly_plan">Anual</span>
-                                </span>
-                            </div>
-                            <div class="pricing_table_plan">
-                                <ul>
-                                    <li>Sem taxas de matrícula ou manutenção</li>
-                                    <li>30% de desconto na mensalidade</li>
-                                    <li>Acesso a todas as aulas coletivas</li>
-                                    <li>Acesso total a estrutura da academia</li>
-                                    <li>Sem restrição de horários</li>
-                                    <li>Leve 5 amigos para treinar</li>
-                                </ul>
-                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
-                                    role="button">MATRICULE-SE</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="gym_coach" id="coach">
-                <div class="gym_coach">
-                    <div class="gym_coach">
-                        <div class="body_spans">
-                            <h2>TEAM OF EXPERT COACHES</h2>
-                            <span class="span_c1">
-                                Massa vivamus lorem ornare risus diam egestas velit ultrices. Ac in tempus quam nulla.
-                                In
-                                viverra vitae viverra mauris eros accumsan sed vitae suspendisse. Pellentesque orci
-                                ipsum
-                                gravida nam fames a rhon.
+        </section>
+        <section class="planos" id="planos">
+            <div class="row">
+                <h1 style="margin-top: 5%;">Planos Disponíveis</h1>
+                <div class="col-md-4 col-sm-6">
+                    <div class="pricing_table">
+                        <div class="pricing_table_header">
+                            <i class="fa fa-home"></i>
+                            <h2 class="title">Frango</h2>
+                            <span class="price-plan">
+                                <i class="fa fa-inr"></i>
+                                <span class="price">R$ 109,99</span>
+                                <span class="monthly_plan">Mensal</span>
                             </span>
-                            <div class="span_c2">
-                                <div class="back_h">
-                                    <p class="h_csss">+5 anos</p>
-                                </div>
-                                <div class="h_css">
-                                    <p class="h_css">de sucesso no trabalho e experiencia em treinamento</p>
-                                </div>
-                            </div>
                         </div>
-
-                        <section class="gym_back_coach">
-                            <div class="perfil_coach"><a class="perf_img1"></a></div>
-                            <div class="perfil_coach"><a class="perf_img2"></a></div>
-                            <div class="perfil_coach"><a class="perf_img3"></a></div>
-                            <div class="perfil_coach"><a class="perf_img4"></a></div>
-                        </section>
-
-
+                        <div class="pricing_table_plan">
+                            <ul>
+                                <li>Confira taxas de matrícula e manutenção na unidade de interesse</li>
+                                <li>Sem multas ou taxas de cancelamento</li>
+                                <li>Acesso a todas as aulas coletivas</li>
+                                <li>Acesso total a estrutura da academia</li>
+                                <li>Sem restrição de horários</li>
+                                <li>Leve 2 amigos para treinar</li>
+                            </ul>
+                            <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
+                                role="button">MATRICULE-SE</a>
+                        </div>
                     </div>
                 </div>
-            </section>
-            <section class="gym_time">
+                <div class="col-md-4 col-sm-6">
+                    <div class="pricing_table active">
+                        <div class="pricing_table_header">
+                            <i class="fa fa-puzzle-piece"></i>
+                            <h2 class="title">Rato de Academia</h2>
+                            <span class="price-plan">
+                                <i class="fa fa-inr"></i>
+                                <span class="price">R$ 299,99</span>
+                                <span class="monthly_plan">Trimensal</span>
+                            </span>
+                        </div>
+                        <div class="pricing_table_plan">
+                            <ul>
+                                <li>Sem taxas de matrícula ou manutenção</li>
+                                <li>10% de desconto na mensalidade</li>
+                                <li>Acesso a todas as aulas coletivas</li>
+                                <li>Acesso total a estrutura da academia</li>
+                                <li>Sem restrição de horários</li>
+                                <li>Leve 5 amigos para treinar</li>
+                            </ul>
+                            <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
+                                role="button">MATRICULE-SE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="pricing_table">
+                        <div class="pricing_table_header">
+                            <i class="fa fa-users"></i>
+                            <h2 class="title">Bodybuilder</h2>
+                            <span class="price-plan">
+                                <i class="fa fa-inr"></i>
+                                <span class="price">R$ 899,99</span>
+                                <span class="monthly_plan">Anual</span>
+                            </span>
+                        </div>
+                        <div class="pricing_table_plan">
+                            <ul>
+                                <li>Sem taxas de matrícula ou manutenção</li>
+                                <li>30% de desconto na mensalidade</li>
+                                <li>Acesso a todas as aulas coletivas</li>
+                                <li>Acesso total a estrutura da academia</li>
+                                <li>Sem restrição de horários</li>
+                                <li>Leve 5 amigos para treinar</li>
+                            </ul>
+                            <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
+                                role="button">MATRICULE-SE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            </section>
-            <section class="gym_cantato">
+        <section id="coach">
 
-            </section>
-            <section class="gym_footer">
+            <div class="gym_coach">
+                <div class="body_spans">
+                    <h2>TEAM OF EXPERT COACHES</h2>
+                    <span class="span_c1">
+                        Massa vivamus lorem ornare risus diam egestas velit ultrices. Ac in tempus quam nulla.
+                        In
+                        viverra vitae viverra mauris eros accumsan sed vitae suspendisse. Pellentesque orci
+                        ipsum
+                        gravida nam fames a rhon.
+                    </span>
+                    <div class="span_c2">
+                        <div class="back_h">
+                            <p class="h_csss">+5 anos</p>
+                        </div>
+                        <div class="h_css">
+                            <p class="h_css">de sucesso no trabalho e experiencia em treinamento</p>
+                        </div>
+                    </div>
+                </div>
 
-            </section>
-        </section><!-- =================================================-->
+                <section class="gym_back_coach">
+                    <div class="perfil_coach"><a class="perf_img1"></a></div>
+                    <div class="perfil_coach"><a class="perf_img2"></a></div>
+                    <div class="perfil_coach"><a class="perf_img3"></a></div>
+                    <div class="perfil_coach"><a class="perf_img4"></a></div>
+                </section>
+
+
+            </div>
+
+        </section>
+
+        <section class="gym_time">
+
+        </section>
+
+        <section class="gym_cantato">
+
+        </section>
+
+        <section class="gym_footer">
+
+        </section>
+
+        <!-- =================================================-->
 
 </body>
 

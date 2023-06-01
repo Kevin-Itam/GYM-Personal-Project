@@ -1,21 +1,8 @@
-function scrollElement() {
-    var element = document.getElementById("coach");
-    element.scrollIntoView();
+
+function scrollElement(scroll) {
+    var element = document.getElementById(scroll);
+    element.scrollIntoView({ behavior: "smooth", block: "end", inline: "center" });
+
 }
 
-function scrollElement() {
-    var element = document.getElementById("coach");
-    element.scrollIntoView();
 
-} function scrollElement() {
-    var element = document.getElementById("coach");
-    element.scrollIntoView();
-
-} function scrollElement() {
-    var element = document.getElementById("coach");
-    element.scrollIntoView();
-    
-} function scrollElement() {
-    var element = document.getElementById("coach");
-    element.scrollIntoView();
-}

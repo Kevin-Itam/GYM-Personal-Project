@@ -141,7 +141,7 @@ header {
     top: 4vh;
     left: 20%;
     height: 480px;
-    width: 550px;
+
     color: white;
 }
 
@@ -198,12 +198,12 @@ h5 {
 .gym_coach {
     display: flex;
     flex-direction: row;
-    column-gap: 15vw;
+    column-gap: 13vw;
     height: auto;
     width: auto;
     margin: 0;
-    padding: 4rem 2rem;
-
+    padding: 12rem 6rem;
+    background-color: #0e0e0ef9;
 }
 
 /*====   TEXTOS   ====*/
@@ -217,6 +217,7 @@ h5 {
     height: auto;
     width: auto;
     max-width: 500px;
+    
 }
 
 h2 {
@@ -266,11 +267,7 @@ h2 {
     display: flex;
     position: relative;
     left: 5vw;
-
-}
-
-.gym_back_prof {
-
+    
 }
 
 .perf_img1{
