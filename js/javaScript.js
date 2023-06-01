@@ -85,13 +85,13 @@ jQuery(document).ready(function () {
       v[1] = v[1] % 10;
       //Retorna Verdadeiro se os dígitos de verificação são os esperados.
       if ((v[0] != cpf[9]) || (v[1] != cpf[10])) {
-        alert('CPF errado');
+     
         jQuery(cpf_field).val("");
         jQuery(cpf_field).focus();
         cpfValid = false;
 
       } else {
-        alert('CPF correto');
+
         jQuery(cpf_field).val(cpf);
         cpfValid = true;
       }

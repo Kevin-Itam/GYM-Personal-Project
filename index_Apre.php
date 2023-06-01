@@ -1,3 +1,28 @@
+<?php
+
+
+session_start();
+
+
+include_once("connect.php");
+
+if (!empty($_SESSION['id_usuario'])) {
+    $id = $_SESSION['id_usuario'];
+    $sql_detalhes = "SELECT * FROM tbl_cadastro WHERE id_cadastro=$id";
+    $result = $conn->query($sql_detalhes);
+    if ($result->num_rows > 0) {
+        while ($usuario_detalhes = mysqli_fetch_array($result)) {
+            $nome = $usuario_detalhes['nome'];
+        }
+    } else {
+        echo "<script> window.location='../pages/pg_login.php'</script>";
+    }
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +34,7 @@
     <script type="text/javascript" src="js/javaScript.js"></script>
     <link href="css/style_planos.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Tela Inicial</title>
 </head>
 <style>
@@ -49,8 +73,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(0, 0, 0);">
             <a class="navbar-brand" href="#" style="color: white;"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -60,15 +83,13 @@
                         <a class="nav-link" href="index_Apre.html" style="margin-left: 400px;">Menu</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="pages/pg_treinadores.html">Treinadores<span
-                                class="sr-only"></span></a>
+                        <a class="nav-link" href="pages/pg_treinadores.html">Treinadores<span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pages/pg_planos.html">Planos</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sobre
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -79,9 +100,17 @@
                         </div>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-outline-warning" href="/pages/pg_cadastro.html" role="button">Cadastrar</a>
-                </form>
+                <?php
+                if (!empty($_SESSION['id_usuario'])) {
+                    echo '                <form class="form-inline my-2 my-lg-0">
+                    <a class="btn btn-outline-warning" href="pages/pg_painel_user.php" role="button">' . $nome . '</a>
+                </form>';
+                } else {
+                    echo '                <form class="form-inline my-2 my-lg-0">
+                    <a class="btn btn-outline-warning" href="pages/pg_cadastro.php" role="button">Cadastrar</a>
+                </form>';
+                }
+                ?>
             </div>
         </nav>
     </header>
@@ -172,7 +201,7 @@
                                     <li>Sem restrição de horários</li>
                                     <li>Leve 2 amigos para treinar</li>
                                 </ul>
-                                <button class="btn btn-outline-danger">MATRICULE-SE</button>
+                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php" role="button">MATRICULE-SE</a>
                             </div>
                         </div>
                     </div>
@@ -196,7 +225,7 @@
                                     <li>Sem restrição de horários</li>
                                     <li>Leve 5 amigos para treinar</li>
                                 </ul>
-                                <button class="btn btn-outline-danger">MATRICULE-SE</button>
+                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php" role="button">MATRICULE-SE</a>
                             </div>
                         </div>
                     </div>
@@ -220,7 +249,7 @@
                                     <li>Sem restrição de horários</li>
                                     <li>Leve 5 amigos para treinar</li>
                                 </ul>
-                                <button class="btn btn-outline-danger">MATRICULE-SE</button>
+                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php" role="button">MATRICULE-SE</a>
                             </div>
                         </div>
                     </div>
@@ -245,7 +274,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <section class="gym_back">
                             <section class="gym_back_prof">
                                 <div></div>
@@ -253,7 +282,7 @@
                                 <div></div>
                                 <div></div>
                             </section>
-                            
+
                         </section>
                     </div>
                 </div>
