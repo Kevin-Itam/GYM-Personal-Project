@@ -28,10 +28,11 @@ if (!empty($_SESSION['id_usuario'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <script type="text/javascript" src="js/javaScript.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
     <link href="css/style_planos.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Tela Inicial</title>
 </head>
 <style>
@@ -70,7 +71,8 @@ if (!empty($_SESSION['id_usuario'])) {
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(0, 0, 0);">
             <a class="navbar-brand" href="#" style="color: white;"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -80,13 +82,14 @@ if (!empty($_SESSION['id_usuario'])) {
                         <a class="nav-link" href="index_Apre.html" style="margin-left: 400px;">Menu</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="pages/pg_treinadores.html">Treinadores<span class="sr-only"></span></a>
+                        <a class="nav-link" onclick="scrollElement()">Treinadores<span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pages/pg_planos.html">Planos</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sobre
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -201,7 +204,8 @@ if (!empty($_SESSION['id_usuario'])) {
                                     <li>Sem restrição de horários</li>
                                     <li>Leve 2 amigos para treinar</li>
                                 </ul>
-                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php" role="button">MATRICULE-SE</a>
+                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
+                                    role="button">MATRICULE-SE</a>
                             </div>
                         </div>
                     </div>
@@ -225,7 +229,8 @@ if (!empty($_SESSION['id_usuario'])) {
                                     <li>Sem restrição de horários</li>
                                     <li>Leve 5 amigos para treinar</li>
                                 </ul>
-                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php" role="button">MATRICULE-SE</a>
+                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
+                                    role="button">MATRICULE-SE</a>
                             </div>
                         </div>
                     </div>
@@ -249,14 +254,15 @@ if (!empty($_SESSION['id_usuario'])) {
                                     <li>Sem restrição de horários</li>
                                     <li>Leve 5 amigos para treinar</li>
                                 </ul>
-                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php" role="button">MATRICULE-SE</a>
+                                <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
+                                    role="button">MATRICULE-SE</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
-            <section class="gym_coach">
+
+            <section class="gym_coach" id="coach">
                 <div class="gym_coach">
                     <div class="gym_coach">
                         <div class="body_spans">
@@ -279,7 +285,7 @@ if (!empty($_SESSION['id_usuario'])) {
                         </div>
 
                         <section class="gym_back_coach">
-                           <div class="perfil_coach"><a class="perf_img1"></a></div>
+                            <div class="perfil_coach"><a class="perf_img1"></a></div>
                             <div class="perfil_coach"><a class="perf_img2"></a></div>
                             <div class="perfil_coach"><a class="perf_img3"></a></div>
                             <div class="perfil_coach"><a class="perf_img4"></a></div>
@@ -299,6 +305,7 @@ if (!empty($_SESSION['id_usuario'])) {
 
             </section>
         </section><!-- =================================================-->
+
 </body>
 
 </html>
