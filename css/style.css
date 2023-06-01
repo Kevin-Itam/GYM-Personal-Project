@@ -156,7 +156,6 @@ h5 {
 .gym_ativ {
     height: auto;
     width: auto;
-    padding: 24px;
     background-color: #0e0e0ef9;
 }
 
@@ -197,11 +196,14 @@ h5 {
 /*========= GYM COACHS =========*/
 
 .gym_coach {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15vw;
     height: auto;
     width: auto;
     margin: 0;
     padding: 4rem 2rem;
-    background-color: #0e0e0e;
+
 }
 
 /*====   TEXTOS   ====*/
@@ -252,16 +254,74 @@ h2 {
     display: flex;
     flex-direction: row;
     column-gap: 1vw;
+    
 }
 
-/*===================================*/
+/*============== COACHS =====================*/
 
-.gym_back {
-    height: auto;
-    width: auto;
+.gym_back_coach {
+    height: 500px;
+    width: 500px;
+    flex-wrap: wrap;
     display: flex;
     position: relative;
     left: 5vw;
+
 }
 
-.gym_back_prof {}
+.gym_back_prof {
+
+}
+
+.perf_img1{
+    display: flex;
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+    background-image: url(/img/coach1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.perf_img2{
+    display: flex;
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+    background-image: url(/img/coach2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.perf_img3{
+    display: flex;
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+    background-image: url(/img/coach3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.perf_img4{
+    display: flex;
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+    background-image: url(/img/coach4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+
+.perfil_coach{
+    position: relative;
+    top: -1.5;
+    left: 1.5vw;
+    height: 50%;
+    width: 50%;
+    border-radius: 125px;
+
+}
