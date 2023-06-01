@@ -27,6 +27,7 @@ if (!empty($_SESSION['id_usuario'])) {
             $nascimento = $usuario_detalhes['nascimento'];
             $telefone = $usuario_detalhes['telefone'];
             $telefone_ad = $usuario_detalhes['telefone_ad'];
+            $permissao = $usuario_detalhes['perm_acesso'];
         }
     } else {
         echo "<script> window.location='../pages/pg_login.php'</script>";
@@ -124,7 +125,9 @@ if (!empty($_SESSION['id_usuario'])) {
                 </div>
             </div>
             <hr style="border-bottom: 2px solid #0e0e0e; margin: 1px!important; opacity:1!important;">
-            <div class="div1">
+            <?php 
+            if(($permissao) == 1){
+                echo' <div class="div1">
                 <img src="">
                 <div>
                     <h5>Plano Contratado</h5><br>
@@ -135,8 +138,12 @@ if (!empty($_SESSION['id_usuario'])) {
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="div1">
+            </div>';
+            }
+            ?>
+            <?php 
+            if(($permissao) == 2){
+                echo'<div class="div1">
                 <img src="">
                 <div>
                     <h5>Bem-Vindo</h5><br>
@@ -147,7 +154,10 @@ if (!empty($_SESSION['id_usuario'])) {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div>';
+            }
+            ?>
+
         </section>
         <!--============CORPO DA PAGINA==========-->
         <form action="../inc/editar_user.php" id="form" autocomplete="off">
