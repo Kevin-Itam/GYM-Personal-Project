@@ -20,9 +20,6 @@ if (!empty($_SESSION['id_usuario'])) {
 }
 
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -255,14 +252,17 @@ if (!empty($_SESSION['id_usuario'])) {
                     </div>
                 </div>
             </section>
+            
             <section class="gym_coach">
                 <div class="gym_coach">
                     <div class="gym_coach">
                         <div class="body_spans">
                             <h2>TEAM OF EXPERT COACHES</h2>
                             <span class="span_c1">
-                                Massa vivamus lorem ornare risus diam egestas velit ultrices. Ac in tempus quam nulla. In
-                                viverra vitae viverra mauris eros accumsan sed vitae suspendisse. Pellentesque orci ipsum
+                                Massa vivamus lorem ornare risus diam egestas velit ultrices. Ac in tempus quam nulla.
+                                In
+                                viverra vitae viverra mauris eros accumsan sed vitae suspendisse. Pellentesque orci
+                                ipsum
                                 gravida nam fames a rhon.
                             </span>
                             <div class="span_c2">
@@ -275,15 +275,14 @@ if (!empty($_SESSION['id_usuario'])) {
                             </div>
                         </div>
 
-                        <section class="gym_back">
-                            <section class="gym_back_prof">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </section>
-
+                        <section class="gym_back_coach">
+                           <div class="perfil_coach"><a class="perf_img1"></a></div>
+                            <div class="perfil_coach"><a class="perf_img2"></a></div>
+                            <div class="perfil_coach"><a class="perf_img3"></a></div>
+                            <div class="perfil_coach"><a class="perf_img4"></a></div>
                         </section>
+
+
                     </div>
                 </div>
             </section>

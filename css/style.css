@@ -278,7 +278,7 @@ h2 {
     border-radius: 100%;
     height: 100%;
     width: 100%;
-    background-image: url(/img/coach1.png);
+    background-image: url(../img/coach1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -288,7 +288,7 @@ h2 {
     border-radius: 100%;
     height: 100%;
     width: 100%;
-    background-image: url(/img/coach2.jpg);
+    background-image: url(../img/coach2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -298,7 +298,7 @@ h2 {
     border-radius: 100%;
     height: 100%;
     width: 100%;
-    background-image: url(/img/coach3.png);
+    background-image: url(../img/coach3.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -308,7 +308,7 @@ h2 {
     border-radius: 100%;
     height: 100%;
     width: 100%;
-    background-image: url(/img/coach4.png);
+    background-image: url(../img/coach4.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
