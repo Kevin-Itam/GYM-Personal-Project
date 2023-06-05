@@ -1,28 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap');
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
 
-  .background-image {
-    background-repeat:no-repeat;
-    position: fixed;
-    width: 100%;
-    background-size: cover;
-    left: 0;
-    right: 0;
-    filter: blur(5px);
-  }
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.background-image {
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  filter: blur(5px);
+}
 
 
-  * {
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 
-  }
+}
 
- /*==== Menu SUperior ====*/
+/*==== Menu SUperior ====*/
 
 
 header {
@@ -41,7 +43,7 @@ header {
 
 }
 
-.navbar-nav{
+.navbar-nav {
   position: relative;
   display: flex;
   flex-direction: row !important;
@@ -81,23 +83,79 @@ header {
 }
 
 /*==============LOGIN===========*/
-.login-wrap{
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: 50%;
+.login-form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
 
-    border: solid 2px rgba(255, 251, 0, 0.747);
-    background-color: black;
-    border-radius: 10px;
+.login-wrap {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 24%;
+  border: solid 2px rgba(255, 251, 0, 0.747);
+  background-color: black;
+  border-radius: 10px;
 
 }
 
-.form-inline{
+.form-inline {
   position: absolute;
-    right: 1rem;
+  right: 1rem;
 }
 
 .form-select {
   margin-top: 10px !important;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-g {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.span_cad {
+  display: none;
+  color: red;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.span_cadd {
+  display: none;
+  color: red;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.message {
+  position: relative;
+  left: 0;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message .success {
+  font-size: 20px;
+  color: green;
+  position: absolute;
+  animation: buttons .3s linear;
+  display: none;
+}
+
+.message .danger {
+  font-size: 20px;
+  color: red;
+  position: absolute;
+  transition: .3s;
+  animation: buttons .3s linear;
+  display: none;
 }

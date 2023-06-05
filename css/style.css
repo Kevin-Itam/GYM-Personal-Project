@@ -322,3 +322,51 @@ h2 {
     border-radius: 125px;
 
 }
+/*==================  rodape ===============*/
+.footer {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 4vw;
+    background-color: #1a1a1aa4;
+}
+
+.gym_cont_back{
+    position: relative;
+    padding: 70px 0 ;
+    background-color: #0e0e0e;
+}
+
+.gym_cont_posi{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding: 70px 0 ;
+}
+
+.gym_cont_row{
+    height: auto;
+    width: auto;
+    padding: 70px 0 ;
+}
+
+.d-flex{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+
+
+
+
+
+

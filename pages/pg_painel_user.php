@@ -113,12 +113,12 @@ if (!empty($_SESSION['id_usuario'])) {
             </div>
             <div class="div1">
                 <img src="">
-                <div>
-                    <h5>Bem-Vindo,<b> Andre Manoel Santana</b></h5><br>
+                <div align="center">
+                    <h5>Retornar para a pagina principal?</h5><br>
                     <div class="dv_ig">
                         <a href="">
                             <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
-                            <p>Sair da Conta</p>
+                            <p>Pagina principal</p>
                         </a>
 
                     </div>

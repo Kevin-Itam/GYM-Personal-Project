@@ -139,16 +139,7 @@ header {
 
 /*================== RODAPE ================*/
 
-.footer {
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    column-gap: 4vw;
-    background-color: #1a1a1aa4;
-}
+
 
 .ft1 {
     height: 500px;

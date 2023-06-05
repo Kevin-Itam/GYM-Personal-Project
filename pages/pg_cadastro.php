@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link href="../css/style_cad.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Tela de Cadastro</title>
 </head>
 
@@ -16,7 +18,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: black;">
             <a class="navbar-brand" href="../index_Apre.html" style="color: white;">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -32,7 +35,8 @@
                         <a class="nav-link" href="#">Planos</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sobre
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -56,46 +60,74 @@
                             <div class="icon d-flex align-items-center justify-content-center">
                                 <span class="fa fa-user-o"></span>
                             </div>
-                            <img src="../img/logo.jpg" width="30" height="30" class="d-inline-block align-top" style="width: 100px; height: 100px;">
+                            <!-- <img src="../img/logo.jpg" width="30" height="30" style="position:relative;"
+                                class="d-inline-block align-top" style="width: 100px; height: 100px;"> -->
                             <h3 class="text-center mb-4" style="font-size: 25px; color: white;">Preencher os campos para
                                 realizar o seu cadastro</h3>
                             <form action="../inc/cadastro_user.php" method="post" class="login-form">
                                 <div class="form-group d-flex" style="margin-top: 10px;">
-                                    <input name="name" type="text" class="form-control rounded-left" placeholder="Nome Completo" required="">
-                                </div>
-                                <div class="form-group" style="margin-top: 10px;">
-                                    <input name="cpf" type="text" class="form-control rounded-left" placeholder="CPF" required="">
-                                </div>
-                                <div class="form-group d-flex" style="margin-top: 10px;">
-                                    <input name="email" type="email" class="form-control rounded-left" placeholder="E-mail" required="">
+                                    <input name="name" id="nome" type="text" class="form-control rounded-left"
+                                        placeholder="Nome Completo" required="">
+                                    <span class="span_cad">Preencha o campo Nome </span>
                                 </div>
                                 <div class="form-group d-flex" style="margin-top: 10px;">
-                                    <input name="senha" type="password" class="form-control rounded-left" placeholder="Senha" required="">
+                                    <input name="cpf" id="CPF" type="text" class="form-control rounded-left" placeholder="CPF"
+                                        required="">
+                                    <span class="span_cad">Preencha o campo CPF </span>
                                 </div>
                                 <div class="form-group d-flex" style="margin-top: 10px;">
-                                    <input name="senha_conf" type="password" class="form-control rounded-left" placeholder=" Confirmar senha" required="">
-                                </div>
-                                <select name="sexo" class="form-select form-select-sm" aria-label=".form-select-sm example" style="margin-top: 10px;">
-                                    <option selected value="0">-Selecione-</option>
-                                    <option value="Masculino">Masculino</option>
-                                    <option value="Feminino">Feminino</option>
-                                    <option value="Outro">Outro</option>
-                                </select>
-                                <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker " inline="true" style="padding-top: 10px;">
-                                    <input name="data" id="date" type="date" value="">
+                                    <input name="email" id="E-mail" type="email" class="form-control rounded-left"
+                                        placeholder="E-mail" required="">
+                                    <span class="span_cad">Preencha o campo E-MAIL </span>
                                 </div>
                                 <div class="form-group d-flex" style="margin-top: 10px;">
-                                    <input name="telefone" type="text" class="form-control rounded-left" placeholder=" Telefone" required="">
+                                    <input name="senha" id="senha" type="password" class="form-control rounded-left"
+                                        placeholder="Senha" required="">
+                                    <span class="span_cad">Preencha o campo SENHA </span>
                                 </div>
                                 <div class="form-group d-flex" style="margin-top: 10px;">
-                                    <input name="telefone_ad" type="text" class="form-control rounded-left" placeholder=" Telefone Adicional">
+                                    <input name="senha_conf" id="conf_senha" type="password" class="form-control rounded-left"
+                                        placeholder=" Confirmar senha" required="">
+                                    <span class="span_cad">Confirme sua SENHA </span>
+                                </div>
+                                <div class="form-g d-flex">
+                                    <select name="sexo" class="" aria-label=".form-select-sm example"
+                                        style="margin-top: 10px;">
+                                        <option selected value="0">-Selecione-</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+
+                                    <div id="date-picker-example"
+                                        class="md-form md-outline input-with-post-icon datepicker " inline="true"
+                                        style="padding-top: 10px;">
+                                        <input name="data" id="date" type="date" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex" style="margin-top: 10px;">
+                                    <input name="telefone" id="TEl1" type="text" class="form-control rounded-left"
+                                        placeholder=" Telefone" required="">
+                                    <span class="span_cad">Preencha o campo Telefone </span>
+                                </div>
+                                <div class="form-group d-flex" style="margin-top: 10px;">
+                                    <input name="telefone_ad" id="TEl2" type="text" class="form-control rounded-left"
+                                        placeholder=" Telefone Adicional">
+                                    <span class="span_cad">Preencha o campo Telefone </span>
                                 </div>
                                 <div class="form-check form-switch" style="padding-top: 10px;">
-                                    <input name="notification" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault" style="color: white;">Aceita receber novidades em seu e-mail?</label>
+                                    <input name="notification" class="form-check-input" type="checkbox"
+                                        id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault"
+                                        style="color: white;">Aceita receber novidades em seu e-mail?</label>
                                 </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-outline-warning" style="width: 150px; margin-top: 25px;">Cadastrar</button>
+                                <div>
+                                    <button type="submit" class="btn btn-outline-warning"
+                                        style="width: 150px; margin-top: 25px;">Cadastrar</button>
+                                    <div class="message">
+                                        <div class="success" id="success">Your Message Successfully Sent!</div>
+                                        <div class="danger" id="danger">Feilds Can't be Empty!</div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -103,6 +135,7 @@
                 </div>
             </div>
         </section>
+        <script src="../js/javaScript.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

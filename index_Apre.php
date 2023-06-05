@@ -302,11 +302,42 @@ if (!empty($_SESSION['id_usuario'])) {
         </section>
 
         <section class="gym_cantato">
-
+            <section class="gym_cont_back">
+                <section class="gym_cont_posi">
+                    <div class="gym_cont_row">
+                        <ul class="list_cont">
+                            <h5>Horadrios de abretura da academia</h5><br><br>
+                            <li class="d-flex">
+                                <p>Monday-Friday :<span> 9:00 AM - 9:00 PM</span></p>
+                                
+                            </li>
+                            <li class="d-flex">
+                                <p>Saturday :<span> 9:00 AM - 6:00 PM</span></p>
+                                
+                            </li>
+                            <li class="d-flex">
+                                <p>Sunday :<span> Closed</span></p>
+                               
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gym_cont_row">
+                        
+                    </div>
+                    <div class="gym_cont_row">
+                        
+                    </div>
+                    <div class="gym_cont_row">
+                        
+                    </div>
+                </section>
+            </section>
         </section>
 
         <section class="gym_footer">
-
+            <section class="rodape">
+                <footer>©2023 Sesi/Senai, todos os direitos reservados</footer>
+            </section>
         </section>
 
         <!-- =================================================-->
