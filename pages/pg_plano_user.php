@@ -119,7 +119,6 @@ $result = $conn->query($sql);
 
                                             while ($row_turma = $sql_query->fetch_assoc()) {
                                                 echo "<tr>";
-                                                echo "<td> <input type='checkbox' /></td>";
                                                 echo "<td>" . $row_turma['id_cadastro'] . "</td>";
                                                 echo "<td>" . $row_turma['nome'] . "</td>";
                                                 echo "<td>" . $row_turma['cpf'] . "</td>";
