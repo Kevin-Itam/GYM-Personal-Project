@@ -301,212 +301,129 @@ if (!empty($_SESSION['id_usuario'])) {
             <div>
                 <h1 style="font-weight:800;">HORÁRIOS DE TRABALHO E AULAS</h1>
             </div>
-            <section class="gym_calendario_posi">
-                <table class="table table-responsive">
-                    <thead style="border:solid white 1px;">
-                        <th scope="col" style="border:solid #1a1a1a 1px;background-color:black!important;">Horarios</th>
-                        <th scope="col" style="border:solid #1a1a1a 1px;background-color:black!important;">segunda</th>
-                        <th scope="col" style="border:solid #1a1a1a 1px;background-color:black!important;">terça</th>
-                        <th scope="col" style="border:solid #1a1a1a 1px;background-color:black!important;">quarta</th>
-                        <th scope="col" style="border:solid #1a1a1a 1px;background-color:black!important;">quinta</th>
-                        <th scope="col" style="border:solid #1a1a1a 1px;background-color:black!important;">sexta</th>
-                        <th scope="col" style="border:solid #1a1a1a 1px;background-color:black!important;">sabado</th>
-                        <th scope="col" style="border:solid #1a1a1a 1px;background-color:black!important;">domingo</th>
-                        </tr>
-                    </thead>
-                    <tbody style="border:solid #1a1a1a 1px;">
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;" style="background-color:black;" >1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="background-color:black;">1</th>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Mark</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">Otto</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                            <td style="border:solid #1a1a1a 1px;background-color:black!important;">@mdo</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <section class="gym_calendario_posi ">
+                <div class="table-responsive">
+                    <table class="table table-fixed">
+                        <thead>
+                            <tr align="center" style="border-style: hidden; border-bottom: 2px solid #1a1a1a;">
+                                <th scope="col" style=";background-color:black!important;">
+                                    Horarios</th>
+                                <th scope="col" style=";background-color:black!important;">
+                                    segunda</th>
+                                <th scope="col" style=";background-color:black!important;">terça
+                                </th>
+                                <th scope="col" style=";background-color:black!important;">quarta
+                                </th>
+                                <th scope="col" style=";background-color:black!important;">quinta
+                                </th>
+                                <th scope="col" style=";background-color:black!important;">sexta
+                                </th>
+                                <th scope="col" style=";background-color:black!important;">sabado
+                                </th>
+                                <th scope="col" style=";background-color:black!important;">
+                                    domingo</th>
+                            </tr>
+                        </thead>
+                        <tbody style="border:solid #1a1a1a 1px;">
+                            <tr align="center">
+                                <th scope="row" style="background-color:black;">1</th>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Mark</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Otto</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Mark</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Otto</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                            </tr>
+                            <tr align="center">
+                                <th scope="row" style="background-color:black;" style="background-color:black;">1</th>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Mark</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Otto</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Mark</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Otto</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                            </tr>
+                            <tr align="center">
+                                <th scope="row" style="background-color:black;">1</th>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Mark</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Otto</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Mark</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Otto</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                            </tr>
+                            <tr align="center">
+                                <th scope="row" style="background-color:black;">1</th>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Mark</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Otto</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Mark</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    Otto</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                                <td
+                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                    @mdo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </section>
 

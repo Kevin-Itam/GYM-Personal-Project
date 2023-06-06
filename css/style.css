@@ -342,6 +342,7 @@ h2 {
 
 .table {
     color: white !important;
+    height: auto !important;
     width: auto !important;
     margin: 0 !important;
 }
