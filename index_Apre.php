@@ -111,7 +111,7 @@ if (!empty($_SESSION['id_usuario'])) {
                 </form>';
                 } else {
                     echo '                <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-outline-warning" href="pages/pg_cadastro.php" role="button">Cadastrar</a>
+                    <a class="btn btn-outline-warning" href="pages/pg_login.php" role="button">Acessar</a>
                 </form>';
                 }
                 ?>
