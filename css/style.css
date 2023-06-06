@@ -217,7 +217,7 @@ h5 {
     height: auto;
     width: auto;
     max-width: 500px;
-    
+
 }
 
 h2 {
@@ -255,7 +255,7 @@ h2 {
     display: flex;
     flex-direction: row;
     column-gap: 1vw;
-    
+
 }
 
 /*============== COACHS =====================*/
@@ -267,10 +267,10 @@ h2 {
     display: flex;
     position: relative;
     left: 5vw;
-    
+
 }
 
-.perf_img1{
+.perf_img1 {
     display: flex;
     border-radius: 100%;
     height: 100%;
@@ -280,7 +280,8 @@ h2 {
     background-repeat: no-repeat;
     background-position: right;
 }
-.perf_img2{
+
+.perf_img2 {
     display: flex;
     border-radius: 100%;
     height: 100%;
@@ -290,7 +291,8 @@ h2 {
     background-repeat: no-repeat;
     background-position: center;
 }
-.perf_img3{
+
+.perf_img3 {
     display: flex;
     border-radius: 100%;
     height: 100%;
@@ -300,7 +302,8 @@ h2 {
     background-repeat: no-repeat;
     background-position: right;
 }
-.perf_img4{
+
+.perf_img4 {
     display: flex;
     border-radius: 100%;
     height: 100%;
@@ -309,11 +312,11 @@ h2 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-   
+
 }
 
 
-.perfil_coach{
+.perfil_coach {
     position: relative;
     top: -1.5;
     left: 1.5vw;
@@ -322,6 +325,46 @@ h2 {
     border-radius: 125px;
 
 }
+
+/*================== CALENDÁRIO ===============*/
+.gym_calendario {
+    height: auto;
+    width: auto;
+    background-color: #0e0e0e;
+}
+
+.gym_calendario_posi {
+    display: flex;
+    justify-content: center;
+    padding: 70px 0;
+    margin: 0;
+}
+
+.table {
+    color: white !important;
+    width: auto !important;
+    margin: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*==================  rodape ===============*/
 .footer {
     width: auto;
@@ -331,42 +374,94 @@ h2 {
     align-items: center;
     flex-direction: row;
     column-gap: 4vw;
-    background-color: #1a1a1aa4;
 }
 
-.gym_cont_back{
+.gym_cont_back {
     position: relative;
-    padding: 70px 0 ;
-    background-color: #0e0e0e;
+    padding: 70px 0;
+    background-color: #0e0e0ef9;
 }
 
-.gym_cont_posi{
+.gym_cont_posi {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: auto;
     width: auto;
-    padding: 70px 0 ;
+    padding: 50px 0;
 }
 
-.gym_cont_row{
+.gym_cont_row {
     height: auto;
     width: auto;
-    padding: 70px 0 ;
+    padding: 70px 0;
 }
 
-.d-flex{
+.d-flex {
     display: flex;
     flex-direction: row;
 
 }
 
+.gym_cont_row1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: auto;
+    padding: 70px 0;
+}
 
+.h5local {
+    position: relative;
+    bottom: 37px;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
 
+.gym_cont_row2 {
+    height: 500px;
+    width: auto;
+    padding: 70px 0;
+}
 
+.gym_cont_row3 {
+    height: 500px;
+    width: auto;
+    padding: 70px 0;
+}
 
+.inst {
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.insta-full {
+    max-width: 64px;
+    max-height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+    background-image: url(../img/insta-void.png);
+    transition: all 0.8s;
+}
 
+.insta-full:hover {
+    background-image: url(../img/insta-full.png);
+}
 
+.face-full {
+    max-width: 64px;
+    max-height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+    background-image: url(../img/face-void.png);
+    transition: all 0.8s;
+}
+
+.face-full:hover {
+    background-image: url(../img/face_full.png);
+}

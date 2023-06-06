@@ -46,7 +46,8 @@ if (!empty($_SESSION['id_usuario'])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3a1453d3f1.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="../css/style_painel.css" rel="stylesheet" />
     <title>Painel de Usuario</title>
 </head>
@@ -79,17 +80,21 @@ if (!empty($_SESSION['id_usuario'])) {
     <div class="backgroundModal" id="abrir">
         <div class="login-wrap p-4 p-md-5">
             <span class="X-lateral-vei" onclick="fecharSenha('abrir')"><i class="fa-regular fa-circle-xmark"></i></span>
-            <h3 class="text-center mb-4" style="padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;">Digite a sua senha nova</h3>
+            <h3 class="text-center mb-4" style="padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;">Digite
+                a sua senha nova</h3>
             <form action="../inc/alterarSenha.php" autocomplete="off" class="login-form">
                 <input type="hidden" name="id_user" value="<?php echo $id; ?>">
                 <div class="form-group">
-                    <input name="troca_senha" type="password" class="form-control rounded-left" placeholder="Senha" required="" style="margin-top: 25px;">
+                    <input name="troca_senha" type="password" class="form-control rounded-left" placeholder="Senha"
+                        required="" style="margin-top: 25px;">
                 </div>
                 <div class="form-group d-flex">
-                    <input name="troca_senha_conf" type="password" class="form-control rounded-left" placeholder="Repetir Senha" required="" style="margin-top: 10px;">
+                    <input name="troca_senha_conf" type="password" class="form-control rounded-left"
+                        placeholder="Repetir Senha" required="" style="margin-top: 10px;">
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-outline-warning" style="width: 150px; margin-top: 25px;">Trocar</button>
+                    <button type="submit" class="btn btn-outline-warning"
+                        style="width: 150px; margin-top: 25px;">Trocar</button>
                 </div>
             </form>
         </div>
@@ -99,13 +104,16 @@ if (!empty($_SESSION['id_usuario'])) {
         <!--============ LATERAL===========-->
         <section class="la">
             <div class="div_out">
-                <h5>Bem-Vindo,<b> <?php echo $nome ?></b></h5><br>
+                <h5>Bem-Vindo,<b>
+                        <?php echo $nome ?>
+                    </b></h5><br>
                 <div class="dv_ig">
                     <a href="../inc/logout.php" style="background-color: #0e0e0e; border-radius: 8px;">
                         <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
                         <p>Sair da Conta</p>
                     </a>
-                    <button onclick="abrirSenha('abrir')" style="background-color: #0e0e0e; border-radius: 8px; margin-top: 5px; color: white;">
+                    <button onclick="abrirSenha('abrir')"
+                        style="background-color: #0e0e0e; border-radius: 8px; margin-top: 5px; color: white;">
                         <!--<img src="../img/chave.png" style="height: 40px; width: 40px;">-->
                         <p>Alterar Senha</p>
                         </buttom>
@@ -114,9 +122,10 @@ if (!empty($_SESSION['id_usuario'])) {
             <div class="div1">
                 <img src="">
                 <div align="center">
+
                     <h5>Retornar para a pagina principal?</h5><br>
                     <div class="dv_ig">
-                        <a href="">
+                        <a  href="../index_Apre.php">
                             <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
                             <p>Pagina principal</p>
                         </a>
@@ -125,9 +134,9 @@ if (!empty($_SESSION['id_usuario'])) {
                 </div>
             </div>
             <hr style="border-bottom: 2px solid #0e0e0e; margin: 1px!important; opacity:1!important;">
-            <?php 
-            if(($permissao) == 1){
-                echo' <div class="div1">
+            <?php
+            if (($permissao) == 1) {
+                echo ' <div class="div1">
                 <img src="">
                 <div>
                     <h5>Plano Contratado</h5><br>
@@ -141,9 +150,9 @@ if (!empty($_SESSION['id_usuario'])) {
             </div>';
             }
             ?>
-            <?php 
-            if(($permissao) == 2){
-                echo'<div class="div1">
+            <?php
+            if (($permissao) == 2) {
+                echo '<div class="div1">
                 <img src="">
                 <div>
                     <h5>Bem-Vindo</h5><br>
@@ -172,7 +181,8 @@ if (!empty($_SESSION['id_usuario'])) {
                 <header align="center">Dados Pessoais </header>
                 <div class="dv1">
                     <div class="input-container">
-                        <input id="firstname" name="nome" class="input" type="text" placeholder=" " value="<?php echo $nome ?>">
+                        <input id="firstname" name="nome" class="input" type="text" placeholder=" "
+                            value="<?php echo $nome ?>">
                         <label for="firstname" class="placeholder">Nome</label>
                     </div>
 
@@ -184,7 +194,8 @@ if (!empty($_SESSION['id_usuario'])) {
 
                 <div class="dv1">
                     <div class="input-container">
-                        <input id="E-mail" name="email" class="input" type="text" placeholder=" " value="<?php echo $email ?>">
+                        <input id="E-mail" name="email" class="input" type="text" placeholder=" "
+                            value="<?php echo $email ?>">
                         <label for="E-mail" class="placeholder">E-mail</label>
                     </div>
                     <div class="input-container">
@@ -231,11 +242,13 @@ if (!empty($_SESSION['id_usuario'])) {
 
                 <div class="dv1">
                     <div class="input-container">
-                        <input id="TEl1" name="telefone" class="input" type="text" placeholder=" " value="<?php echo $telefone ?>">
+                        <input id="TEl1" name="telefone" class="input" type="text" placeholder=" "
+                            value="<?php echo $telefone ?>">
                         <label for="TEl1" class="placeholder">Telefone</label>
                     </div>
                     <div class="input-container">
-                        <input id="TEL2" name="telefone_ad" class="input" type="text" placeholder=" " value="<?php echo $telefone_ad ?>">
+                        <input id="TEL2" name="telefone_ad" class="input" type="text" placeholder=" "
+                            value="<?php echo $telefone_ad ?>">
                         <label for="TEL2" class="placeholder">Telefone Adicional</label>
                     </div>
                 </div>
