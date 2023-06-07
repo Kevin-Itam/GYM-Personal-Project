@@ -122,11 +122,9 @@ if (!empty($_SESSION['id_usuario'])) {
             <div class="div1">
                 <img src="">
                 <div align="center">
-
-                    <h5>Retornar para a pagina principal?</h5><br>
                     <div class="dv_ig">
                         <a  href="../index_Apre.php">
-                            <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
+                            <img src="..\img\retorna.png" style="height: 40px; width: 40px;">
                             <p>Pagina principal</p>
                         </a>
 
