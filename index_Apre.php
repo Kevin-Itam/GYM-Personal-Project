@@ -202,7 +202,7 @@ if (!empty($_SESSION['id_usuario'])) {
                         </div>
                         <div class="pricing_table_plan">
                             <ul>
-                                <a>' . $plano['desc_plano'] . '/a>
+                                <a>' . $plano['desc_plano'] . '</a>
                             </ul>
                             <a class="btn btn-outline-danger" href="pages/pg_plano_user.php" role="button">MATRICULE-SE</a>
                         </div>
