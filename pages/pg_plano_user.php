@@ -90,9 +90,8 @@ $result = $conn->query($sql);
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
                     <form class="d-flex" method="GET" action="">
-                        <input name="nome" class="form-control me-2" type="search" placeholder="Search..."
-                            value="<?php if (isset($_GET['nome_aluno']))
-                                echo $_GET['nome_aluno']; ?>">
+                        <input name="nome" class="form-control me-2" type="search" placeholder="Search..." value="<?php if (isset($_GET['nome_aluno']))
+                            echo $_GET['nome_aluno']; ?>">
                         <button type="submit">Pesquisar</button>
                     </form>
                 </div>
@@ -160,31 +159,42 @@ $result = $conn->query($sql);
                     <?php
                 } else {
 
-                                            while ($row_turma = $sql_query->fetch_assoc()) {
-                                                echo "<tr>";
-                                                echo "<td> <input type='checkbox' /></td>";
-                                                echo "<td>" . $row_turma['id_cadastro'] . "</td>";
-                                                echo "<td>" . $row_turma['nome'] . "</td>";
-                                                echo "<td>" . $row_turma['cpf'] . "</td>";
-                                                echo "<td>" . $row_turma['email'] . "</td>";
-                                                echo "<td>" . '  <a class="linkar2" href=excluido_turma.php?id=' . $row_turma['id_cadastro'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
-                                                echo "<td>" . '<a  class="linkar" href=edit_turma.php?id=' . $row_turma['id_cadastro'] . "><img class='img-edit' src='..\img\icons8-engrenagem-30.png'></a>" . "</td>";
-                                                echo '</tr>';
-                                            }
-                                        }
-                                    ?>
-                                    </tbody>
-                                    <?php
-                                    ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    while ($row_turma = $sql_query->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td> <input type='checkbox' /></td>";
+                        echo "<td>" . $row_turma['id_cadastro'] . "</td>";
+                        echo "<td>" . $row_turma['nome'] . "</td>";
+                        echo "<td>" . $row_turma['cpf'] . "</td>";
+                        echo "<td>" . $row_turma['email'] . "</td>";
+                        echo "<td>" . '  <a class="linkar2" href=excluido_turma.php?id=' . $row_turma['id_cadastro'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
+                        echo "<td>" . '<a  class="linkar" href=edit_turma.php?id=' . $row_turma['id_cadastro'] . "><img class='img-edit' src='..\img\icons8-engrenagem-30.png'></a>" . "</td>";
+                        echo '</tr>';
+                    }
+                }
+                ?>
+            </tbody>
+            <?php
+            ?>
+            </tbody>
+        </table>
     </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script>
+        function menu_toogle() {
+            var _body = document.body;
+
+            if (_body.classList.contains('menu-close')) {
+                _body.classList.remove('menu-close');
+            } else {
+                _body.classList.add('menu-close');
+            }
+        }
+    </script>
 </body>
 
 </html>
