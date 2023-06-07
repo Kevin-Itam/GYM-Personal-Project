@@ -45,9 +45,6 @@ $result = $conn->query($sql);
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,93 +52,144 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <link href="../css/style_lateral.css" rel="stylesheet" />
-    <title>Seus Planos</title>
+    <link href="../css/style_lateral.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/3a1453d3f1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Página do Administador</title>
 </head>
+<style>
+    button {
+        border: 0;
+        outline: none;
+        padding: 10px 36px;
+        font-size: 17px;
+        font-weight: 600;
+        border-radius: 5px;
+        background-color: #a5a5a5;
+        transition: all 0.5s ease;
+    }
+
+    button:hover {
+        background-color: #ffffff;
+
+    }
+</style>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" value=" <?php if (isset($_GET['nome'])) echo $_GET['nome']; ?>">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>
-    </nav>
-    <!--main content wrapper-->
-    <div class="mcw">
-        <!--navigation here-->
-        <!--main content view-->
-        <div class="cv">
-            <div>
-                <div class="inbox">
-                    <div class="inbox-sb">
-
-                    </div>
-                    <div class="inbox-bx container-fluid">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <ul>
-                                    <li><a href="#">Usuários</a></li>
-                                    <li><a href="#">Planos</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-10">
-                                <table class="table table-stripped">
-                                    <tbody>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Nome</th>
-                                            <th scope="col">CPF</th>
-                                            <th scope="col">E-mail</th>
-                                            <th scope="col">Editar</th>
-                                        </tr>
-                                        <?php
-
-
-                                        $pesquisa = "";
-
-                                        if (isset($_GET['nome']))
-                                            $pesquisa = $conn->real_escape_string($_GET['nome']);
-
-                                        $sql_code = "SELECT * FROM tbl_cadastro WHERE nome LIKE '%$pesquisa%'";
-                                        $sql_query = $conn->query($sql_code) or die("ERRO ao consultar! " . $conn->error);
-
-                                        if ($sql_query->num_rows == 0) {
-
-                                        ?>
-                                            <tr>
-                                                <td colspan="3">Nenhum resultado encontrado...</td>
-                                            </tr>
-                                    <tbody>
-                                    <?php
-                                        } else {
-
-                                            while ($row_turma = $sql_query->fetch_assoc()) {
-                                                echo "<tr>";
-                                                echo "<td> <input type='checkbox' /></td>";
-                                                echo "<td>" . $row_turma['id_cadastro'] . "</td>";
-                                                echo "<td>" . $row_turma['nome'] . "</td>";
-                                                echo "<td>" . $row_turma['cpf'] . "</td>";
-                                                echo "<td>" . $row_turma['email'] . "</td>";
-                                                echo "<td>" . '  <a class="linkar2" href=excluido_turma.php?id=' . $row_turma['id_cadastro'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
-                                                echo "<td>" . '<a  class="linkar" href=edit_turma.php?id=' . $row_turma['id_cadastro'] . "><img class='img-edit' src='..\img\icons8-engrenagem-30.png'></a>" . "</td>";
-                                                echo '</tr>';
-                                            }
-                                        }
-                                    ?>
-                                    </tbody>
-                                    <?php
-                                    ?>
-                                    </tbody>
-                                </table>
-                            </div>
+    <header>
+        <div class="nav-top">
+            <nav class="div-navv">
+                <div class="imgss"></div>
+            </nav>
+            <nav class="div-nav2">
+                <div class="btn">
+                    <span onclick="menu_toogle()"><i class="fa-solid fa-bars fa-2xl"></i></span>
+                </div>
+            </nav>
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <form class="d-flex" method="GET" action="">
+                        <input name="nome" class="form-control me-2" type="search" placeholder="Search..."
+                            value="<?php if (isset($_GET['nome_aluno']))
+                                echo $_GET['nome_aluno']; ?>">
+                        <button type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </nav>
+            <div class="div-nav">
+                <nav class="full">
+                    <div class="d-flex">
+                        <div class="dropdown d-inline-block user-dropdown">
+                            <span class="d-none d-xl-inline-block ms-1">Kevin</span>
                         </div>
                     </div>
-                </div>
+                </nav>
             </div>
         </div>
+    </header>
+    <!--========================== SIDEBAR ============================-->
+    <div class="forum_menu">
+        <ul>
+
+            <li class="list active fa-house">
+                <a class="alink">
+                    <span class="titulo-menu">Menu</span>
+                    <span><i class="fa-solid fa-house"></i></span>
+                    <span class="titulo"><a class="a" href="../index_Apre.php">Página principal</a></span>
+                </a>
+            </li>
+        </ul>
     </div>
+    <!--========================== TABLE ============================-->
+    <div class="tabela">
+        <a>Última transação</a>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">excluir</th>
+                    <th scope="col">Editar</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <?php
+
+
+                $pesquisa = "";
+
+                if (isset($_GET['nome']))
+                    $pesquisa = $conn->real_escape_string($_GET['nome']);
+
+                $sql_code = "SELECT * FROM tbl_cadastro WHERE nome LIKE '%$pesquisa%'";
+                $sql_query = $conn->query($sql_code) or die("ERRO ao consultar! " . $conn->error);
+
+                if ($sql_query->num_rows == 0) {
+
+                    ?>
+                    <tr>
+                        <td colspan="3">Nenhum resultado encontrado...</td>
+                    </tr>
+                <tbody>
+                    <?php
+                } else {
+
+                    while ($row_turma = $sql_query->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td> <input type='checkbox' /></td>";
+                        echo "<td>" . $row_turma['id_cadastro'] . "</td>";
+                        echo "<td>" . $row_turma['nome'] . "</td>";
+                        echo "<td>" . $row_turma['cpf'] . "</td>";
+                        echo "<td>" . $row_turma['email'] . "</td>";
+                        echo "<td>" . '  <a class="linkar2" href=excluido_turma.php?id=' . $row_turma['id_cadastro'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
+                        echo "<td>" . '<a  class="linkar" href=edit_turma.php?id=' . $row_turma['id_cadastro'] . "><img class='img-edit' src='..\img\icons8-engrenagem-30.png'></a>" . "</td>";
+                        echo '</tr>';
+                    }
+                }
+                ?>
+            </tbody>
+            <?php
+            ?>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function menu_toogle() {
+            var _body = document.body;
+
+            if (_body.classList.contains('menu-close')) {
+                _body.classList.remove('menu-close');
+            } else {
+                _body.classList.add('menu-close');
+            }
+        }
+    </script>
 </body>
 
 </html>

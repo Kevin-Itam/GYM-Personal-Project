@@ -1,283 +1,270 @@
+html,
 body {
-    margin-top: 50px;
-    background-color: #fff;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.01em;
-    color: #39464e;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #f3f3f4 !important;
 }
 
-.navbar-default {
-    background-color: #FFF;
-    margin-left: 200px;
-}
-
-/*main side bar*/
-.msb {
-    width: 200px;
-    background-color: #F5F7F9;
+/* ===============  MENU SUPERIOR  ============*/
+header {
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    z-index: 1002;
+    background-color: #f8f9fa;
+}
+
+.nav-top {
+    display: flex;
+    width: 100%;
+}
+
+nav {
+    position: relative;
     left: 0;
     top: 0;
-    right: auto;
-    min-height: 100%;
-    overflow-y: auto;
-    white-space: nowrap;
-    height: 100%;
-    z-index: 1;
-    border-right: 1px solid #ddd;
 }
 
-.navbar {
-    border: none;
-    margin-left: 0;
-    background-color: inherit;
+.full {
+    position: absolute;
+    top: 50%;
+    left: 83%;
+    transform: translate(0%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.navbar-header {
+/*=============  MENU LATERAL ==============*/
+
+.linke {
+    text-decoration-line: none;
+}
+
+body.menu-close .imgss{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: calc(15px + 15px);
+}
+
+body.menu-close .forum_menu ul li a .titulo,
+body.menu-close .pp,
+body.menu-close .titulo-menu,
+body.menu-close .a {
+    display: none;
+    transition: 0.5s;
+}
+body.menu-close .tabela{
+    margin-left: 6em;
+    transition: 0.5s;
+    width: 90vw;
+}
+
+body.menu-close .forum_menu,
+body.menu-close .div-navv, 
+body.menu-close .div-navv{
+    width: 2.8vw;
+    background-image: url(../img/favicon.ico);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.forum_menu {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: absolute;
+    background-color: black;
+    width: 12vw;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.forum_menu ul {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-bottom: 1px solid #e7e7e7;
-    margin-bottom: 20px;
-    background: #fff;
+    padding-left: 0;
+    padding-top: 45px;
 }
 
-.panel {
-    border: 0 none;
-    box-shadow: none;
-    margin: 0;
-    background: inherit;
-}
-
-li {
-    display: block;
-    width: 100%;
-}
-
-a {
-    padding: 15px;
-    color: #5f5f5f;
-}
-
-.glyphicon,
-.fa {
-    margin-right: 8px;
-}
-
-
-.nb {
-    padding-top: 5px;
-    padding-left: 10px;
-    margin-bottom: 30px;
-    overflow: hidden;
-
-}
-
-
-ul.nv,
-ul.ns {
+.forum_menu ul li {
     position: relative;
-    padding: 0;
     list-style: none;
+    width: 100%;
 }
 
-
-
-li {
-    display: block;
+.forum_menu ul li a {
     position: relative;
-}
-
-a {
-    color: #444;
-    padding: 10px 25px;
-    display: block;
-
-}
-
-.ic {
-    font-size: 16px;
-    margin-right: 5px;
-    font-weight: 300;
-    display: inline-block;
-}
-
-/*ns: nav-sub*/
-.ns li a {
-
-    padding: 10px 50px;
-
-
-}
-
-
-
-
-/*main content wrapper*/
-.mcw {
-    margin-left: 200px;
-    position: relative;
-    min-height: 100%;
-
-    /*content view*/
-}
-
-
-/*globals*/
-a,
-a:focus,
-a:hover {
+    display: flex;
+    width: 100%;
     text-decoration: none;
+    color: #fff;
+    padding-left: 7px;
+    font-size: .92rem;
+}
+
+.forum_menu ul li a .fa-house {
+    position: relative;
+    display: block;
+    min-width: 40px;
+    height: 50px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.forum_menu ul li a .fa-house {
+    position: relative;
+    font-size: 1rem;
+    z-index: 1;
+}
+
+.forum_menu ul li a .titulo {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 
-    .container-fluid {
-        padding-left: 0;
-        padding-right: 0;
-    }
+.titulo-Dashboard{
+    margin-left: 150px;
+    margin-top: 75px;
+}
+.tabela{
+    background-color: #fff;
+    width: 85vw;
+    position: absolute;
+    top: 45vh;
+    margin-left: 15em;
+    padding: 10px;
+    transition: 0.5s;
+}
+/*============= DASH ==============*/
 
-    ul,
-    li {
-        margin: 0;
-        padding: 0;
-    }
+.dash-big .dash-small{
+    border: 20px solid black;
+    border-radius: 0.4rem;
+    width: auto;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+.blocquinhos{
+    width: 50%;
+    position: relative;
+    top: 40%;
+    left: 0;
+    background-color: white!important;
+    padding: 10px;
+    margin-left: 15em;
+    margin-right: 2em;
+    transition: 0.5s;
 
-
-.msb,
-.mnb {
-    -moz-animation: slidein 300ms forwards;
-    -o-animation: slidein 300ms forwards;
-    -webkit-animation: slidein 300ms forwards;
-    animation: slidein 300ms forwards;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
 }
 
-.mcw {
-    -moz-animation: bodyslidein 300ms forwards;
-    -o-animation: bodyslidein 300ms forwards;
-    -webkit-animation: bodyslidein 300ms forwards;
-    animation: bodyslidein 300ms forwards;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+.form-check{
+    margin-right: 2px;
 }
 
-/* Slide in animation */
-@-moz-keyframes slidein {
-    0% {
-        left: -200px;
-    }
-
-    100% {
-        left: 0;
-    }
+.avatar-xs {
+    height: 2rem;
+    width: 2rem;
 }
 
-@-webkit-keyframes slidein {
-    0% {
-        left: -200px;
-    }
-
-    100% {
-        left: 0;
-    }
+.rounded-circle {
+    border-radius: 50%!important;
+}
+/*============= DASH ==============*/
+.pp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 22px;
+    right: -8px;
+    height: 17px;
+    width: 21px;
+    border-radius: 11px;
+    background-color: #0bb197;
 }
 
-@keyframes slidein {
-    0% {
-        left: -200px;
-    }
-
-    100% {
-        left: 0;
-    }
+.fa-house {
+    position: relative;
 }
 
-@-moz-keyframes slideout {
-    0% {
-        left: 0;
-    }
-
-    100% {
-        left: -200px;
-    }
+.titulo-menu {
+    position: absolute;
+    top: -10px;
+    left: 11px;
+    font-size: 10px;
+    color: #8590a5;
 }
 
-@-webkit-keyframes slideout {
-    0% {
-        left: 0;
-    }
-
-    100% {
-        left: -200px;
-    }
+.titulo {
+    color: #d7e4ec;
 }
 
-@keyframes slideout {
-    0% {
-        left: 0;
-    }
-
-    100% {
-        left: -200px;
-    }
+.imgss {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../img/logo.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
-@-moz-keyframes bodyslidein {
-    0% {
-        left: 0;
-    }
-
-    100% {
-        margin-left: 200px;
-    }
+.div-navv {
+    width: 12vw;
+    height: 100%;
+    background-color: black;
+    transition: 0.5s;
 }
 
-@-webkit-keyframes bodyslidein {
-    0% {
-        left: 0;
-    }
-
-    100% {
-        left: 0
-    }
+.div-nav2 {
+    position: relative;
+    top: 7px;
+    height: 100%;
+    width: 5vw;
+    border: none;
+    padding: 0;
 }
 
-@keyframes bodyslidein {
-    0% {
-        margin-left: 0;
-    }
-
-    100% {
-        margin-left: 200px;
-    }
+.alink {
+    width: 100%;
 }
 
-@-moz-keyframes bodyslideout {
-    0% {
-        margin-left: 200px;
-    }
-
-    100% {
-        margin-right: 0;
-    }
+.d-flex {
+    position: relative;
+    left: -20px;
 }
 
-@-webkit-keyframes bodyslideout {
-    0% {
-        margin-left: 200px;
-    }
-
-    100% {
-        margin-left: 0;
-    }
+.d-flex input {
+    position: relative;
+    left: -20px;
+    border: none;
+    height: 38px;
+    background-color: #f1f5f7 !important;
+    box-shadow: none !important;
 }
 
-@keyframes bodyslideout {
-    0% {
-        margin-left: 200px;
-    }
-
-    100% {
-        margin-left: 0;
-    }
+.toper {
+    position: relative;
+    right: 0;
+}
+/*===========icones============*/
+.home-icon {
+    background-image: url();
+    background-size: cover;
 }
