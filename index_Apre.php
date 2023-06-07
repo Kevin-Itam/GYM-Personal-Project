@@ -19,6 +19,7 @@ if (!empty($_SESSION['id_usuario'])) {
     }
 }
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,8 +32,7 @@ if (!empty($_SESSION['id_usuario'])) {
     <script type="text/javascript" src="js/scroll.js"></script>
     <link href="css/style_planos.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Tela Inicial</title>
 </head>
 <style>
@@ -71,8 +71,7 @@ if (!empty($_SESSION['id_usuario'])) {
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(0, 0, 0);">
             <a class="navbar-brand" href="#" style="color: white;"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -82,15 +81,13 @@ if (!empty($_SESSION['id_usuario'])) {
                         <a class="nav-link" onclick="scrollElement('apresentacao')" style="margin-left: 400px;">Menu</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" onclick="scrollElement('coach')">Treinadores<span
-                                class="sr-only"></span></a>
+                        <a class="nav-link" onclick="scrollElement('coach')">Treinadores<span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" onclick="scrollElement('planos')">Planos</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sobre
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -182,84 +179,38 @@ if (!empty($_SESSION['id_usuario'])) {
                 </div>
             </section>
         </section>
+        <!--========== PLANO ==========-->
+
         <section class="planos" id="planos">
             <div class="row">
                 <h1 style="margin-top: 5%;">Planos Disponíveis</h1>
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricing_table">
-                        <div class="pricing_table_header">
-                            <i class="fa fa-home"></i>
-                            <h2 class="title">Frango</h2>
-                            <span class="price-plan">
-                                <i class="fa fa-inr"></i>
-                                <span class="price">R$ 109,99</span>
-                                <span class="monthly_plan">Mensal</span>
-                            </span>
-                        </div>
-                        <div class="pricing_table_plan">
-                            <ul>
-                                <li>Confira taxas de matrícula e manutenção na unidade de interesse</li>
-                                <li>Sem multas ou taxas de cancelamento</li>
-                                <li>Acesso a todas as aulas coletivas</li>
-                                <li>Acesso total a estrutura da academia</li>
-                                <li>Sem restrição de horários</li>
-                                <li>Leve 2 amigos para treinar</li>
-                            </ul>
-                            <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
-                                role="button">MATRICULE-SE</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricing_table active">
-                        <div class="pricing_table_header">
-                            <i class="fa fa-puzzle-piece"></i>
-                            <h2 class="title">Rato de Academia</h2>
-                            <span class="price-plan">
-                                <i class="fa fa-inr"></i>
-                                <span class="price">R$ 299,99</span>
-                                <span class="monthly_plan">Trimensal</span>
-                            </span>
-                        </div>
-                        <div class="pricing_table_plan">
-                            <ul>
-                                <li>Sem taxas de matrícula ou manutenção</li>
-                                <li>10% de desconto na mensalidade</li>
-                                <li>Acesso a todas as aulas coletivas</li>
-                                <li>Acesso total a estrutura da academia</li>
-                                <li>Sem restrição de horários</li>
-                                <li>Leve 5 amigos para treinar</li>
-                            </ul>
-                            <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
-                                role="button">MATRICULE-SE</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
+                <?php
+                $consulta = "SELECT * FROM tbl_planos";
+                $sql = $conn->query($consulta) or die($conn->error);
+                
+                while ($plano = $sql->fetch_assoc()) {
+                    echo'<div class="col-md-4 col-sm-6">
                     <div class="pricing_table">
                         <div class="pricing_table_header">
                             <i class="fa fa-users"></i>
-                            <h2 class="title">Bodybuilder</h2>
+                            <h2 class="title">' . $plano['nome_plano'] . ' </h2>
                             <span class="price-plan">
                                 <i class="fa fa-inr"></i>
-                                <span class="price">R$ 899,99</span>
-                                <span class="monthly_plan">Anual</span>
+                                <span class="price">R$ ' . $plano['valor_plano'] . '</span>
+                                <span class="monthly_plan">' . $plano['opcao_plano'] . '</span>
                             </span>
                         </div>
                         <div class="pricing_table_plan">
                             <ul>
-                                <li>Sem taxas de matrícula ou manutenção</li>
-                                <li>30% de desconto na mensalidade</li>
-                                <li>Acesso a todas as aulas coletivas</li>
-                                <li>Acesso total a estrutura da academia</li>
-                                <li>Sem restrição de horários</li>
-                                <li>Leve 5 amigos para treinar</li>
+                                <a>' . $plano['desc_plano'] . '/a>
                             </ul>
-                            <a class="btn btn-outline-danger" href="pages/pg_plano_user.php"
-                                role="button">MATRICULE-SE</a>
+                            <a class="btn btn-outline-danger" href="pages/pg_plano_user.php" role="button">MATRICULE-SE</a>
                         </div>
                     </div>
-                </div>
+                </div>';
+                }
+
+                ?>
             </div>
         </section>
 
@@ -327,98 +278,70 @@ if (!empty($_SESSION['id_usuario'])) {
                         <tbody style="border:solid #1a1a1a 1px;">
                             <tr align="center">
                                 <th scope="row" style="background-color:black;">1</th>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Mark</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Otto</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Mark</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Otto</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
                             </tr>
                             <tr align="center">
                                 <th scope="row" style="background-color:black;" style="background-color:black;">1</th>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Mark</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Otto</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Mark</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Otto</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
                             </tr>
                             <tr align="center">
                                 <th scope="row" style="background-color:black;">1</th>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Mark</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Otto</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Mark</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Otto</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
                             </tr>
                             <tr align="center">
                                 <th scope="row" style="background-color:black;">1</th>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Mark</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Otto</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Mark</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     Otto</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
-                                <td
-                                    style="border:solid #1a1a1a 1px;background-color:black!important;">
+                                <td style="border:solid #1a1a1a 1px;background-color:black!important;">
                                     @mdo</td>
                             </tr>
                         </tbody>
@@ -432,8 +355,7 @@ if (!empty($_SESSION['id_usuario'])) {
                 <section class="gym_cont_posi">
                     <div class="gym_cont_row1">
                         <h5 class="h5local"><b>Localização</b></h5>
-                        <a
-                            href="https://www.google.com.br/maps/place/R.+Tuiuti,+1683+-+Aventureiro,+Joinville+-+SC,+89226-000/@-26.2566859,
+                        <a href="https://www.google.com.br/maps/place/R.+Tuiuti,+1683+-+Aventureiro,+Joinville+-+SC,+89226-000/@-26.2566859,
                         -48.8231582,17z/data=!3m1!4b1!4m6!3m5!1s0x94deae3e13de697f:0xcf3986cbfef8677b!8m2!3d-26.2566907!4d-48.8205833!16s%2Fg%2F11gsmb_ln5?entry=ttu">
                             <img src=" img\mapa.png" style="max-width:400px; max-height:155px">
                         </a>
