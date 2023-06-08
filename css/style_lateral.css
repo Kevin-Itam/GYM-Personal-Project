@@ -143,6 +143,15 @@ body.menu-close .div-navv{
     background-color: #fff;
     width: 85vw;
     position: absolute;
+    top: 10vh;
+    margin-left: 15em;
+    padding: 10px;
+    transition: 0.5s;
+}
+.tabela_planos{
+    background-color: #fff;
+    width: 85vw;
+    position: absolute;
     top: 45vh;
     margin-left: 15em;
     padding: 10px;
