@@ -187,9 +187,9 @@ if (!empty($_SESSION['id_usuario'])) {
                 <?php
                 $consulta = "SELECT * FROM tbl_planos";
                 $sql = $conn->query($consulta) or die($conn->error);
-                
+
                 while ($plano = $sql->fetch_assoc()) {
-                    echo'<div class="col-md-4 col-sm-6">
+                    echo '<div class="col-md-4 col-sm-6">
                     <div class="pricing_table">
                         <div class="pricing_table_header">
                             <i class="fa fa-users"></i>

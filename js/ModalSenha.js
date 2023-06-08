@@ -15,3 +15,16 @@ function fecharSenha(abrir){
     modal.style.display = 'none';
     
 }
+
+function abrir(id_registro){
+    let dc = document.querySelector('.backgroundModal[id="'+ id_registro +'"]')
+    dc.style.display = 'block';
+    
+}
+
+function fechar(id_fechar){
+    
+    let modal = document.querySelector('.backgroundModal[id="'+ id_fechar +'"]')
+
+    modal.style.display = 'none';
+}
