@@ -80,6 +80,14 @@ header {
 
 }
 
+/*=================== PRESENTAÇÃO  =========================*/
+
+.sec_apre > .carousel-item,.carousel-item,.carousel-item {
+    width:auto;
+    /*filter: blur(2px);*/
+}
+
+
 /*===== Corpo da Pagina Principal=====*/
 
 .corpo {
@@ -88,15 +96,6 @@ header {
     width: 100%;
     height: auto;
 
-}
-
-.sec_apre {
-    height: 70vh;
-    width: 100%;
-    background-image: url(../img/body_gym.jpg);
-    background-repeat: no-repeat;
-    background-position-y: -10rem;
-    /*filter: blur(2px);*/
 }
 
 .sobre {
@@ -340,7 +339,7 @@ h2 {
     margin: 0;
 }
 
-.table {
+table {
     color: white !important;
     height: auto !important;
     width: auto !important;

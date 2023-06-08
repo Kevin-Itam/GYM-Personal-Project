@@ -178,12 +178,6 @@ $result = $conn->query($sql);
             </tbody>
         </table>
     </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
     <script>
         function menu_toogle() {
             var _body = document.body;
