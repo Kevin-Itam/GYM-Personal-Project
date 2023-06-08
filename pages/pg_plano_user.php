@@ -250,7 +250,7 @@ $result = $conn->query($sql);
                     echo "<td>" . $plano['idl_planos'] . "</td>";
                     echo "<td>" . $plano['nome_plano'] . "</td>";
                     echo "<td>" . $plano['valor_plano'] . "</td>";
-                    echo "<td>" . '  <a class="linkar2" href=excluido_turma.php?id=' . $plano['idl_planos'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
+                    echo "<td>" . '  <a class="linkar2" href=../inc/remove_planos.php?id=' . $plano['idl_planos'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
                     echo "<td>" . '<a  class="linkar" href=edit_turma.php?id=' . $plano['idl_planos'] . "><img class='img-edit' src='..\img\icons8-engrenagem-30.png'></a>" . "</td>";
                     echo '</tr>';
                 }
