@@ -32,7 +32,8 @@ if (!empty($_SESSION['id_usuario'])) {
     <script type="text/javascript" src="js/scroll.js"></script>
     <link href="css/style_planos.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Tela Inicial</title>
 </head>
 <style>
@@ -118,7 +119,50 @@ if (!empty($_SESSION['id_usuario'])) {
     <!--========== Corpo da Pagina ==========-->
 
     <section class="corpo">
-        <section class="sec_apre" id="apresentacao"></section>
+        <section class="sec_apre" id="apresentacao">
+            <div id="carouselExampleControls" class="carousel slide" data-mdb-ride="carousel"
+                style="max-height:70vh;max-width:100vw;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="max-height:70vh; max-width:100vw;">
+                        <div>
+                            <img src="https://wallpaperaccess.com/full/5595849.jpg" class="d-block w-100"
+                                style=" transform: scaleX(-1); min-height:100%;" />
+                            <div>
+                                Não se coloque em segundo plano, cuide de você! (nome da academia) está oferecendo
+                                descontos especiais para quem quer voltar à forma e cuidar da saúde novamente.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="max-height:70vh; max-width:100vw;">
+                        <img src="https://images2.alphacoders.com/692/692041.jpg" class="d-block w-100" />
+                        <div>
+                            Não se coloque em segundo plano, cuide de você! (nome da academia) está oferecendo
+                            descontos especiais para quem quer voltar à forma e cuidar da saúde novamente.
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="max-height:70vh; max-width:100vw; background-position-y: bottom;">
+                        <img src="https://coolwallpapers.me/picsup/6043149-bw-fitness-barbell-gym-girls-two.jpg"
+                            class="d-block w-100" />
+                        <div>
+                            Não se coloque em segundo plano, cuide de você! (nome da academia) está oferecendo
+                            descontos especiais para quem quer voltar à forma e cuidar da saúde novamente.
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls"
+                    data-mdb-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"
+                        style="color:red;font-weight:1000;"></span>
+
+                </button>
+                <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleControls"
+                    data-mdb-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"
+                        style="color:red;font-weight:1000;"></span>
+
+                </button>
+            </div>
+        </section>
         <section class="sobre">
             <div class="crop_so">
                 <div class="d_img">
@@ -187,13 +231,13 @@ if (!empty($_SESSION['id_usuario'])) {
                 <?php
                 $consulta = "SELECT * FROM tbl_planos";
                 $sql = $conn->query($consulta) or die($conn->error);
-
+                
                 while ($plano = $sql->fetch_assoc()) {
-                    echo '<div class="col-md-4 col-sm-6">
+                    echo'<div class="col-md-4 col-sm-6">
                     <div class="pricing_table">
                         <div class="pricing_table_header">
                             <i class="fa fa-users"></i>
-                            <h2 class="title">' . $plano['nome_plano'] . ' </h2>
+                            <h2 class="title">Bodybuilder</h2>
                             <span class="price-plan">
                                 <i class="fa fa-inr"></i>
                                 <span class="price">R$ ' . $plano['valor_plano'] . '</span>
@@ -412,7 +456,9 @@ if (!empty($_SESSION['id_usuario'])) {
         </section>
 
         <!-- =================================================-->
-
+        <!-- MDB -->
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
 </body>
 
 </html>
