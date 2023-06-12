@@ -263,7 +263,7 @@ $result = $conn->query($sql);
                         echo "<td>" . $cadastro['cpf'] . "</td>";
                         echo "<td>" . $cadastro['senha'] . "</td>";
                         echo "<td>" . $cadastro['email'] . "</td>";
-                        echo "<td>" . '  <a class="btn btn-danger" href=excluido_turma.php?id=' . $cadastro['id_cadastro'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
+                        echo "<td>" . '  <a class="btn btn-danger" hhref=../inc/remove_user.php?id=' . $cadastro['id_cadastro'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
                         echo "<td>" . '<button  class="btn btn-success" href=edit_turma.php?id=' . $cadastro['id_cadastro'] . "><img class='img-edit' src='..\img\icons8-engrenagem-30.png'></butoon>" . "</td>";
                         echo "</tr>";
                     }
