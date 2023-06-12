@@ -305,18 +305,19 @@ $result = $conn->query($sql);
                     echo "<td>" . $plano['idl_planos'] . "</td>";
                     echo "<td>" . $plano['nome_plano'] . "</td>";
                     echo "<td>" . $plano['valor_plano'] . "</td>";
-                    echo "<td>" . '  <a class="btn btn-danger" href=excluido_turma.php?id=' . $plano['idl_planos'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
+                    echo "<td>" . '  <a class="btn btn-danger" href=../inc/remove_planos.php?id=' . $plano['idl_planos'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
                     echo "<td>" . "<button class='btn btn-success' onclick='abrir(" . $plano['idl_planos'] . ")' >Editar</button>" . "</td>";
                     echo '</tr>';
+
 
                     echo " <div class='backgroundModal' id=" . $plano["idl_planos"] . ">
                     <div class='login-wrap p-4 p-md-5'>
                         <span class='X-lateral-vei' onclick='fechar(" . $plano['idl_planos'] . ") '><i class='fa-regular fa-circle-xmark'></i></span>
                         <h3 class='text-center mb-4' style='padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;'>Cadastrar o novo Plano</h3>
-                        <form action='../inc/editar_plano.php' method='post' class='login-form'>
-                            <input type='hidden' name='id_user' value=". $plano['idl_planos'] .">
+                        <form action='../inc/editar_plano.php' method='get' class='login-form'>
+                        <input type='hidden' name='id_user' value=".$plano['idl_planos'].">
                             <div class='form-group'>
-                                <input name='nome_plano' type='text' class='form-control rounded-left' placeholder='Nome do Plano' required='' style='margin-top: 25px;' value=". $plano['nome_plano'] .">
+                                <input name='nome_plano' type='text' class='form-control rounded-left' placeholder='Nome do Plano' required='' style='margin-top: 25px;' value=" . $plano['nome_plano'] . ">
                             </div>
                             <div class='form-group'>
                                 <input name='valor_plano' type='text' class='form-control rounded-left' placeholder='Valor do Plano' required='' style='margin-top: 25px;' value=". $plano['valor_plano'] .">

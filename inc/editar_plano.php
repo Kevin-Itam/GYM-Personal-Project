@@ -7,14 +7,6 @@ $valor = filter_input(INPUT_GET, 'valor_plano', FILTER_SANITIZE_STRING);
 $opcao = filter_input(INPUT_GET, 'opcao_plano', FILTER_SANITIZE_STRING);
 $descricao = filter_input(INPUT_GET, 'desc_plano', FILTER_SANITIZE_STRING);
 
-var_dump($id);
-var_dump($nome_plano);
-var_dump($valor);
-var_dump($opcao);
-var_dump($descricao);
-
-die;
-
 if (empty($nome_plano) || empty($valor) || empty($opcao) || empty($descricao) || empty($id)) {
     echo "<script>alert('Erro ao editar plano! Favor preencher os campos necessários'); </script>";
     echo "<script> window.location='../pages/pg_plano_user.php' </script>";
