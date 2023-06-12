@@ -130,7 +130,7 @@ if (!empty($_SESSION['id_usuario'])) {
             </div>
 
             <?php
-            if (($permissao) == 2) {
+            if (($permissao) == 1) {
                 echo ' <div class="div1">
                 <img src="">
                 <div>
@@ -146,7 +146,7 @@ if (!empty($_SESSION['id_usuario'])) {
             }
             ?>
             <?php
-            if (($permissao) == 1) {
+            if (($permissao) == 2) {
                 echo '<div class="div1">
                 <img src="">
                 <div>
