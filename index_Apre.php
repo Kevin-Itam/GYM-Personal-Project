@@ -70,7 +70,7 @@ if (!empty($_SESSION['id_usuario'])) {
 
 <body>
     <!--========== Menus ==========-->
-    <header >
+    <header>
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(0, 0, 0);">
             <a class="navbar-brand" href="#" style="color: white;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -87,8 +87,7 @@ if (!empty($_SESSION['id_usuario'])) {
                         <a class="nav-link" onclick="scrollElement('Sobre')">Sobre</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" onclick="scrollElement('ativ')">Programas<span
-                                class="sr-only"></span></a>
+                        <a class="nav-link" onclick="scrollElement('ativ')">Programas<span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" onclick="scrollElement('coach')">Treinadores<span
@@ -181,7 +180,7 @@ if (!empty($_SESSION['id_usuario'])) {
         </div>
     </section>
     <!--=========================================================================-->
-    <section class="sobre"  id="Sobre">
+    <section class="sobre" id="Sobre">
         <div class="crop_so">
             <div class="d_img">
                 <div class="corr"></div>
@@ -242,7 +241,40 @@ if (!empty($_SESSION['id_usuario'])) {
         </section>
     </section>
     <!--=============================================================================================================================================-->
-    <!--==================== PLANOSS============-->
+    <!--========== PLANO ==========-->
+
+    <section class="planos" id="planos">
+        <div class="row">
+            <h1 style="margin-top: 5%;">Planos Disponíveis</h1>
+            <?php
+            $consulta = "SELECT * FROM tbl_planos";
+            $sql = $conn->query($consulta) or die($conn->error);
+
+            while ($plano = $sql->fetch_assoc()) {
+                echo '<div class="col-md-4 col-sm-6">
+                    <div class="pricing_table">
+                        <div class="pricing_table_header">
+                            <i class="fa fa-users"></i>
+                            <h2 class="title">Bodybuilder</h2>
+                            <span class="price-plan">
+                                <i class="fa fa-inr"></i>
+                                <span class="price">R$ ' . $plano['valor_plano'] . '</span>
+                                <span class="monthly_plan">' . $plano['opcao_plano'] . '</span>
+                            </span>
+                        </div>
+                        <div class="pricing_table_plan">
+                            <ul>
+                                <a>' . $plano['desc_plano'] . '</a>
+                            </ul>
+                            <a class="btn btn-outline-danger" href="pages/pg_plano_user.php" role="button">MATRICULE-SE</a>
+                        </div>
+                    </div>
+                </div>';
+            }
+
+            ?>
+        </div>
+    </section>
     <!--=============================================================================================================================================-->
     <section id="coach">
 

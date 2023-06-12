@@ -52,11 +52,6 @@ if (!empty($_SESSION['id_usuario'])) {
     <title>Painel de Usuario</title>
 </head>
 <style>
-    html,
-    body {
-        height: 100%;
-    }
-
     .login-wrap {
         background: white;
         border-radius: 5px;
@@ -99,7 +94,7 @@ if (!empty($_SESSION['id_usuario'])) {
             </form>
         </div>
     </div>
-    <!--=======================-->]
+    <!--=======================-->
     <div id="filterBlur">
         <!--============ LATERAL===========-->
         <section class="la">
@@ -123,25 +118,27 @@ if (!empty($_SESSION['id_usuario'])) {
                 <img src="">
                 <div align="center">
                     <div class="dv_ig">
-                        <a  href="../index_Apre.php">
+                        <a href="../index_Apre.php">
                             <img src="..\img\retorna.png" style="height: 40px; width: 40px;">
                             <p>Pagina principal</p>
                         </a>
 
                     </div>
                 </div>
+                <hr
+                    style="position: relative;top:100%;border-bottom: 2px solid #0e0e0e;margin-top: 11px!important; opacity:1!important; width: 100%;">
             </div>
-            <hr style="border-bottom: 2px solid #0e0e0e; margin: 1px!important; opacity:1!important;">
+
             <?php
-            if (($permissao) == 1) {
+            if (($permissao) == 2) {
                 echo ' <div class="div1">
                 <img src="">
                 <div>
                     <h5>Plano Contratado</h5><br>
                     <div class="dv_ig">
                         <a href="../pages/pg_plano_user.php">
-                            <img src="../img/icon_painel.png" style="height: 40px; width: 40px;">
-                            <p>Acessar seus planos</p>
+                            <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
+                            <p>Painel de Administrador</p>
                         </a>
                     </div>
                 </div>
@@ -149,15 +146,15 @@ if (!empty($_SESSION['id_usuario'])) {
             }
             ?>
             <?php
-            if (($permissao) == 2) {
+            if (($permissao) == 1) {
                 echo '<div class="div1">
                 <img src="">
                 <div>
-                    <h5>Bem-Vindo</h5><br>
+                    <h5>Plano contratado</h5><br>
                     <div class="dv_ig">
                         <a href="">
-                            <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
-                            <p>Sair da Conta</p>
+                            <img src="../img/icon_painel.png" style="height: 40px; width: 40px;">
+                            <p>Acessar seus planos</p>
                         </a>
                     </div>
                 </div>
@@ -171,7 +168,7 @@ if (!empty($_SESSION['id_usuario'])) {
 
             <div class="titulo">
                 <img src="../img/icons-userr.png">
-                <h2>Cadastro</h2>
+                <h2>Perfil de Usuario</h2>
             </div>
 
             <section class="fild_1">

@@ -28,3 +28,24 @@ function fechar(id_fechar){
 
     modal.style.display = 'none';
 }
+/*============ tabelas ============= */
+
+const cad = document.querySelector("#cad");
+const plan = document.querySelector("#plan");
+
+
+function abrir_cad(abr_cad){
+    let modal = document.getElementById(abr_cad);
+    modal.style.display = 'block'; 
+
+    // var tab = plan;
+    // tab.style.display = 'none';
+}
+
+function abrir_plan(abr_plan){
+    let modal = document.getElementById(abr_plan);
+    modal.style.display = 'block'; 
+    // var tab = cad;
+    // tab.style.display = 'none';
+
+}

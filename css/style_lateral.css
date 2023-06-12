@@ -33,42 +33,48 @@ nav {
     position: absolute;
     top: 50%;
     left: 83%;
-    transform: translate(0%,-50%);
+    transform: translate(0%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.btn-src{
+    color:white!important;
+    background-color: black!important;
 
+}
 /*=============  MENU LATERAL ==============*/
 
 .linke {
     text-decoration-line: none;
 }
 
-body.menu-close .imgss{
+body.menu-close .imgss {
     background-image: url();
-    background-repeat: no-repeat;
-    background-size: calc(15px + 15px);
 }
 
 body.menu-close .forum_menu ul li a .titulo,
-body.menu-close .pp,
 body.menu-close .titulo-menu,
-body.menu-close .a {
+body.menu-close .a{
     display: none;
-    transition: 0.5s;
 }
-body.menu-close .tabela{
+body.menu-close .forum_menu ul li a .fa-house {
+    position: relative;
+    left: 15px;
+    font-size:1.5rem;
+}
+body.menu-close .tabela {
     margin-left: 6em;
     transition: 0.5s;
-    width: 90vw;
+    width: 90%;
 }
 
 body.menu-close .forum_menu,
-body.menu-close .div-navv, 
-body.menu-close .div-navv{
-    width: 2.8vw;
-    background-image: url(../img/favicon.ico);
+body.menu-close .div-navv,
+body.menu-close .div-navv {
+    min-width: 5vw;
+    max-width: 5vw;
+    background-image: url(../img/adm_ico.png);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -81,8 +87,10 @@ body.menu-close .div-navv{
     position: absolute;
     background-color: black;
     width: 12vw;
+    min-width: 12vw;
+    max-width: 12vw;
     overflow-x: hidden;
-    transition: 0.5s;
+
 }
 
 .forum_menu ul {
@@ -120,7 +128,8 @@ body.menu-close .div-navv{
 
 .forum_menu ul li a .fa-house {
     position: relative;
-    font-size: 1rem;
+    top: 2.5rem;
+    font-size: 1.2rem;
     z-index: 1;
 }
 
@@ -134,92 +143,22 @@ body.menu-close .div-navv{
     white-space: nowrap;
 }
 
-
-.titulo-Dashboard{
-    margin-left: 150px;
-    margin-top: 75px;
-}
-.tabela{
-    background-color: #fff;
-    width: 85vw;
-    position: absolute;
-    top: 10vh;
-    margin-left: 15em;
-    padding: 10px;
-    transition: 0.5s;
-}
-.tabela_planos{
-    background-color: #fff;
-    width: 85vw;
-    position: absolute;
-    top: 45vh;
-    margin-left: 15em;
-    padding: 10px;
-    transition: 0.5s;
-}
-/*============= DASH ==============*/
-
-.dash-big .dash-small{
-    border: 20px solid black;
-    border-radius: 0.4rem;
-    width: auto;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-}
-.blocquinhos{
-    width: 50%;
-    position: relative;
-    top: 40%;
-    left: 0;
-    background-color: white!important;
-    padding: 10px;
-    margin-left: 15em;
-    margin-right: 2em;
-    transition: 0.5s;
-
-}
-
-.form-check{
-    margin-right: 2px;
-}
-
-.avatar-xs {
-    height: 2rem;
-    width: 2rem;
-}
-
-.rounded-circle {
-    border-radius: 50%!important;
-}
-/*============= DASH ==============*/
-.pp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 22px;
-    right: -8px;
-    height: 17px;
-    width: 21px;
-    border-radius: 11px;
-    background-color: #0bb197;
-}
-
-.fa-house {
-    position: relative;
-}
-
+/*============= SIDE BAR ==============*/
 .titulo-menu {
     position: absolute;
-    top: -10px;
+    top: 10px;
     left: 11px;
-    font-size: 10px;
+    font-size: 18px;
     color: #8590a5;
 }
 
 .titulo {
     color: #d7e4ec;
+}
+
+.a {
+    position: relative;
+    top: 5vh;
 }
 
 .imgss {
@@ -231,21 +170,22 @@ body.menu-close .div-navv{
     background-image: url(../img/logo.jpg);
     background-size: cover;
     background-position: center;
+
 }
 
 .div-navv {
     width: 12vw;
     height: 100%;
-    background-color: black;
+    background-color: white;
     transition: 0.5s;
+    border-right: 2px solid black;
 }
 
 .div-nav2 {
+    display: flex;
+    align-items: center;
     position: relative;
-    top: 7px;
     height: 100%;
-    width: 5vw;
-    border: none;
     padding: 0;
 }
 
@@ -267,36 +207,110 @@ body.menu-close .div-navv{
     box-shadow: none !important;
 }
 
-.toper {
-    position: relative;
-    right: 0;
-}
-/*===========icones============*/
-.home-icon {
-    background-image: url();
-    background-size: cover;
-}
-/*=================== formulario =====================*/
+/*========== TABELA CADASTROS ===============*/
 
-html,
-body {
-    height: 100%;
+.tabela {
+    width: 80%;
+    position: absolute;
+    top: 30vh;
+    margin-left: 10vw;
+    padding: 20px;
+    transition: 0.5s;
+
+    color: white;
+    background-color: #000000;
 }
+
+table {
+    color: white !important;
+}
+
+tr {
+    border: 2px solid #ffff0059 !important;
+}
+
+td {
+    border: 1px solid #ffff0059 !important;
+}
+
+th {
+    border: 1px solid #ffff0059 !important;
+}
+
+.tabela_planos {
+    background-color: #fff;
+    width: 85vw;
+    position: absolute;
+    top: 45vh;
+    margin-left: 15em;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+/*========== TABELA CADASTROS ===============*/
+
+.tabela {
+    width: 80%;
+    position: absolute;
+    top: 30vh;
+    margin-left: 10vw;
+    padding: 20px;
+    transition: 0.5s;
+
+    color: white;
+    background-color: #000000;
+}
+
+table {
+    color: white !important;
+}
+
+tr {
+    border: 2px solid #ffff0059 !important;
+}
+
+td {
+    border: 1px solid #ffff0059 !important;
+}
+
+th {
+    border: 1px solid #ffff0059 !important;
+}
+
+.tabela_planos {
+    background-color: #fff;
+    width: 85vw;
+    position: absolute;
+    top: 45vh;
+    margin-left: 15em;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+/*=================== formulario =====================*/
 
 /*==========MODAL===========*/
 .login-wrap {
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 5px;
+    width: 30vw;
+    height: auto;
+}
+
+.fa-regular{
+    position: relative;
+    top: -2vh;
+    left: 90%;
+    font-size:35px;
 }
 
 .backgroundModal {
-    position: fixed;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgb(0 0 0 / 95%);
-    z-index: 5;
+    background-color: rgb(0 0 0 / 90%);
+    z-index: 1;
     /* Ocultar a janela modal */
     display: none;
 }
@@ -320,61 +334,52 @@ button:hover {
 
 /*========= INPUTS ===========*/
 /*=====================*/
-.dv1 {
-    display: flex;
-    flex-direction: row;
-    column-gap: 5vw;
 
-}
-
-.input-container {
-    left: 4rem;
-    height: 50px;
+.form-group{
     position: relative;
-    width: 15vw;
+    height: 50px!important;
 }
 
-.input {
-    background: #222;
-    border-radius: 12px;
-    border: 0;
-    box-sizing: border-box;
-    color: white;
-    font-size: 18px;
-    height: 100%;
-    outline: 0;
-    padding: 0px 20px 0;
-    width: 100%;
+.form-control {
+    background: #222!important;
+    color: white!important;
+    font-size: 18px!important;
+    height: 100%!important;
+    outline: 0!important;
+
 }
 
-.input:focus~.cut,
-.input:not(:placeholder-shown)~.cut {
-    transform: translateY(8px);
+.form-control:focus~.cut,
+.form-control:not(:placeholder-shown)~.cut {
+    transform: translateY(8px)!important;
 }
 
 .placeholder {
-    color: white;
-    font-family: sans-serif;
-    left: 20px;
-    line-height: 14px;
-    pointer-events: none;
-    position: absolute;
-    transform-origin: 0 50%;
-    transition: transform 200ms, color 200ms;
-    top: 20px;
+    color: white!important;
+    font-family: sans-serif!important;
+    left: 20px!important;
+    line-height: 14px!important;
+    pointer-events: none!important;
+    position: absolute!important;
+    transform-origin: 0 50%!important;
+    transition: transform 200ms, color 200ms!important;
+    top: 20px!important;
 }
 
-.input:focus~.placeholder,
-.input:not(:placeholder-shown)~.placeholder {
-    transform: translateY(-45px) translateX(-10px) scale(0.95);
+.form-control:focus~.placeholder,
+.form-control:not(:placeholder-shown)~.placeholder {
+    transform: translateY(-42px) translateX(-10px) scale(0.95);
 }
 
-.input:not(:placeholder-shown)~.placeholder {
-    color: white;
+.form-control:not(:placeholder-shown)~.placeholder {
+    color: rgb(0, 0, 0)!important;
+
 }
 
-.input:focus~.placeholder {
-    color: white;
+.form-control:focus~.placeholder {
+    color: rgb(0, 0, 0)!important;
+    font-weight: 600;
+    font-size: 17px;
 }
 
 /*=====================*/

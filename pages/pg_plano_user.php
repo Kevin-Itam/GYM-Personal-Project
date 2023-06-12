@@ -54,10 +54,23 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/style_lateral.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/3a1453d3f1.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Página do Administador</title>
 </head>
 <style>
+    #cad {
+        display: block;
+    }
+
+    #plan {
+        display: none;
+    }
+
+    #src {
+        background-color: black !important;
+    }
+
     button {
         border: 0;
         outline: none;
@@ -78,48 +91,69 @@ $result = $conn->query($sql);
         background: white;
         border-radius: 5px;
     }
-
-    .backgroundModal {
-        position: fixed;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(0 0 0 / 95%);
-        z-index: 5;
-        /* Ocultar a janela modal */
-        display: none;
-    }
 </style>
+<script>
+    function menu_toogle() {
+        var _body = document.body;
 
-<body>
+        if (_body.classList.contains('menu-close')) {
+            _body.classList.remove('menu-close');
+        } else {
+            _body.classList.add('menu-close');
+        }
+    }
+</script>
+<script src="../js/ModalSenha.js" crossorigin="anonymous"></script>
+
+<body style="display:flex;justify-content:center;background-color:#343a40!important;">
+
     <!--============ Modal===========-->
+
     <div class="backgroundModal" id="abrir">
         <div class="login-wrap p-4 p-md-5">
-            <span class="X-lateral-vei" onclick="fecharSenha('abrir')"><i class="fa-regular fa-circle-xmark"></i></span>
-            <h3 class="text-center mb-4" style="padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;">Cadastrar o novo Plano</h3>
-            <form action="../inc/cadastro_plano.php" method="post" class="login-form">
+            <span class="X-lateral-vei" style="cursor:pointer;" onclick="fecharSenha('abrir')"><i
+                    class="fa-regular fa-circle-xmark"></i></span>
+            <h3 class="text-center mb-4">Cadastrar o novo Plano</h3>
+            <form action="../inc/cadastro_plano.php" method="post">
                 <input type="hidden" name="id_user">
+
                 <div class="form-group">
-                    <input name="nome_plano" type="text" class="form-control rounded-left" placeholder="Nome do Plano" required="" style="margin-top: 25px;">
+                    <input name="nome_plano" type="text" class="form-control rounded-left" placeholder=" "
+                        style="margin-top: 25px;">
+                    <label for="firstname" class="placeholder"> Nome do Plano</label>
                 </div>
+
+
                 <div class="form-group">
-                    <input name="valor_plano" type="text" class="form-control rounded-left" placeholder="Valor do Plano" required="" style="margin-top: 25px;">
+                    <input name="valor_plano" type="text" class="form-control rounded-left" placeholder=" "
+                        style="margin-top: 25px;">
+                    <label for="firstname" class="placeholder">Valor do Plano</label>
                 </div>
+
                 <div class="form-group">
-                    <input name="opcao_plano" type="text" class="form-control rounded-left" placeholder="Mensal/Trimensal/Anual" required="" style="margin-top: 25px;">
+                    <input name="opcao_plano" type="text" class="form-control rounded-left" placeholder=" "
+                        placeholder=" " style="margin-top: 25px;">
+                    <label for="firstname" class="placeholder">Opçao de Planos</label>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Descrição do Plano</label>
-                    <textarea  name="desc_plano" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form6Example7" style="position:relative;top:1vh;">Adicione uma
+                        descrição ao plano</label>
+                    <textarea class="form-control" id="form6Example7" name="desc_plano" rows="4"
+                        style="position:relative;top:1vh; resize:none;"></textarea>
+
                 </div>
+
                 <div class="form-group">
-                    <button type="submit" class="btn btn-outline-warning" style="width: 150px; margin-top: 25px;">Salvar</button>
+                    <button type="submit" class="btn btn-outline-warning"
+                        style="width: 150px; margin-top:25px;background-color:black;color:white;position:relative;left:35%;">Salvar
+                    </button>
                 </div>
             </form>
         </div>
     </div>
-    <!--=======================-->]
+
+    <!--============ HEADER ===========-->
     <header>
         <div class="nav-top">
             <nav class="div-navv">
@@ -130,16 +164,18 @@ $result = $conn->query($sql);
                     <span onclick="menu_toogle()"><i class="fa-solid fa-bars fa-2xl"></i></span>
                 </div>
             </nav>
-            <nav class="navbar navbar-light bg-light">
+            <nav class="navbar navbar-light bg-light" style="left:2vw;">
                 <div class="container-fluid">
                     <form class="d-flex" method="GET" action="">
-                        <input name="nome" class="form-control me-2" type="search" placeholder="Search..." value="<?php if (isset($_GET['nome_aluno']))
-                                                                                                                        echo $_GET['nome_aluno']; ?>">
-                        <button type="submit">Pesquisar</button>
+                        <div class="input-group">
+                            <input type="search" name="nome" class="form-control rounded" placeholder="Pesquisar" aria-label="Search" aria-describedby="search-addon" value="<?php if (isset($_GET['nome_aluno']))
+                                    echo $_GET['nome_aluno']; ?>" style="color:black!important;border:2px solid black;"/>
+                            <button type="submit" class="btn-src">Pesquisar</button>
+                        </div>
                     </form>
                 </div>
             </nav>
-            <div class="div-nav">
+            <!-- <div class="div-nav">
                 <nav class="full">
                     <div class="d-flex">
                         <div class="dropdown d-inline-block user-dropdown">
@@ -147,24 +183,40 @@ $result = $conn->query($sql);
                         </div>
                     </div>
                 </nav>
-            </div>
+            </div> -->
         </div>
     </header>
     <!--========================== SIDEBAR ============================-->
     <div class="forum_menu">
         <ul>
-
             <li class="list active fa-house">
                 <a class="alink">
                     <span class="titulo-menu">Menu</span>
                     <span><i class="fa-solid fa-house"></i></span>
+
                     <span class="titulo"><a class="a" href="../index_Apre.php">Página principal</a></span>
+                </a>
+            </li>
+            <li class="list active fa-house">
+                <a class="alink">
+                    <a href="../img/registrado.png"></a>
+                    <span class="titulo"><a class="a" onclick="abrir_cad('cad')">Visualizar cadastros</a></span>
+                </a>
+            </li>
+            <li class="list active fa-house">
+                <a class="alink">
+                    <a href="../img/registrado.png"></a>
+                    <span class="titulo"><a class="a" onclick="abrir_plan('plan')">Visualizar cadastros</a></span>
                 </a>
             </li>
         </ul>
     </div>
-    <!--========================== TABLE ============================-->
-    <div class="tabela">
+
+    <!--========================== TABELA  Cadastros ============================-->
+    <!--=========================================================================-->
+
+
+    <div class="tabela" id="cad">
         <a>Cadastros</a>
         <table class="table">
             <thead class="thead-light">
@@ -173,6 +225,7 @@ $result = $conn->query($sql);
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">CPF</th>
+                    <th scope="col">Senha</th>
                     <th scope="col">E-mail</th>
                     <th scope="col">excluir</th>
                     <th scope="col">Editar</th>
@@ -194,51 +247,56 @@ $result = $conn->query($sql);
 
                 if ($sql_query->num_rows == 0) {
 
-                ?>
+                    ?>
                     <tr>
                         <td colspan="3">Nenhum resultado encontrado...</td>
                     </tr>
-            <tbody>
-            <?php
+                <tbody>
+                    <?php
                 } else {
 
                     while ($cadastro = $sql_query->fetch_assoc()) {
                         echo "<tr>";
-                        echo "<td> <input type='checkbox' /></td>";
+                        echo "<td></td>";
                         echo "<td>" . $cadastro['id_cadastro'] . "</td>";
                         echo "<td>" . $cadastro['nome'] . "</td>";
                         echo "<td>" . $cadastro['cpf'] . "</td>";
+                        echo "<td>" . $cadastro['senha'] . "</td>";
                         echo "<td>" . $cadastro['email'] . "</td>";
                         echo "<td>" . '  <a class="linkar2" href=excluido_turma.php?id=' . $cadastro['id_cadastro'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
                         echo "<td>" . '<a  class="linkar" href=edit_turma.php?id=' . $cadastro['id_cadastro'] . "><img class='img-edit' src='..\img\icons8-engrenagem-30.png'></a>" . "</td>";
                         echo "</tr>";
                     }
                 }
-            ?>
+                ?>
             </tbody>
             <?php
             ?>
             </tbody>
         </table>
     </div>
-    <div class="tabela_planos">
+
+    <!--============================================================================-->
+    <!--==================================== TABELA  PLANOS ========================-->
+
+    <div class="tabela" id="plan">
         <a>Planos</a>
         <table class="table">
             <thead class="thead-light">
                 <tr>
                     <th scope="col"></th>
                     <th scope="col">#</th>
-                    <th scope="col">Plano</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">Excluir</th>
+                    <th scope="col">Planos</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Valores</th>
                     <th scope="col">Editar</th>
-
+                    <th scope="col">Excluir</th>
                 </tr>
                 <div>
-            <button onclick="abrirSenha('abrir')" class="btn btn-success" style="height: 40px; width:100px ;">
-                <p>Cadastrar</p>
-                </buttom>
-        </div>
+                    <button onclick="abrirSenha('abrir')" class="btn btn-success" style="height: 40px; width:100px ;">
+                        <p>Cadastrar</p>
+                        </buttom>
+                </div>
             </thead>
             <tbody>
                 <?php
@@ -246,15 +304,14 @@ $result = $conn->query($sql);
                 $sql = $conn->query($consulta) or die($conn->error);
                 while ($plano = $sql->fetch_assoc()) {
                     echo "<tr>";
-                    echo "<td> <input type='checkbox' /></td>";
                     echo "<td>" . $plano['idl_planos'] . "</td>";
                     echo "<td>" . $plano['nome_plano'] . "</td>";
                     echo "<td>" . $plano['valor_plano'] . "</td>";
                     echo "<td>" . '  <a class="linkar2" href=excluido_turma.php?id=' . $plano['idl_planos'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
                     echo "<td>" . "<button class='btn btn-success' onclick='abrir(" . $plano['idl_planos'] . ")' >Editar</button>" . "</td>";
                     echo '</tr>';
-                    
-                    echo" <div class='backgroundModal' id=" . $plano["idl_planos"] . ">
+
+                    echo " <div class='backgroundModal' id=" . $plano["idl_planos"] . ">
                     <div class='login-wrap p-4 p-md-5'>
                         <span class='X-lateral-vei' onclick='fechar(" . $plano['idl_planos'] . ") '><i class='fa-regular fa-circle-xmark'></i></span>
                         <h3 class='text-center mb-4' style='padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;'>Cadastrar o novo Plano</h3>
@@ -287,21 +344,9 @@ $result = $conn->query($sql);
             </tbody>
         </table>
     </div>
-    <?php 
-    
-    ?>
-    <script>
-        function menu_toogle() {
-            var _body = document.body;
+    <?php
 
-            if (_body.classList.contains('menu-close')) {
-                _body.classList.remove('menu-close');
-            } else {
-                _body.classList.add('menu-close');
-            }
-        }
-    </script>
-    <script src="../js/ModalSenha.js" crossorigin="anonymous"></script>
+    ?>
 </body>
 
 </html>
