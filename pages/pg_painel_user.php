@@ -130,7 +130,7 @@ if (!empty($_SESSION['id_usuario'])) {
             </div>
 
             <?php
-            if (($permissao) == 1) {
+            if (($permissao) == 2) {
                 echo ' <div class="div1">
                 <img src="">
                 <div>
@@ -151,11 +151,27 @@ if (!empty($_SESSION['id_usuario'])) {
                 echo ' <div class="div1">
                 <img src="">
                 <div>
-                    <h5>Planos</h5><br>
+                    <h5>Plano Ativo</h5><br>
+                    <div class="dv_ig">
+                        <a href="../pages/pg_painel_plano_ativos.php">
+                            <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
+                            <p>Consultar</p>
+                        </a>
+                    </div>
+                </div>
+            </div>';
+            }
+            ?>
+            <?php
+            if (($permissao) == 1) {
+                echo ' <div class="div1">
+                <img src="">
+                <div>
+                    <h5>Comprar Plano</h5><br>
                     <div class="dv_ig">
                         <a href="../pages/pg_painel_plano.php">
                             <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
-                            <p>Consulte</p>
+                            <p>Consultar</p>
                         </a>
                     </div>
                 </div>

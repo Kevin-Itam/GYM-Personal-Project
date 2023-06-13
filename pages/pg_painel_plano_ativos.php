@@ -113,7 +113,7 @@ if (!empty($_SESSION['id_usuario'])) {
             </div>
 
             <?php
-            if (($permissao) == 1) {
+            if (($permissao) == 2) {
                 echo ' <div class="div1">
                 <img src="">
                 <div>
@@ -128,7 +128,22 @@ if (!empty($_SESSION['id_usuario'])) {
             </div>';
             }
             ?>
-
+                        <?php
+            if (($permissao) == 1) {
+                echo ' <div class="div1">
+                <img src="">
+                <div>
+                    <h5>Comprar Planos</h5><br>
+                    <div class="dv_ig">
+                        <a href="../pages/pg_painel_plano.php">
+                            <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
+                            <p>Consultar</p>
+                        </a>
+                    </div>
+                </div>
+            </div>';
+            }
+            ?>
             <?php
             if (($permissao) == 1) {
                 echo ' <div class="div1">
@@ -138,7 +153,7 @@ if (!empty($_SESSION['id_usuario'])) {
                     <div class="dv_ig">
                         <a href="../pages/pg_painel_user.php">
                             <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
-                            <p>Consulte</p>
+                            <p>Consultar</p>
                         </a>
                     </div>
                 </div>
@@ -163,12 +178,7 @@ if (!empty($_SESSION['id_usuario'])) {
         <div class="card mb-4">
           <div class="card-body p-4" >
 
-          <?php
-            $consulta = "SELECT * FROM tbl_planos";
-            $sql = $conn->query($consulta) or die($conn->error);
 
-            while ($plano = $sql->fetch_assoc()) {
-                echo'
                 
                 <div class="row align-items-center" style="margin-top: 25px;">
                 <div class="col-md-2">
@@ -178,14 +188,14 @@ if (!empty($_SESSION['id_usuario'])) {
                 <div class="col-md-2 d-flex justify-content-center">
                   <div>
                     <p class="small text-muted mb-4 pb-2">Nome</p>
-                    <p class="lead fw-normal mb-0">' . $plano['nome_plano'] . '</p>
+                    <p class="lead fw-normal mb-0">Frango</p>
                   </div>
                 </div>
                 <div class="col-md-2 d-flex justify-content-center">
                   <div>
                     <p class="small text-muted mb-F4 pb-2">Tipo</p>
                     <p class="lead fw-normal mb-0"><i class="#" aria-hidden="true"></i>
-                    ' . $plano['opcao_plano'] . '</p>
+                    Mensal</p>
                   </div>
                 </div>
                 <div class="col-md-2 d-flex justify-content-center" >
@@ -197,16 +207,14 @@ if (!empty($_SESSION['id_usuario'])) {
                 <div class="col-md-2 d-flex justify-content-center">
                   <div>
                     <p class="small text-muted mb-4 pb-2">Valor</p>
-                    <p class="lead fw-normal mb-0">' . $plano['valor_plano'] . '</p>
+                    <p class="lead fw-normal mb-0">109,99</p>
                   </div>
                 </div> 
                 <div class="d-flex justify-content-end">
                 <button type="button" class="btn btn-danger btn-lg">Cancelar Plano</button>
               </div>
-                ';
-              
 
-            } ?>
+
             </div>
             </div>
           </div>
