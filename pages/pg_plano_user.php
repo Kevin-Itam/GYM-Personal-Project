@@ -330,31 +330,43 @@ $result = $conn->query($sql);
                     echo '</tr>';
 
 
-                    echo " <div class='backgroundModal' id=" . $plano["idl_planos"] . ">
-                    <div class='login-wrap p-4 p-md-5'>
-                        <span class='X-lateral-vei' onclick='fechar(" . $plano['idl_planos'] . ") '><i class='fa-regular fa-circle-xmark'></i></span>
-                        <h3 class='text-center mb-4' style='padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;'>Cadastrar o novo Plano</h3>
-                        <form action='../inc/editar_plano.php' method='post' class='login-form'>
-                            <input type='hidden' name='id_user' value=". $plano['idl_planos'] .">
-                            <div class='form-group'>
-                                <input name='nome_plano' type='text' class='form-control rounded-left' placeholder='Nome do Plano' required='' style='margin-top: 25px;' value=". $plano['nome_plano'] .">
-                            </div>
-                            <div class='form-group'>
-                                <input name='valor_plano' type='text' class='form-control rounded-left' placeholder='Valor do Plano' required='' style='margin-top: 25px;' value=". $plano['valor_plano'] .">
-                            </div>
-                            <div class='form-group'>
-                                <input name='opcao_plano' type='text' class='form-control rounded-left' placeholder='Mensal/Trimensal/Anual' required='' style='margin-top: 25px;' value=". $plano['opcao_plano'] .">
-                            </div>
-                            <div class='form-group'>
-                                <label for='exampleFormControlTextarea1'>Descrição do Plano</label>
-                                <textarea  name='desc_plano' class='form-control' id='exampleFormControlTextarea1' rows='3' >". $plano['desc_plano'] ."</textarea>
-                            </div>
-                            <div class='form-group'>
-                                <button type='submit' class='btn btn-outline-warning' style='width: 150px; margin-top: 25px;'>Salvar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>";
+                    echo " <div class='backgroundModal'style='position:absolute!important;top:0%;left:20%;transform:transition(-50%,-0%);' id=" . $plano["idl_planos"] . ">
+                                <div class='login-wrap p-4 p-md-5'>
+                                    <span class='X-lateral-vei' style='cursor:pointer;' onclick='fechar(" . $plano['idl_planos'] . ") '><i class='fa-regular fa-circle-xmark'></i></span>
+                                    <h3 class='text-center mb-4' style='padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;'>Cadastrar o novo Plano</h3>
+                                    <form action='../inc/editar_plano.php' method='post' class='login-form'>
+
+                                        <input type='hidden' name='id_user' value=" . $plano['idl_planos'] . ">
+                                        
+                                        <div class='form-group'>
+                                            <input name='nome_plano' type='text' class='form-control rounded-left' placeholder=' ' style='margin-top: 30px;' value=" . $plano['nome_plano'] . ">
+                                            <label for='firstname' class='placeholder'> Nome do Plano</label>
+                                        </div>
+
+                                        <div class='form-group'>
+                                            <input name='valor_plano' type='text' class='form-control rounded-left' placeholder=' ' style='margin-top: 30px;' value=" . $plano['valor_plano'] . ">
+                                            <label for='firstname' class='placeholder'> Valor do Plano</label>
+                                        </div>
+
+                                        <div class='form-group'>
+                                            <input name='opcao_plano' type='text' class='form-control rounded-left' placeholder=' ' style='margin-top: 30px;' value=" . $plano['opcao_plano'] . ">
+                                            <label for='firstname' class='placeholder'>Opçao de Planos</label>
+                                        </div>
+
+
+                                        <div class='form-outline mb-4'>
+                                            <label for='exampleFormControlTextarea1'style='position:relative;top:1vh;color:black;'>Adicione uma descrição ao plano</label>
+                                            <textarea  name='desc_plano' class='form-control' id='exampleFormControlTextarea1' rows='4' style='position:relative;top:1vh; resize:none;'>" . $plano['desc_plano'] . "</textarea>
+                                        </div>
+
+                                        <div class='form-group'>
+                                            <button type='submit' class='btn btn-outline-warning' style='width: 150px; margin-top:30px;background-color:black;color:white;position:relative;left:35%;'>Salvar</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>";
+
                 }
                 ?>
             </tbody>
