@@ -132,8 +132,7 @@ $result = $conn->query($sql);
 
     <div class="backgroundModal" id="abrir">
         <div class="login-wrap p-4 p-md-5">
-            <span class="X-lateral-vei" style="cursor:pointer;" onclick="fecharSenha('abrir')"><i
-                    class="fa-regular fa-circle-xmark"></i></span>
+            <span class="X-lateral-vei" style="cursor:pointer;" onclick="fecharSenha('abrir')"><img src='..\img\icons8-excluir-30.png'></span>
             <h3 class="text-center mb-4">Cadastrar o novo Plano</h3>
             <form action="../inc/cadastro_plano.php" method="post">
                 <input type="hidden" name="id_user">
@@ -286,10 +285,11 @@ $result = $conn->query($sql);
                         echo "<td>" . "<button class='btn btn-success' onclick='abrir(" . $cadastro['id_cadastro'] . ")' >Editar</button>" . "</td>";
                         echo "</tr>";
 
-                        echo " <div class='backgroundModal'style='position:absolute!important;top:0%;left:20%;transform:transition(-50%,-0%);' id=" . $cadastro["id_cadastro"] . ">
+                        echo " <div>
+                        <div class='backgroundModal'style='position:absolute!important;top:-50%;left:25%;' id=" . $cadastro["id_cadastro"] . ">
                         <div class='login-wrap p-4 p-md-5'>
-                            <span class='X-lateral-vei' style='cursor:pointer;' onclick='fechar(" . $cadastro['id_cadastro'] . ") '><i class='fa-regular fa-circle-xmark'></i></span>
-                            <h3 class='text-center mb-4' style='padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;'>Cadastrar o novo Plano</h3>
+                            <span class='X-lateral-vei' style='cursor:pointer;' onclick='fechar(" . $cadastro['id_cadastro'] . ") '><img src='..\img\icons8-excluir-30.png'></span>
+                            <h3 class='text-center mb-4' style='padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;'>Editar os Cadastros</h3>
                             <form action='../inc/editar_user2.php' method='get' class='login-form'>
 
                             <input type='hidden' name='id_user' value=" . $cadastro['id_cadastro'] . ">
@@ -321,7 +321,9 @@ $result = $conn->query($sql);
 
                             </form>
                         </div>
-                    </div>";
+                    </div>
+                    </div>"
+                        ;
 
                     }
                 }
@@ -361,15 +363,15 @@ $result = $conn->query($sql);
                     echo "<td>" . $plano['idl_planos'] . "</td>";
                     echo "<td>" . $plano['nome_plano'] . "</td>";
                     echo "<td>" . $plano['valor_plano'] . "</td>";
-                    echo "<td>" . '  <a class="btn btn-danger" href=../inc/remove_planos.php?id=' . $plano['idl_planos'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
+                    echo "<td>" . '  <a class="btn btn-danger" href=../inc/remove_planos.php?id=' . $plano['idl_planos'] . "><img src='..\img\icons8-excluir-30.png'></a>" . "</td>";
                     echo "<td>" . "<button class='btn btn-success' onclick='abrir(" . $plano['idl_planos'] . ")' >Editar</button>" . "</td>";
                     echo '</tr>';
 
 
-                    echo " <div class='backgroundModal'style='position:absolute!important;top:0%;left:20%;transform:transition(-50%,-0%);' id=" . $plano["idl_planos"] . ">
+                    echo " <div class='backgroundModal'style='position:absolute!important;top:-50%;left:25%;' id=" . $plano["idl_planos"] . ">
                                 <div class='login-wrap p-4 p-md-5'>
-                                    <span class='X-lateral-vei' style='cursor:pointer;' onclick='fechar(" . $plano['idl_planos'] . ") '><i class='fa-regular fa-circle-xmark'></i></span>
-                                    <h3 class='text-center mb-4' style='padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;'>Cadastrar o novo Plano</h3>
+                                    <span class='X-lateral-vei' style='cursor:pointer;' onclick='fechar(" . $plano['idl_planos'] . ") '><img  src='..\img\icons8-excluir-30.png'></span>
+                                    <h3 class='text-center mb-4' style='padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;'>Editar os Planos</h3>
                                     <form action='../inc/editar_plano.php' method='get' class='login-form'>
 
                                         <input type='hidden' name='id_user' value=" . $plano['idl_planos'] . ">

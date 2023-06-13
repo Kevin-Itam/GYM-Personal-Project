@@ -149,9 +149,7 @@ if (!empty($_SESSION['id_usuario'])) {
 
                         <p
                             style="font-size: 30px;font-weight: 600;line-height:5vh; position:relative;top:-10rem;left:-90vh;">
-                            Nulla vitae elit libero, a
-                            pharetra
-                            augue mollis interdum.</p>
+                            Sorte é o que acontece quando a preparação encontra a oportunidade.</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-mdb-interval="3000"
@@ -160,10 +158,10 @@ if (!empty($_SESSION['id_usuario'])) {
                         class="d-block w-100" alt="Exotic Fruits" />
                     <div class="carousel-caption d-none d-md-block">
 
-                        <p style="font-size: 30px;font-weight: 600;line-height:5vh; position:relative;top:-10rem;">Nulla
-                            vitae elit libero, a
-                            pharetra
-                            augue mollis interdum.</p>
+                        <p style="font-size: 30px;font-weight: 600;line-height:5vh; position:relative;top:-10rem;">
+                            Ser fitness não é sobre ter o corpo perfeito, mas sim sobre ter uma vida saudável e
+                            equilibrada.
+                        </p>
                     </div>
                 </div>
             </div>
