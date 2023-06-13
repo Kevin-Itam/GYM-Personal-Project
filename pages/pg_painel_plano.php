@@ -135,7 +135,7 @@ if (!empty($_SESSION['id_usuario'])) {
                 <div>
                     <h5>Plano Ativo</h5><br>
                     <div class="dv_ig">
-                        <a href="../pages/pg_plano_plano_ativos.php">
+                        <a href="../pages/pg_painel_plano_ativos.php">
                             <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
                             <p>Consultar</p>
                         </a>

@@ -16,7 +16,7 @@
     <div>
         <img class="background-image" src="../img/loss_lado.png">
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: black;">
-            <a class="navbar-brand" href="../index_Apre.html" style="color: white;">
+            <a class="navbar-brand" href="../index_Apre.php" style="color: white;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,29 +24,6 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index_Apre.php" style="margin-left: 400px;">Menu</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Treinadores<span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Planos</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Sobre
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Nós</a>
-                            <a class="dropdown-item" href="#">Local</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Horário</a>
-                        </div>
-                    </li>
-                </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <a class="btn btn-outline-warning" href="../pages/pg_login.php" role="button">Acessar</a>
                 </form>
@@ -93,7 +70,7 @@
                                 <div class="form-g d-flex">
                                     <select name="sexo" class="" aria-label=".form-select-sm example"
                                         style="margin-top: 10px;">
-                                        <option selected value="0">-Selecione-</option>
+                                        <option selected value="0">Sexo</option>
                                         <option value="Masculino">Masculino</option>
                                         <option value="Feminino">Feminino</option>
                                         <option value="Outro">Outro</option>
@@ -102,6 +79,7 @@
                                     <div id="date-picker-example"
                                         class="md-form md-outline input-with-post-icon datepicker " inline="true"
                                         style="padding-top: 10px;">
+                                        <label for="firtname" style="color: white;">Data de Nascimento</label>
                                         <input name="data" id="date" type="date" value="">
                                     </div>
                                 </div>
