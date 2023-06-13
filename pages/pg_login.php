@@ -2,11 +2,7 @@
 
 session_start();
 
-if ((!isset($_SESSION['cpf']) == true) and (!isset($_SESSION['senha']) == true)) {
-    unset($_SESSION['cpf']);
-    unset($_SESSION['senha']);
-    echo "<script> window.location='../pages/pg_login.php' </script>";
-}
+
 ?>
 
 <!DOCTYPE html>

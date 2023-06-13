@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Jun-2023 às 23:48
+-- Tempo de geração: 13-Jun-2023 às 14:51
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -47,8 +47,8 @@ CREATE TABLE `tbl_cadastro` (
 --
 
 INSERT INTO `tbl_cadastro` (`id_cadastro`, `usuario`, `senha`, `cpf`, `nome`, `email`, `sexo`, `nascimento`, `telefone`, `telefone_ad`, `perm_acesso`, `valores`) VALUES
-(4, NULL, 'asdasd', '123', 'teste', 'entrarhabbo123@hotmail.com', 'Nenhum', '2023-05-24', '4700000000', '', '1', NULL),
-(7, NULL, 'andre31', '1252533', 'André Manoel de Santana', 'andremanoel.santana31@gmail.com', 'Masculino', '2023-05-31', '47999974589', '', '1', NULL);
+(4, NULL, 'asdasd', '123', 'Admin', 'entrarhabbo123@hotmail.com', 'Nenhum', '2023-05-24', '4700000000', '', '2', NULL),
+(7, NULL, 'andre31', '12525337999', 'André Manoel de Santana', 'andremanoel.santana31@gmail.com', 'Masculino', '2023-05-31', '47999974589', '', '1', NULL);
 
 -- --------------------------------------------------------
 

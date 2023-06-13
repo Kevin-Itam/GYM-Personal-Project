@@ -27,7 +27,7 @@ if (!empty($_SESSION['id_usuario'])) {
 
 //Permissão de acesso
 
-if (($permissao) == 1) {
+if (($permissao) == 2) {
 } else {
     echo "<script> window.location='../pages/pg_painel_user.php' </script>";
 }
@@ -238,7 +238,7 @@ $result = $conn->query($sql);
 
 
     <div class="tabela" id="cad">
-        <p style="margin-top:20px;margin-bottom:20px;font-size:20px;font-weight:700;">Cadastros</p>
+        <p style="margin-top:20px;margin-bottom:20px;font-size:20px;font-weight:700;">Usuários</p>
         <table class="table">
             <thead class="thead-light">
                 <tr>
@@ -246,7 +246,6 @@ $result = $conn->query($sql);
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">CPF</th>
-                    <th scope="col">Senha</th>
                     <th scope="col">E-mail</th>
                     <th scope="col">excluir</th>
                     <th scope="col">Editar</th>
@@ -282,11 +281,48 @@ $result = $conn->query($sql);
                         echo "<td>" . $cadastro['id_cadastro'] . "</td>";
                         echo "<td>" . $cadastro['nome'] . "</td>";
                         echo "<td>" . $cadastro['cpf'] . "</td>";
-                        echo "<td>" . $cadastro['senha'] . "</td>";
                         echo "<td>" . $cadastro['email'] . "</td>";
                         echo "<td>" . '  <a class="btn btn-danger" hhref=../inc/remove_user.php?id=' . $cadastro['id_cadastro'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
-                        echo "<td>" . '<button  class="btn btn-success" href=edit_turma.php?id=' . $cadastro['id_cadastro'] . "><img class='img-edit' src='..\img\icons8-engrenagem-30.png'></butoon>" . "</td>";
+                        echo "<td>" . "<button class='btn btn-success' onclick='abrir(" . $cadastro['id_cadastro'] . ")' >Editar</button>" . "</td>";
                         echo "</tr>";
+
+                        echo " <div class='backgroundModal'style='position:absolute!important;top:0%;left:20%;transform:transition(-50%,-0%);' id=" . $cadastro["id_cadastro"] . ">
+                        <div class='login-wrap p-4 p-md-5'>
+                            <span class='X-lateral-vei' style='cursor:pointer;' onclick='fechar(" . $cadastro['id_cadastro'] . ") '><i class='fa-regular fa-circle-xmark'></i></span>
+                            <h3 class='text-center mb-4' style='padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;'>Cadastrar o novo Plano</h3>
+                            <form action='../inc/editar_user2.php' method='get' class='login-form'>
+
+                            <input type='hidden' name='id_user' value=" . $cadastro['id_cadastro'] . ">
+                            <div class='dvsec'>
+                                <label for='select' class='lasec' style='color: #000000;'>Perfil de acesso</label>
+                                <select name='perf_acesso' id='select'>
+                                    <option value=" . $cadastro['perm_acesso'] . ">Selecione</option>
+                                    <option value='1'>Cliente</option>
+                                    <option value='2'>Admin</option>
+                                </select>
+                            </div>
+                                <div class='form-group'>
+                                    <input name='nome' type='text' class='form-control rounded-left' placeholder=' ' style='margin-top: 30px;' value=" . $cadastro['nome'] . ">
+                                    <label for='firstname' class='placeholder'> Nome do cliente</label>
+                                </div>
+
+                                <div class='form-group'>
+                                    <input name='cpf' type='text' class='form-control rounded-left' placeholder=' ' style='margin-top: 30px;' value=" . $cadastro['cpf'] . ">
+                                    <label for='firstname' class='placeholder'> CPF</label>
+                                </div>
+
+                                <div class='form-group'>
+                                    <input name='email' type='text' class='form-control rounded-left' placeholder=' ' style='margin-top: 30px;' value=" . $cadastro['email'] . ">
+                                    <label for='firstname' class='placeholder'>E-mail</label>
+                                </div>
+                                <div class='form-group'>
+                                    <button type='submit' class='btn btn-outline-warning' style='width: 150px; margin-top:30px;background-color:black;color:white;position:relative;left:35%;'>Salvar</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>";
+
                     }
                 }
                 ?>
@@ -334,7 +370,7 @@ $result = $conn->query($sql);
                                 <div class='login-wrap p-4 p-md-5'>
                                     <span class='X-lateral-vei' style='cursor:pointer;' onclick='fechar(" . $plano['idl_planos'] . ") '><i class='fa-regular fa-circle-xmark'></i></span>
                                     <h3 class='text-center mb-4' style='padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;'>Cadastrar o novo Plano</h3>
-                                    <form action='../inc/editar_plano.php' method='post' class='login-form'>
+                                    <form action='../inc/editar_plano.php' method='get' class='login-form'>
 
                                         <input type='hidden' name='id_user' value=" . $plano['idl_planos'] . ">
                                         
