@@ -172,10 +172,8 @@ if (!empty($_SESSION['id_usuario'])) {
                 
                 <div class="row align-items-center" style="margin-top: 25px;">
                 <div class="col-md-2">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="#">
-                <label class="form-check-label" for="#">
-                  Selecionar
-                </label>
+                <p class="lead fw-normal mb-0"><i class="fas fa-circle me-2" style="color: green;" aria-hidden="true"></i>
+                Ativo</p>
               </div>
                 <div class="col-md-2 d-flex justify-content-center">
                   <div>
@@ -186,7 +184,7 @@ if (!empty($_SESSION['id_usuario'])) {
                 <div class="col-md-2 d-flex justify-content-center">
                   <div>
                     <p class="small text-muted mb-F4 pb-2">Tipo</p>
-                    <p class="lead fw-normal mb-0"><i class="fas fa-circle me-2" aria-hidden="true"></i>
+                    <p class="lead fw-normal mb-0"><i class="#" aria-hidden="true"></i>
                     ' . $plano['opcao_plano'] . '</p>
                   </div>
                 </div>
@@ -202,6 +200,9 @@ if (!empty($_SESSION['id_usuario'])) {
                     <p class="lead fw-normal mb-0">' . $plano['valor_plano'] . '</p>
                   </div>
                 </div> 
+                <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-danger btn-lg">Cancelar Plano</button>
+              </div>
                 ';
               
 
@@ -210,24 +211,6 @@ if (!empty($_SESSION['id_usuario'])) {
             </div>
           </div>
         </div>
-
-        <div class="card mb-5">
-          <div class="card-body p-4">
-
-            <div class="float-end">
-              <p class="mb-0 me-5 d-flex align-items-center">
-                <span class="small text-muted me-2">Valor Total:</span> <span
-                  class="lead fw-normal">R$ 00,00</span>
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-primary btn-lg">Continue</button>
-        </div>
-
       </div>
     </div>
   </div>
