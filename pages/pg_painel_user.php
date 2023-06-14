@@ -89,7 +89,7 @@ if (!empty($_SESSION['id_usuario'])) {
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-outline-warning"
-                        style="width: 150px; margin-top: 25px;">Trocar</button>
+                        style="width: 150px; margin-top: 25px; color: black;border:1px solid black;position:relative;left:20%;">Trocar</button>
                 </div>
             </form>
         </div>

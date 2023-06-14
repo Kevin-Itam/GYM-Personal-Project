@@ -56,13 +56,13 @@ session_start();
                                         required="" style="margin-top: 10px;">
                                 </div>
                                 <div class="form-group d-md-flex">
-                                    <div class="w-50 text-md-right" style="margin-top: 10px;">
-                                        <a href="../pages/pg_esq_senha.php">Esqueceu a senha?</a>
+                                    <div class="w-50 text-md-right" style="margin-top: 10px;position:relative;right:6%;">
+                                        <a href="../pages/pg_esq_senha.php" style="color:white;font-size:18px;">Esqueceu a senha?</a>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-outline-warning"
-                                        style="width: 150px; margin-top: 25px;">Logar</button>
+                                        style="width: 150px; margin-top: 25px;position:relative;left:30%;">Logar</button>
                                 </div>
                             </form>
                         </div>

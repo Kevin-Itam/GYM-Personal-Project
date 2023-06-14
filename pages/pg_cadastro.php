@@ -79,8 +79,8 @@
                                     <div id="date-picker-example"
                                         class="md-form md-outline input-with-post-icon datepicker " inline="true"
                                         style="padding-top: 10px;">
-                                        <label for="firtname" style="color: white;">Data de Nascimento</label>
-                                        <input name="data" id="date" type="date" value="">
+                                        <label for="firtname" style="color: white;">Data de Nascimento&nbsp;:&nbsp;</label>
+                                        <input name="data" id="date" type="date" value=""style="border-radius:2px;padding:4px;">
                                     </div>
                                 </div>
                                 <div class="form-group d-flex" style="margin-top: 10px;">
