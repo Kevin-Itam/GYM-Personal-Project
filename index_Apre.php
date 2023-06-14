@@ -66,11 +66,6 @@ if (!empty($_SESSION['id_usuario'])) {
     span {
         color: rgba(255, 251, 0, 0.747);
     }
-    .btn-primary {
-        color:rgba(255,255,255,.55);
-        background-color: transparent!important;
-        border-color: transparent!important;
-    }
 </style>
 
 <body>
@@ -109,15 +104,10 @@ if (!empty($_SESSION['id_usuario'])) {
                 <?php
                 if (!empty($_SESSION['id_usuario'])) {
                     echo '                <form class="form-inline my-2 my-lg-0">
-                    <a class="btn-outline-danger nav-link" href="../inc/logout.php" role="button" style="    display: flex;
-                    justify-content: center;
-                    background-color: #5d5d5d54;
-                    border-radius: 8px;
-                    text-decoration: none;
-                    color: red;">Sair</a>
+                    <a class="btn btn-outline-danger" href="../inc/logout.php" role="button">Sair</a>
                 </form>';
                     echo '               <form class="form-inline my-2 my-lg-0" >
-                    <a class="btn-outline-warning" href="pages/pg_painel_user.php" role="button">' . $nome . '</a>
+                    <a class="btn btn-outline-warning" href="pages/pg_painel_user.php" role="button">' . $nome . '</a>
                 </form>';
                 } else {
                     echo '                <form class="form-inline my-2 my-lg-0">

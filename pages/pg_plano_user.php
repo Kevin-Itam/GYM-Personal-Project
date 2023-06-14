@@ -246,7 +246,8 @@ $result = $conn->query($sql);
                     <th scope="col">Nome</th>
                     <th scope="col">CPF</th>
                     <th scope="col">E-mail</th>
-                    <th scope="col">excluir</th>
+                    <th scope="col">Permissão</th>
+                    <th scope="col">Excluir</th>
                     <th scope="col">Editar</th>
 
                 </tr>
@@ -275,12 +276,19 @@ $result = $conn->query($sql);
                 } else {
 
                     while ($cadastro = $sql_query->fetch_assoc()) {
+                        
                         echo "<tr>";
                         echo "<td></td>";
                         echo "<td>" . $cadastro['id_cadastro'] . "</td>";
                         echo "<td>" . $cadastro['nome'] . "</td>";
                         echo "<td>" . $cadastro['cpf'] . "</td>";
                         echo "<td>" . $cadastro['email'] . "</td>";
+                        if ($cadastro['perm_acesso'] == 1){
+                            echo "<td>Cliente</td>";
+                        }
+                        if($cadastro['perm_acesso'] == 2){
+                            echo "<td>Admin</td>";
+                        }
                         echo "<td>" . '  <a class="btn btn-danger" hhref=../inc/remove_user.php?id=' . $cadastro['id_cadastro'] . "><img  src='..\img\icons8-excluir-30.png'></a>" . "</td>";
                         echo "<td>" . "<button class='btn btn-success' onclick='abrir(" . $cadastro['id_cadastro'] . ")' >Editar</button>" . "</td>";
                         echo "</tr>";
