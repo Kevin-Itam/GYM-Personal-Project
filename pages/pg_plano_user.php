@@ -181,7 +181,7 @@ $result = $conn->query($sql);
             </nav>
             <nav class="div-nav2">
                 <div class="btn">
-                    <span onclick="menu_toogle()"><i class="fa-solid fa-bars fa-2xl"></i></span>
+                    <span onclick="menu_toogle()"><img src="..\img\hamburguer.png"></span>
                 </div>
             </nav>
             <nav class="navbar navbar-light bg-light" style="left:2vw;">
@@ -218,7 +218,7 @@ $result = $conn->query($sql);
             </li>
 
             <li class="list active " style="display: flex;flex-direction: column;row-gap: 2vh;">
-                <a class="alink" href="../index_Apre.php"><span class="titulo"
+                <a class="alink" href="../index.php"><span class="titulo"
                         style="cursor:pointer;background-color: white;"> Voltar ao menu </span></a>
             </li>
 

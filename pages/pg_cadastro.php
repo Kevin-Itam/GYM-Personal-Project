@@ -16,7 +16,7 @@
     <div>
         <img class="background-image" src="../img/loss_lado.png">
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: black;">
-            <a class="navbar-brand" href="../index_Apre.php" style="color: white;">
+            <a class="navbar-brand" href="../index.php" style="color: white;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,10 +102,6 @@
                                 <div>
                                     <button type="submit" class="btn btn-outline-warning"
                                         style="width: 150px; margin-top: 25px;">Cadastrar</button>
-                                    <div class="message">
-                                        <div class="success" id="success">Your Message Successfully Sent!</div>
-                                        <div class="danger" id="danger">Feilds Can't be Empty!</div>
-                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -113,7 +109,7 @@
                 </div>
             </div>
         </section>
-        <script src="../js/javaScript.js" crossorigin="anonymous"></script>
+        <!-- <script src="../js/javaScript.js" crossorigin="anonymous"></script> -->
 </body>
 
 </html>

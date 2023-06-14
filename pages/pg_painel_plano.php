@@ -102,7 +102,7 @@ if (!empty($_SESSION['id_usuario'])) {
                 <img src="">
                 <div align="center">
                     <div class="dv_ig">
-                        <a href="../index_Apre.php">
+                        <a href="../index.php">
                             <img src="..\img\retorna.png" style="height: 40px; width: 40px;">
                             <p>Pagina principal</p>
                         </a>

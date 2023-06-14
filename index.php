@@ -110,7 +110,7 @@ if (!empty($_SESSION['id_usuario'])) {
                 if (!empty($_SESSION['id_usuario'])) {
                 echo'
                 
-                <div class="dropdown">
+                <div class="dropdown" style="position:relative;left:10vw;">
                 <a class=" btn-primary dropdown-toggle" role="button" id="dropdownMenuLink"
                     data-mdb-toggle="dropdown" aria-expanded="false" style="text-decoration:none;">
                     ' . $nome . '
