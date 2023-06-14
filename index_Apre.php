@@ -66,6 +66,11 @@ if (!empty($_SESSION['id_usuario'])) {
     span {
         color: rgba(255, 251, 0, 0.747);
     }
+    .btn-primary {
+        color:rgba(255,255,255,.55);
+        background-color: transparent!important;
+        border-color: transparent!important;
+    }
 </style>
 
 <body>
@@ -100,20 +105,39 @@ if (!empty($_SESSION['id_usuario'])) {
                         <a class="nav-link" onclick="scrollElement('calendario')">Horarios</a>
                     </li>
                 </ul>
+
                 <?php
                 if (!empty($_SESSION['id_usuario'])) {
                     echo '                <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-outline-danger" href="../inc/logout.php" role="button">Sair</a>
+                    <a class="btn-outline-danger nav-link" href="../inc/logout.php" role="button" style="    display: flex;
+                    justify-content: center;
+                    background-color: #5d5d5d54;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    color: red;">Sair</a>
                 </form>';
                     echo '               <form class="form-inline my-2 my-lg-0" >
-                    <a class="btn btn-outline-warning" href="pages/pg_painel_user.php" role="button">' . $nome . '</a>
+                    <a class="btn-outline-warning" href="pages/pg_painel_user.php" role="button">' . $nome . '</a>
                 </form>';
                 } else {
                     echo '                <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-outline-warning" href="pages/pg_login.php" role="button">Acessar</a>
+                    <a class="btn-outline-warning" href="pages/pg_login.php" role="button">Acessar</a>
                 </form>';
                 }
+                
                 ?>
+                <div class="dropdown">
+                    <a class=" btn-primary dropdown-toggle" role="button" id="dropdownMenuLink"
+                        data-mdb-toggle="dropdown" aria-expanded="false" style="text-decoration:none;">
+                        Perfil de Acesso
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><form><a class="dropdown-item" href="pages/pg_painel_user.php" role="button">' . $nome . '</a></form></li>
+                        <li><form><a class="dropdown-item" href="pages/pg_login.php" role="button">Acessar</a></form></li>
+                        <li><form><a class="dropdown-item" href="../inc/logout.php" role="button">Sair</a></form></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -148,7 +172,7 @@ if (!empty($_SESSION['id_usuario'])) {
                     <div class="carousel-caption d-none d-md-block">
 
                         <p
-                            style="font-size: 30px;font-weight: 600;line-height:5vh; position:relative;top:-10rem;left:-90vh;">
+                            style="font-size: 30px;font-weight: 700;line-height:5vh; position:relative;top:-12rem;left:-90vh;">
                             Sorte é o que acontece quando a preparação encontra a oportunidade.</p>
                     </div>
                 </div>
@@ -218,22 +242,19 @@ if (!empty($_SESSION['id_usuario'])) {
             <div class="gym_ativ_type">
                 <img src="img/bodybuild.png" style="height: 600px; width: 450px;">
                 <div class="gym_ativ_type_txt">
-                    <h5><a><b>Coaching</b></a><a><b>Strength</b></a></h5>
-                    <span>Musculação</span>
+                    <h5><a><b>Musculação</b></a></h5>
                 </div>
             </div>
             <div class="gym_ativ_type">
                 <img src="img/zumba.jpg" style="height: 600px; width: 450px;">
                 <div class="gym_ativ_type_txt">
-                    <h5><a><b>Coaching</b></a><a><b>Strength</b></a></h5>
-                    <span>Zumba</span>
+                    <h5><a><b>Zumba</b></a></h5>
                 </div>
             </div>
             <div class="gym_ativ_type">
                 <img src="img/velho_treinando.jpg" style="height: 600px; width: 450px;">
                 <div class="gym_ativ_type_txt">
-                    <h5><a><b>Coaching</b></a><a><b>Strength</b></a></h5>
-                    <span>Treinamento Funcional</span>
+                    <h5><a><b>Treinamento Funcional</b></h5>
                 </div>
             </div>
         </section>
