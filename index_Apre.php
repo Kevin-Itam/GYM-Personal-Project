@@ -66,6 +66,11 @@ if (!empty($_SESSION['id_usuario'])) {
     span {
         color: rgba(255, 251, 0, 0.747);
     }
+    .btn-primary {
+        color:rgba(255,255,255,.55);
+        background-color: transparent!important;
+        border-color: transparent!important;
+    }
 </style>
 
 <body>
