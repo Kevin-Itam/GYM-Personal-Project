@@ -108,31 +108,30 @@ if (!empty($_SESSION['id_usuario'])) {
 
                 <?php
                 if (!empty($_SESSION['id_usuario'])) {
-                    echo '                <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-outline-danger" href="../inc/logout.php" role="button">Sair</a>
-                </form>';
-                    echo '               <form class="form-inline my-2 my-lg-0" >
-                    <a class="btn btn-outline-warning" href="pages/pg_painel_user.php" role="button">' . $nome . '</a>
-                </form>';
+                echo'
+                
+                <div class="dropdown">
+                <a class=" btn-primary dropdown-toggle" role="button" id="dropdownMenuLink"
+                    data-mdb-toggle="dropdown" aria-expanded="false" style="text-decoration:none;">
+                    ' . $nome . '
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><form><a class="dropdown-item" href="pages/pg_painel_user.php" role="button">Dados do usuário</a></form></li>
+                    <li><form><a class="dropdown-item" href="inc/logout.php" role="button">Sair</a></form></li>
+                </ul>
+                </div>
+                
+                ';
+
                 } else {
-                    echo '                <form class="form-inline my-2 my-lg-0">
-                    <a class="btn-outline-warning" href="pages/pg_login.php" role="button">Acessar</a>
+                    echo '               <form class="form-inline my-2 my-lg-0" >
+                    <a class="btn btn-outline-warning" href="pages/pg_login.php" role="button">Acessar</a>
                 </form>';
                 }
                 
                 ?>
-                <div class="dropdown">
-                    <a class=" btn-primary dropdown-toggle" role="button" id="dropdownMenuLink"
-                        data-mdb-toggle="dropdown" aria-expanded="false" style="text-decoration:none;">
-                        Perfil de Acesso
-                    </a>
 
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><form><a class="dropdown-item" href="pages/pg_painel_user.php" role="button">' . $nome . '</a></form></li>
-                        <li><form><a class="dropdown-item" href="pages/pg_login.php" role="button">Acessar</a></form></li>
-                        <li><form><a class="dropdown-item" href="../inc/logout.php" role="button">Sair</a></form></li>
-                    </ul>
-                </div>
             </div>
         </nav>
     </header>
