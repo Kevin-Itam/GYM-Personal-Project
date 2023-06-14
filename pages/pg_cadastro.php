@@ -85,12 +85,7 @@
                                 </div>
                                 <div class="form-group d-flex" style="margin-top: 10px;">
                                     <input name="telefone" id="TEl1" type="text" class="form-control rounded-left"
-                                        placeholder=" Telefone" required="">
-                                    <span class="span_cad">Preencha o campo Telefone </span>
-                                </div>
-                                <div class="form-group d-flex" style="margin-top: 10px;">
-                                    <input name="telefone_ad" id="TEl2" type="text" class="form-control rounded-left"
-                                        placeholder=" Telefone Adicional">
+                                        placeholder="(00) 00000-0000" required="">
                                     <span class="span_cad">Preencha o campo Telefone </span>
                                 </div>
                                 <div class="form-check form-switch" style="padding-top: 10px;">
