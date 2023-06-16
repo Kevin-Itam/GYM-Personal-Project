@@ -44,6 +44,7 @@ if (!empty($_SESSION['id_usuario'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3a1453d3f1.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -68,28 +69,89 @@ if (!empty($_SESSION['id_usuario'])) {
         /* Ocultar a janela modal */
         display: none;
     }
-</style>
 
+    .form-group {
+        position: relative;
+        height: 50px !important;
+    }
+
+    .form-control {
+        background: #222 !important;
+        color: white !important;
+        font-size: 18px !important;
+        height: 100% !important;
+        outline: 0 !important;
+
+    }
+
+    .form-control:focus~.cut,
+    .form-control:not(:placeholder-shown)~.cut {
+        transform: translateY(8px) !important;
+    }
+
+    .placeholder {
+        color: white !important;
+        font-family: sans-serif !important;
+        left: 20px !important;
+        line-height: 14px !important;
+        pointer-events: none !important;
+        position: absolute !important;
+        transform-origin: 0 50% !important;
+        transition: transform 200ms, color 200ms !important;
+        top: 20px !important;
+    }
+
+    .form-control:focus~.placeholder,
+    .form-control:not(:placeholder-shown)~.placeholder {
+        transform: translateY(-42px) translateX(-10px) scale(0.95);
+    }
+
+    .form-control:not(:placeholder-shown)~.placeholder {
+        color: rgb(0, 0, 0) !important;
+
+    }
+
+    .form-control:focus~.placeholder {
+        color: rgb(0, 0, 0) !important;
+        font-weight: 600;
+        font-size: 17px;
+    }
+</style>
 <body>
     <!--============ Modal===========-->
     <div class="backgroundModal" id="abrir">
         <div class="login-wrap p-4 p-md-5">
-            <span class="X-lateral-vei" onclick="fecharSenha('abrir')"><i class="fa-regular fa-circle-xmark"></i></span>
-            <h3 class="text-center mb-4" style="padding-top: 50px; color: white; font-size: 25px; color:#0e0e0e;">Digite
+            <span class="X-lateral-vei" onclick="fecharSenha('abrir')"><img style="cursor:pointer;position: relative;
+    bottom: 30px;
+    left: 100%;" src='..\img\icons8-excluir-30.png'></span>
+            <h3 class="text-center mb-4" style="padding-top: 50px;
+    font-size: 25px;
+    color: #0e0e0e;
+    position: relative;
+    top: -4vh;
+    font-weight: 600;">Digite
                 a sua senha nova</h3>
-            <form action="../inc/alterarSenha.php" autocomplete="off" class="login-form">
+            <form action="../inc/alterarSenha.php" autocomplete="off" class="login-form" style="position: relative;
+    top: -2vh;">
                 <input type="hidden" name="id_user" value="<?php echo $id; ?>">
                 <div class="form-group">
-                    <input name="troca_senha" type="password" class="form-control rounded-left" placeholder="Senha"
-                        required="" style="margin-top: 25px;">
-                </div>
-                <div class="form-group d-flex">
-                    <input name="troca_senha_conf" type="password" class="form-control rounded-left"
-                        placeholder="Repetir Senha" required="" style="margin-top: 10px;">
+                    <input name="troca_senha" type="password" class="form-control rounded-left" placeholder=" "
+                        style="margin-top: 30px;">
+                    <label for="firstname" class="placeholder">Senha</label>
                 </div>
                 <div class="form-group">
+                    <input name="troca_senha_conf" type="password" class="form-control rounded-left" placeholder=" "
+                        style="margin-top: 30px;">
+                    <label for="firstname" class="placeholder"> Repetir senha</label>
+                </div>
+                <!-- <div class="form-group">
                     <button type="submit" class="btn btn-outline-warning"
                         style="width: 150px; margin-top: 25px; color: black;border:1px solid black;position:relative;left:20%;">Trocar</button>
+                </div> -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-outline-warning"
+                        style="width: 150px; margin-top:25px;background-color:black;color:white;position:relative;left:25%;">Trocar
+                    </button>
                 </div>
             </form>
         </div>
@@ -277,6 +339,18 @@ if (!empty($_SESSION['id_usuario'])) {
     </div>
     <script src="../js/javaScript.js" crossorigin="anonymous"></script>
     <script src="../js/ModalSenha.js" crossorigin="anonymous"></script>
+    <script>  
+  function formatar(mascara, documento) {
+    let i = documento.value.length;
+    let saida = '#';
+    let texto = mascara.substring(i);
+    while (texto.substring(0, 1) != saida && texto.length ) {
+      documento.value += texto.substring(0, 1);
+      i++;
+      texto = mascara.substring(i);
+    }
+  }
+</script>
 
 </body>
 

@@ -66,10 +66,17 @@ if (!empty($_SESSION['id_usuario'])) {
     span {
         color: rgba(255, 251, 0, 0.747);
     }
+
     .btn-primary {
-        color:rgba(255,255,255,.55);
-        background-color: transparent!important;
-        border-color: transparent!important;
+        color: rgba(255, 255, 255, .55);
+        background-color: transparent !important;
+        border-color: transparent !important;
+    }
+
+    .btn-outline-warning:hover {
+        color: white !important;
+        border: 2px solid #ffc107;
+        ;
     }
 </style>
 
@@ -108,7 +115,7 @@ if (!empty($_SESSION['id_usuario'])) {
 
                 <?php
                 if (!empty($_SESSION['id_usuario'])) {
-                echo'
+                    echo '
                 
                 <div class="dropdown" style="position:relative;left:10vw;">
                 <a class=" btn-primary dropdown-toggle" role="button" id="dropdownMenuLink"
@@ -126,10 +133,15 @@ if (!empty($_SESSION['id_usuario'])) {
 
                 } else {
                     echo '               <form class="form-inline my-2 my-lg-0" >
-                    <a class="btn btn-outline-warning" href="pages/pg_login.php" role="button">Acessar</a>
+                    <a class="btn-outline-warning" href="pages/pg_login.php" role="button" style="position:relative;right:5vw;display:flex;height:50px;width:80px;justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    background-color: #91898917;
+                    border-radius: 27px;
+                    padding: 25px;">Acessar</a>
                 </form>';
                 }
-                
+
                 ?>
 
             </div>
@@ -236,19 +248,33 @@ if (!empty($_SESSION['id_usuario'])) {
             <div class="gym_ativ_type">
                 <img src="img/bodybuild.png" style="height: 600px; width: 450px;">
                 <div class="gym_ativ_type_txt">
-                    <h5><a><b>Musculação</b></a></h5>
+                    <h5><a><b style="color:yellow;">Musculação</b></a></h5>
+                    <p style="word-break:normal; max-width:200px;max-width: 418px;
+    margin: 0; font-size:17px;">A <b>musculação</b> é um tipo de exercício físico realizado com pesos de diversas
+                        cargas diversas
+                        cargas, amplitudes e tempo de contração variáveis, para pessoas de diversas idades e com
+                        diferentes objetivos.</p>
                 </div>
             </div>
             <div class="gym_ativ_type">
                 <img src="img/zumba.jpg" style="height: 600px; width: 450px;">
                 <div class="gym_ativ_type_txt">
-                    <h5><a><b>Zumba</b></a></h5>
+                    <h5><a><b style="color:yellow;">Zumba</b></a></h5>
+                    <p style="word-break:normal; max-width:200px;max-width: 418px;
+    margin: 0; font-size:17px;">A <b>zumba</b> é a mistura de movimentos aeróbicos e coreografias latinas, como a
+                        salsa, e reggaeton, que promove o condicionamento físico, com destaque para o
+                        treino cardiovascular,pernas e glúteos.</p>
                 </div>
             </div>
             <div class="gym_ativ_type">
                 <img src="img/velho_treinando.jpg" style="height: 600px; width: 450px;">
                 <div class="gym_ativ_type_txt">
-                    <h5><a><b>Treinamento Funcional</b></h5>
+                    <h5><a><b style="color:yellow;">Treinamento Funcional</b></h5>
+                    <p style="word-break:normal; max-width:200px;max-width: 418px;
+    margin: 0; font-size:17px;">O <b>treinamento funcional</b> é uma classificação de exercícios que envolvem treinar o corpo
+                        para desenvolver capacidades funcionais necessárias às atividades da vida diária,agachar,
+                        empurrar, puxar,
+                        correr, levantar.</p>
                 </div>
             </div>
         </section>
@@ -258,7 +284,7 @@ if (!empty($_SESSION['id_usuario'])) {
 
     <section class="planos" id="planos">
         <div class="row">
-            <h1 style="margin-top: 5%;">Planos Disponíveis</h1>
+            <h1 style="margin-top: 5%;margin-bottom: 5%;">Planos Disponíveis</h1>
             <?php
             $consulta = "SELECT * FROM tbl_planos";
             $sql = $conn->query($consulta) or die($conn->error);
