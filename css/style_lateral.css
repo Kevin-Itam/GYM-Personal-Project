@@ -118,14 +118,12 @@ body.menu-close .div-navv {
     width: 100%;
     text-decoration: none;
     color: #fff;
-    padding-left: 7px;
     font-size: .92rem;
 }
 
 .forum_menu ul li a .fa-house {
     position: relative;
     display: block;
-
     height: 50px;
     text-align: center;
     line-height: 60px;

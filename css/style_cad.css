@@ -12,6 +12,7 @@ body {
   background-repeat: no-repeat;
   position: fixed;
   width: 100%;
+  height: 100%;
   background-size: cover;
   left: 0;
   right: 0;

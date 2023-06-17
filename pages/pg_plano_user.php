@@ -52,6 +52,7 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link href="../css/style_lateral.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -217,18 +218,22 @@ $result = $conn->query($sql);
                 </a>
             </li>
 
-            <li class="list active " style="display: flex;flex-direction: column;row-gap: 2vh;">
+            <li class="list active " >
                 <a class="alink" href="../index.php"><span class="titulo"
-                        style="cursor:pointer;background-color: white;"> Voltar ao menu </span></a>
+                        style="cursor:pointer;background-color: white;border-radius:8px;"> Voltar ao menu </span></a>
             </li>
 
-            <li class="list active " style="display: flex;flex-direction: column;row-gap: 2vh;"><a class="alink"
-                    onclick="abrir_cad('cad')"><span class="titulo" style="cursor:pointer;background-color: white;">
+            <li class="list active " ><a class="alink"
+                    onclick="abrir_cad('cad')"><span class="titulo" style="cursor:pointer;background-color: white;border-radius:8px;">
                         Visualizar cadastros </span></a>
             </li>
-            <li class="list active " style="display: flex;flex-direction: column;row-gap: 2vh;">
+            <li class="list active " >
                 <a class="alink" onclick="abrir_plan('plan')"><span class="titulo"
-                        style="cursor:pointer;background-color: white;"> Visualizar Plano </span></a>
+                        style="cursor:pointer;background-color: white;border-radius:8px;"> Visualizar Plano </span></a>
+            </li>
+            <li class="list active " style="position:relative;top:30vh;">
+                <a class="alink" onclick="abrir_plan('plan')"><span class="titulo"
+                        style="cursor:pointer;background-color: white;border-radius:8px;"> Retornar ao Perfil </span></a>
             </li>
         </ul>
     </div>
