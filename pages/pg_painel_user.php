@@ -247,7 +247,7 @@ if (!empty($_SESSION['id_usuario'])) {
 
             <div class="titulo">
                 <img src="../img/icons-userr.png">
-                <h2>Perfil de Usuario</h2>
+                <h2>Perfil de Administrador</h2>
             </div>
 
             <section class="fild_1">
