@@ -232,7 +232,7 @@ $result = $conn->query($sql);
                         style="cursor:pointer;background-color: white;border-radius:8px;"> Visualizar Plano </span></a>
             </li>
             <li class="list active " style="position:relative;top:30vh;">
-                <a class="alink" onclick="abrir_plan('plan')"><span class="titulo"
+                <a class="alink" href="../pages/pg_painel_user.php" onclick="abrir_plan('plan')"><span class="titulo"
                         style="cursor:pointer;background-color: white;border-radius:8px;"> Retornar ao Perfil </span></a>
             </li>
         </ul>
