@@ -52,8 +52,8 @@
                                 </div>
                                 <!--========== Colocar notificação de foi enviado e de não foi encotrado o usuário informa o e-mail ou telefone do suporte==========-->
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-outline-warning"
-                                        style="width: 150px; margin-top: 25px;">Enviar</button>
+                                    <button type="button" class="btn btn-outline-warning" style="width: 150px; margin-top: 25px;position: relative;
+    left: 30%;">Enviar</button>
                                 </div>
                             </form>
                         </div>
