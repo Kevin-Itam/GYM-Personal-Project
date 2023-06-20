@@ -52,17 +52,66 @@ nav {
 body.menu-close .imgss {
     background-image: url();
 }
+body.menu-close .ico1 {
+    display: block!important;
+    position: relative;
+    background-image: url(../img/casa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 64px;
+    width: 64px;
+    max-width: 64px;
+    max-height: 64px;
+    margin-left: 0.71vw;
+}
+body.menu-close .ico2 {
+    display: block!important;
+    position: relative;
+    background-image: url(../img/cad_list.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 64px;
+    width: 64px;
+    max-width: 64px;
+    max-height: 64px;
+    margin-left: 0.71vw;
+}
+body.menu-close .ico3 {
+    display: block!important;
+    position: relative;
+    background-image: url(../img/plan_list.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 64px;
+    width: 64px;
+    max-width: 64px;
+    max-height: 64px;
+    margin-left: 0.71vw;
+}
+body.menu-close .ico4 {
+    display: block!important;
+    position: relative;
+    background-image: url(../img/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 64px;
+    width: 64px;
+    max-width: 64px;
+    max-height: 64px;
+    margin-left: 0.71vw;
+}
+
 
 body.menu-close .forum_menu ul li a .titulo,
 body.menu-close .titulo-menu,
 body.menu-close .a{
     display: none;
 }
-body.menu-close .forum_menu ul li a .fa-house {
-    position: relative;
-    left: 15px;
-    font-size:1.5rem;
-}
+
 body.menu-close .tabela {
     margin-left: 6em;
     transition: 0.5s;
@@ -92,6 +141,7 @@ body.menu-close .div-navv {
     overflow-x: hidden;
     border-left: 2px solid white;
     border-right: 2px solid white;
+    border-bottom: 2px solid white;
     background-color: black;
 
 }
@@ -100,7 +150,7 @@ body.menu-close .div-navv {
     position: absolute;
     top: 2vh;
     left: 0;
-    padding-left: 0;
+    padding-left: 5px;
     padding-top: 45px;
 }
 

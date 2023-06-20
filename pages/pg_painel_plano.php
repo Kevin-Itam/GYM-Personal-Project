@@ -264,7 +264,7 @@ if (!empty($_SESSION['id_usuario'])) {
 
     </form>
     </div>
-    <script src="../js/javaScript.js" crossorigin="anonymous"></script>
+    <!-- <script src="../js/javaScript.js" crossorigin="anonymous"></script> -->
     <script src="../js/ModalSenha.js" crossorigin="anonymous"></script>
 
 </body>

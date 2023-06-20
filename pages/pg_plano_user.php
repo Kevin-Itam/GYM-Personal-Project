@@ -111,7 +111,18 @@ $result = $conn->query($sql);
         display: flex;
         flex-direction: row;
         position: relative;
-        z
+    }
+    .ico1{
+        display: none!important;
+    }
+    .ico2{
+        display: none!important;
+    }
+    .ico3{
+        display: none!important;
+    }
+    .ico4{
+        display: none!important;
     }
 </style>
 <script>
@@ -221,19 +232,23 @@ $result = $conn->query($sql);
             <li class="list active " >
                 <a class="alink" href="../index.php"><span class="titulo"
                         style="cursor:pointer;background-color: white;border-radius:8px;"> Voltar ao menu </span></a>
+                        <a class="ico1" style="height:64px;width:64px;" href="../index.php"></a>
             </li>
 
-            <li class="list active " ><a class="alink"
+            <li class="list active " style="top:5vh;" ><a class="alink"
                     onclick="abrir_cad('cad')"><span class="titulo" style="cursor:pointer;background-color: white;border-radius:8px;">
                         Visualizar cadastros </span></a>
+                        <a class="ico2" style="height:64px;width:64px;cursor:pointer;" onclick="abrir_cad('cad')" style="cursor:pointer;"></a>
             </li>
-            <li class="list active " >
+            <li class="list active " style="top:10vh;" >
                 <a class="alink" onclick="abrir_plan('plan')"><span class="titulo"
                         style="cursor:pointer;background-color: white;border-radius:8px;"> Visualizar Plano </span></a>
+                        <a class="ico3" style="height:64px;width:64px;cursor:pointer;" onclick="abrir_plan('plan')" style="cursor:pointer;"></a>
             </li>
-            <li class="list active " style="position:relative;top:30vh;">
-                <a class="alink" href="../pages/pg_painel_user.php" onclick="abrir_plan('plan')"><span class="titulo"
+            <li class="list active  " style="position:relative;top:30vh;">
+                <a class="alink" href="../pages/pg_painel_user.php" ><span class="titulo"
                         style="cursor:pointer;background-color: white;border-radius:8px;"> Retornar ao Perfil </span></a>
+                        <a class="ico4" style="top:20vh;height:64px;width:64px; cursor:pointer;" href="../pages/pg_painel_user.php" style="cursor:pointer;"></a>
             </li>
         </ul>
     </div>
