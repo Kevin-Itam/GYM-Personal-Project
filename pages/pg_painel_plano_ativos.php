@@ -39,8 +39,7 @@ if (!empty($_SESSION['id_usuario'])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3a1453d3f1.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="../css/style_painel.css" rel="stylesheet" />
     <title>Painel de Usuario</title>
 </head>
@@ -73,16 +72,13 @@ if (!empty($_SESSION['id_usuario'])) {
             <form action="../inc/alterarSenha.php" autocomplete="off" class="login-form">
                 <input type="hidden" name="id_user" value="<?php echo $id; ?>">
                 <div class="form-group">
-                    <input name="troca_senha" type="password" class="form-control rounded-left" placeholder="Senha"
-                        required="" style="margin-top: 25px;">
+                    <input name="troca_senha" type="password" class="form-control rounded-left" placeholder="Senha" required="" style="margin-top: 25px;">
                 </div>
                 <div class="form-group d-flex">
-                    <input name="troca_senha_conf" type="password" class="form-control rounded-left"
-                        placeholder="Repetir Senha" required="" style="margin-top: 10px;">
+                    <input name="troca_senha_conf" type="password" class="form-control rounded-left" placeholder="Repetir Senha" required="" style="margin-top: 10px;">
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-outline-warning"
-                        style="width: 150px; margin-top: 25px;">Trocar</button>
+                    <button type="submit" class="btn btn-outline-warning" style="width: 150px; margin-top: 25px;">Trocar</button>
                 </div>
             </form>
         </div>
@@ -113,8 +109,7 @@ if (!empty($_SESSION['id_usuario'])) {
 
                     </div>
                 </div>
-                <hr
-                    style="position: relative;top:100%;border-bottom: 2px solid #0e0e0e;margin-top: 11px!important; opacity:1!important; width: 100%;">
+                <hr style="position: relative;top:100%;border-bottom: 2px solid #0e0e0e;margin-top: 11px!important; opacity:1!important; width: 100%;">
             </div>
 
             <?php
@@ -136,37 +131,25 @@ if (!empty($_SESSION['id_usuario'])) {
             <?php
             if (($permissao) == 1) {
                 echo ' <div class="div1">
-                <img src="">
-                <div>
-                    <h5>Consultar</h5><br>
-                    <div class="dv_ig">
-                        <a href="../pages/pg_painel_plano_ativos.php">
-                            <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
-                            <p>Planos Antivos</p>
-                        </a>
-                        <a href="../pages/pg_painel_plano.php">
-                            <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
-                            <p>Compras Planos</p>
-                        </a>
-                    </div>
+            <img src="">
+            <div>
+                <div class="dv_ig" >
+                    <a href="../pages/pg_painel_user.php" >
+                        <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
+                        <p>Dados do usuário</p>
+                    </a>
+                    <a href="../pages/pg_painel_plano_ativos.php" style="margin-top: 20px;">
+                        <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
+                        <p>Plano Ativo</p>
+                    </a>
+                    <a href="../pages/pg_painel_plano.php" style="margin-top: 20px;">
+                        <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
+                        <p>Comprar Planos</p>
+                    </a>
+
                 </div>
-            </div>';
-            }
-            ?>
-            <?php
-            if (($permissao) == 1) {
-                echo ' <div class="div1">
-                <img src="">
-                <div>
-                    <h5>Dados do usuário</h5><br>
-                    <div class="dv_ig">
-                        <a href="../pages/pg_painel_user.php">
-                            <img src="../img/icons-userr.png" style="height: 40px; width: 40px;">
-                            <p>Consultar</p>
-                        </a>
-                    </div>
-                </div>
-            </div>';
+            </div>
+        </div>';
             }
             ?>
 
@@ -193,8 +176,7 @@ if (!empty($_SESSION['id_usuario'])) {
 
                                     <div class="row align-items-center" style="margin-top: 25px;">
                                         <div class="col-md-2">
-                                            <p class="lead fw-normal mb-0"><i class="fas fa-circle me-2"
-                                                    style="color: green;" aria-hidden="true"></i>
+                                            <p class="lead fw-normal mb-0"><i class="fas fa-circle me-2" style="color: green;" aria-hidden="true"></i>
                                                 Ativo</p>
                                         </div>
                                         <div class="col-md-2 d-flex justify-content-center">
