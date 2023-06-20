@@ -317,7 +317,6 @@ if (!empty($_SESSION['id_usuario'])) {
 
                 <div class="BTN">
                     <button type="submit">Confirmar</button>
-                    <button type="reset">Limpar</button>
                 </div>
 
             </section>
