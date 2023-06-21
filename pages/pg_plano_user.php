@@ -138,7 +138,7 @@ $result = $conn->query($sql);
 </script>
 <script src="../js/ModalSenha.js" crossorigin="anonymous"></script>
 
-<body style="display:flex;justify-content:center;background-color:#343a40!important;">
+<body style="display:flex;justify-content:center;">
 
     <!--============ Modal===========-->
 
