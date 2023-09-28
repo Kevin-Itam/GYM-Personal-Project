@@ -1,0 +1,94 @@
+@use 'variables'
+
+
+body
+    
+    font-family: variables.$font-txt
+    background-color: variables.$primary-color
+.side_menu
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    width: 6rem
+    min-width: 5rem
+    box-sizing: border-box
+    overflow: hidden
+    box-shadow: 3px 0 0 red
+    transition-duration: .5s 
+    background-color: variables.$secundary-color
+    
+    div > .menu_ico
+        color: black
+        font-size: 56px
+        cursor: pointer 
+        margin-left: 14px
+
+    span i 
+        color: black
+        font-size: 50px
+        cursor: pointer 
+        margin-left: 8px
+
+    ul
+        position: relative
+        top: 12vh
+        margin: 0
+        padding: 0 
+        display: flex
+        flex-direction: column
+        justify-content: center
+        row-gap: 2rem
+
+    ul li:hover
+        background: red
+
+    ul li
+        height: 100px
+        display: flex
+        flex-direction: row
+        column-gap: 1.5rem
+        align-items: center
+        padding-left: 16px
+        list-style: none
+        transition: .5s
+
+    ul li > a
+        display: flex
+        text-decoration: none
+
+
+    ul li a span > i
+        margin-left: 10px
+        margin-right: 10px
+        color: black  
+        font-size:46px
+
+    ul li a > .menu_txt
+        line-height: 70px
+        white-space: nowrap
+        color: variables.$primary-color   
+.side_menu:focus-within 
+  width: 14rem
+
+
+/* TABELA PERFIL DO USUARIO ATUAL*/
+
+header 
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 1.5rem
+    margin-left: 6rem
+    color: variables.$secundary-color
+
+.sec-form
+    display: flex
+    flex-direction: column
+    row-gap: 4.5vw
+    position: absolute
+    top: 50%
+    left: 56%
+    transform: translate(-56%, -50%)
+    border-radius: 7px
+    background-color: rgb(39 39 39 / 45%)

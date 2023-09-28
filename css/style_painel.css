@@ -1,67 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap');
 
-* {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    height: auto;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #0e0e0e;
-    font-family: "Poppins", sans-serif !important;
-
-
-}
-
-.corpo {
-    width: 100%;
-    height: 100%;
-    background-color: #0e0e0e;
-
-}
 
 /*========= CORPO DO FORMULARIO =========*/
-header {
-    position: relative;
-    top: 2rem;
-    font-weight: 600;
-    font-size: 25px;
-    color: white;
-}
-
-.titulo {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    align-items: center;
-    top: 0.5rem;
-    left: 33vw;
-
-}
-
-.fild_1 {
-    display: flex;
-    flex-direction: column;
-    row-gap: 4.5vw;
-    height: auto;
-    width: 40vw;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    padding: 16px 0;
-    transform: translate(-45%, -50%);
-    border-radius: 10px;
-    color: white;
-    border: 0.5px solid yellow;
-}
-
-h2 {
-    color: white;
-}
-
 
 /*=====================*/
 .BTN {
@@ -109,16 +49,15 @@ p {
 
 /*=========== CORPO LATERAL ==========*/
 .div_out {
-    position: fixed;
-    top: 28px;
-    right: 0;
-    max-width: 21rem;
+    position: relative;
+    top: 10%;
+    max-width: 22rem;
     border-radius: 5px;
     border: solid 1px black;
-    background-color: white;
-    color: black;
-    padding: 16px 20px;
-    margin: 0 2rem;
+    background-color: #0e0e0e;
+    color: white;
+    margin: 9px;
+    padding: 3rem 17px;
 
 }
 
@@ -130,22 +69,21 @@ p {
     border: solid 1px black;
     background-color: #0e0e0e;
     color: white;
-    margin: 9px ;
+    margin: 9px;
     padding: 3rem 17px;
 
 }
 
+
 .la {
-    width: auto;
+    display: none;
     height: 100%;
-    display: flex;
     flex-direction: column;
     row-gap: 4vh;
     position: absolute;
     left: 0;
     padding: 0 20px;
     background-color: white;
-    border-right: 1px solid yellow;
 }
 
 /*========= INPUTS ===========*/
@@ -179,7 +117,7 @@ p {
 
 .input:focus~.cut,
 .input:not(:placeholder-shown)~.cut {
-    transform: translateY(8px);
+    transform: translateY(10px);
 }
 
 .placeholder {
@@ -216,6 +154,7 @@ p {
     justify-content: center;
     border: none;
 }
-.dvsec:focus{
+
+.dvsec:focus {
     border: none;
 }

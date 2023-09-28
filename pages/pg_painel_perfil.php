@@ -48,9 +48,8 @@ if (!empty($_SESSION['id_usuario'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="../css/style_painel.css" rel="stylesheet" />
-    <link href="../css/SASS/style_Cad_sass.css" rel="stylesheet" />
-    <title>Painel de Usuario</title>
+    <link href="../css/SASS/style_PERFIL_sass.css" rel="stylesheet" />
+    <title></title>
 </head>
 <style>
     .login-wrap {
@@ -174,7 +173,6 @@ if (!empty($_SESSION['id_usuario'])) {
     </div>
     <!--=======================-->
 
-    
 
 
     <div id="filterBlur">
@@ -189,7 +187,7 @@ if (!empty($_SESSION['id_usuario'])) {
                         <span class="menu_ico"><i class="bi bi-person-circle"></i></span>
                     </a>
 
-                    <a href="../pages/pg_painel_perfil.php" class="menu_link">
+                    <a href="#" class="menu_link">
                         <span class="menu_txt">Perfil </span>
                     </a>
                 </li>
@@ -216,17 +214,18 @@ if (!empty($_SESSION['id_usuario'])) {
                 } ?>
                 <li class="menu_pg">
                     <a href="#">
-                    <span class="menu_ico"><i class="bi bi-arrow-left-circle"></i></span>
+                        <span class="menu_ico"><i class="bi bi-arrow-left-circle"></i></span>
                     </a>
-                    
+
                     <a href="#" class="menu_link back">
                         <span class="menu_txt">HOME</span>
                     </a>
                 </li>
             </ul>
 
+
         </nav>
-        <section class="la">
+        <!-- <section class="la">
             <div class="div_out">
                 <h5>BemVindo</h5>
                 <div class="dv_ig">
@@ -280,7 +279,7 @@ if (!empty($_SESSION['id_usuario'])) {
             }
             ?>
 
-        </section>
+        </section> -->
 
 
         <!--============CORPO DA PAGINA==========-->
@@ -288,38 +287,22 @@ if (!empty($_SESSION['id_usuario'])) {
 
         <form action="../inc/editar_user.php" id="form" autocomplete="off">
 
-            <header >
-                <img src="../img/icons-userr.png" style="max-height: 100px;max-width: 100px;">
-                <h2>Perfil de Administrador</h2>
-            </header>
-            <section class="sec-form">
-                <div class="dv1">
-                    <div class="input-container">
-                        <input id="firstname" name="nome" class="input" type="text" placeholder=" "
-                            value="<?php echo $nome ?>">
-                        <label for="firstname" class="placeholder">Nome</label>
+            <section class="sec-border">
+                <section class="sec-form">
+                    <div class="input__form" id="item-1">
+                        <input id="firstname" name="nome" class="input__field" type="text" placeholder="nome">
+                        <label for="nome" class="form__label">Nome</label>
                     </div>
-
-                    <div class="input-container">
-                        <input id="CPF" name="cpf" class="input" type="text" placeholder=" " value="<?php echo $cpf ?>">
-                        <label for="CPF" class="placeholder">CPF</label>
+                    <div class="input__form" id="item-2">
+                        <input id="Cpf" name="cpf" class="input" type="text" placeholder="cpf">
                     </div>
-                </div>
-
-                <div class="dv1">
-                    <div class="input-container">
-                        <input id="E-mail" name="email" class="input" type="text" placeholder=" "
-                            value="<?php echo $email ?>">
-                        <label for="E-mail" class="placeholder">E-mail</label>
+                    <div class="input__form" id="item-3">
+                        <input id="Email" name="email" class="input" type="text" placeholder="email">
                     </div>
-                    <div class="input-container">
-                        <input id="Data" name="data" class="input" type="date" value="<?php echo $nascimento ?>">
-                        <label for="E-mail" class="placeholder">Data de Nascimento</label>
-                    </div>
-                </div>
-                <?php
-                if (($sexo) == 'Masculino') {
-                    echo '
+                    <div class="input__form" id="item-4">
+                        <?php
+                        if (($sexo) == 'Masculino') {
+                            echo '
                 <div class="dvsec">
                     <label for="select" class="lasec">Sexo</label>
                     <select name="sexo" id="select">
@@ -328,9 +311,9 @@ if (!empty($_SESSION['id_usuario'])) {
                         <option value="Outro">Outro</option>
                     </select>
                 </div>';
-                } else {
-                    if (($sexo) == 'Feminino') {
-                        echo '
+                        } else {
+                            if (($sexo) == 'Feminino') {
+                                echo '
                         <div class="dvsec">
                             <label for="select" class="lasec">Sexo</label>
                             <select name="sexo" id="select">
@@ -339,8 +322,8 @@ if (!empty($_SESSION['id_usuario'])) {
                                 <option value="Outro">Outro</option>
                             </select>
                         </div>';
-                    } else {
-                        echo '
+                            } else {
+                                echo '
                         <div class="dvsec">
                             <label for="select" class="lasec">Sexo</label>
                             <select name="sexo" id="select">
@@ -349,29 +332,42 @@ if (!empty($_SESSION['id_usuario'])) {
                                 <option value="Feminino">Feminino</option>
                             </select>
                         </div>';
-                    }
-                }
-                ?>
-
-                <div class="dv1">
-                    <div class="input-container">
-                        <input id="TEl1" name="telefone" class="input" type="text" placeholder=" "
-                            value="<?php echo $telefone ?>">
-                        <label for="TEl1" class="placeholder">Telefone</label>
+                            }
+                        }
+                        ?>
                     </div>
-                    <div class="input-container">
-                        <input id="TEL2" name="telefone_ad" class="input" type="text" placeholder=" "
-                            value="<?php echo $telefone_ad ?>">
-                        <label for="TEL2" class="placeholder">Telefone Adicional</label>
+                    <div class="input__form" id="item-5">
+                        <input id="Data" name="data" class="input" type="date">
                     </div>
-                </div>
-
-                <div class="BTN">
-                    <button type="submit">Confirmar</button>
-                </div>
-
+                    <div class="input__form" id="item-6">
+                        <input id="Tel_Cel" name="tel_cel" class="input" type="text" placeholder="telefone celular">
+                    </div>
+                    <div class="input__form" id="item-7">
+                        <input id="Tel_Re" name="tel_re" class="input" type="text" placeholder="telefone casa">
+                    </div>
+                    <div class="input__form" id="item-8">
+                    <input id="Cep" name="CEP" class="input" type="text" placeholder="CEP">
+                    </div>
+                    <div class="input__form" id="item-9">
+                    <input name="local" class="input" type="text" placeholder="Cidade/Estado">
+                    </div>
+                    <div class="input__form" id="item-10">
+                    <input name="Bairro" class="input" type="text" placeholder="Bairro">
+                    </div>
+                    <div class="input__form" id="item-11">
+                    <input name="Rua" class="input" type="text" placeholder="Rua">
+                    </div>
+                    <div class="input__form" id="item-12">
+                    <input name="Número" class="input" type="text" placeholder="Número">
+                    </div>
+                    <div class="button__form" id="item-13">
+                        <div class="btn">
+                            <button class="btn__Confirm">Confirmar</button>
+                            <button class="btn__Clean">Limpar</button>
+                        </div>
+                    </div>
+                </section>
             </section>
-
 
         </form>
     </div>
