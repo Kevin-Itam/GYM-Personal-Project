@@ -290,31 +290,33 @@ if (!empty($_SESSION['id_usuario'])) {
             <section class="sec-border">
                 <section class="sec-form">
                     <div class="input__form" id="item-1">
-                        <input id="firstname" name="nome" class="input__field" type="text" placeholder="nome">
-                        <label for="nome" class="form__label">Nome</label>
+                        <input id="firstname" name="nome" class="input__field" type="text" placeholder=" ">
+                        <label for="firstname" id="item-name" class="form__label">Nome Completo</label>
                     </div>
                     <div class="input__form" id="item-2">
-                        <input id="Cpf" name="cpf" class="input" type="text" placeholder="cpf">
+                        <input id="Cpf" name="cpf" class="input__field" type="text" placeholder=" ">
+                        <label for="Cpf" id="item-cpf" class="form__label">CPF</label>
                     </div>
                     <div class="input__form" id="item-3">
-                        <input id="Email" name="email" class="input" type="text" placeholder="email">
+                        <input id="Email" name="email" class="input__field" type="text" placeholder=" ">
+                        <label for="Email" id="item-email" class="form__label">E-mail</label>
                     </div>
                     <div class="input__form" id="item-4">
                         <?php
                         if (($sexo) == 'Masculino') {
                             echo '
-                <div class="dvsec">
-                    <label for="select" class="lasec">Sexo</label>
-                    <select name="sexo" id="select">
-                        <option "value=' . $sexo . '">' . $sexo . '</option>
-                        <option value="Feminino">Feminino</option>
-                        <option value="Outro">Outro</option>
-                    </select>
-                </div>';
+                                <div>
+                                    <label for="select" class="">Sexo</label>
+                                    <select name="sexo" id="select">
+                                        <option "value=' . $sexo . '">' . $sexo . '</option>
+                                        <option value="Feminino">Feminino</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                </div>';
                         } else {
                             if (($sexo) == 'Feminino') {
                                 echo '
-                        <div class="dvsec">
+                        <div>
                             <label for="select" class="lasec">Sexo</label>
                             <select name="sexo" id="select">
                                 <option "value=' . $sexo . '">' . $sexo . '</option>
@@ -324,7 +326,7 @@ if (!empty($_SESSION['id_usuario'])) {
                         </div>';
                             } else {
                                 echo '
-                        <div class="dvsec">
+                        <div>
                             <label for="select" class="lasec">Sexo</label>
                             <select name="sexo" id="select">
                                 <option "value=' . $sexo . '">' . $sexo . '</option>
@@ -340,25 +342,32 @@ if (!empty($_SESSION['id_usuario'])) {
                         <input id="Data" name="data" class="input" type="date">
                     </div>
                     <div class="input__form" id="item-6">
-                        <input id="Tel_Cel" name="tel_cel" class="input" type="text" placeholder="telefone celular">
+                        <input id="Tel_Cel" name="tel_cel" class="input__field" type="text" placeholder=" ">
+                        <label for="Tel_Cel" id="item-cel" class="form__label">telefone celular</label>
                     </div>
                     <div class="input__form" id="item-7">
-                        <input id="Tel_Re" name="tel_re" class="input" type="text" placeholder="telefone casa">
+                        <input id="Tel_Re" name="tel_re" class="input__field" type="text" placeholder=" ">
+                        <label for="Tel_Re" id="item-cel-cs" class="form__label">telefone casa</label>
                     </div>
                     <div class="input__form" id="item-8">
-                    <input id="Cep" name="CEP" class="input" type="text" placeholder="CEP">
+                        <input id="Cep" name="CEP" class="input__field" type="text" placeholder=" ">
+                        <label for="Cep" id="item-cep" class="form__label">CEP</label>
                     </div>
                     <div class="input__form" id="item-9">
-                    <input name="local" class="input" type="text" placeholder="Cidade/Estado">
+                        <input id="loco" name="local" class="input__field" type="text" placeholder=" ">
+                        <label for="loco" id="item-cid_es" class="form__label">Cidade/Estado</label>
                     </div>
                     <div class="input__form" id="item-10">
-                    <input name="Bairro" class="input" type="text" placeholder="Bairro">
+                        <input id="bair" name="Bairro" class="input__field" type="text" placeholder=" ">
+                        <label for="bair" id="item-bairro" class="form__label">Bairro</label>
                     </div>
                     <div class="input__form" id="item-11">
-                    <input name="Rua" class="input" type="text" placeholder="Rua">
+                        <input id="rua" name="Rua" class="input__field" type="text" placeholder=" ">
+                        <label for="rua" id="item-rua" class="form__label">Rua</label>
                     </div>
                     <div class="input__form" id="item-12">
-                    <input name="Número" class="input" type="text" placeholder="Número">
+                        <input id="num" name="Número" class="input__field" type="text" placeholder=" ">
+                        <label for="num" id="item-numero" class="form__label">Número</label>
                     </div>
                     <div class="button__form" id="item-13">
                         <div class="btn">

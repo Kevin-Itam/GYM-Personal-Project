@@ -85,14 +85,16 @@ body {
   background-color: white;
   height: 70%;
   max-height: 70%;
-  width: 50%;
+  width: 36rem;
 }
 .sec-border .sec-form {
   height: 100%;
   width: 100%;
   padding: 2rem;
   display: grid;
-  grid-template-columns: 50% 50%;
+  column-gap: 1rem;
+  grid-template-columns: 47% 50%;
+  grid-template-rows: 12% 12% 12% 12% 12% 12% 12% 12%;
   border: 1px solid white;
   background-color: black;
 }
@@ -108,6 +110,10 @@ body {
   grid-column-start: 1;
   grid-column-end: 3;
 }
+.sec-border #item-10 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 .sec-border #item-13 {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -118,26 +124,30 @@ body {
   outline: 0;
   border: 2px solid white;
   padding: 5px 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-radius: 6px;
 }
-.input__field::placeholder {
-  color: transparent;
-}
 .input__field:placeholder-shown ~ label {
-  font-size: 1.2rem;
-  color: red;
-  position: absolute;
-  left: 3rem;
-  top: 40px;
+  font-size: 1.1rem;
+  color: black;
+  padding: 6px 10px 6px 10px;
+  position: relative;
+  top: -38px;
   display: block;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 .input__field:focus ~ label {
-  position: absolute;
-  top: 0;
-  left: 2rem;
+  position: relative;
+  top: -70px;
+  color: white;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
 }
 
 /*# sourceMappingURL=style_PERFIL_sass.css.map */
