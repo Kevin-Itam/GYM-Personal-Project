@@ -1,340 +1,225 @@
-html,
-body {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: #f3f3f4 !important;
-}
-
-/* ===============  MENU SUPERIOR  ============*/
-header {
-    position: fixed;
+.topnav {
+    position: absolute;
     top: 0;
     right: 0;
-    left: 0;
-    display: flex;
-    z-index: 1002;
-    background-color: #f8f9fa;
-}
-
-.nav-top {
-    display: flex;
     width: 100%;
+    overflow: hidden;
+    background-color: #000000;
 }
 
-nav {
-    position: relative;
-    left: 0;
-    top: 0;
+.topnav a {
+    float: right;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 28px 36px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-.full {
+.topnav a:hover {
+    background-color: #202020;
+    color: rgb(255, 255, 255);
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 12px;
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    border: none;
+    font-size: 17px;
+    outline: none;
+    border-radius: 0 0 8px;
+}
+
+.topnav .search-container .btn__search {
+    float: right;
+    padding: 12px 16px 12px 16px;
+    margin-top: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px 0 0 0;
+}
+
+.topnav .search-container .btn__search:hover {
+    background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav .search-container {
+        float: right;
+    }
+
+    .topnav a,
+    .topnav input[type=text],
+    .topnav .search-container .btn__search {
+        float: right;
+        display: block;
+        text-align: right;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+/*=============  MENU LATERAL ==============*/
+.table-wrapper {
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+
+caption {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border: 6px solid #1a1a1a ;
+    background-color: #1a1a1a;
+    border-radius: 8px 8px 0 0;
+}
+
+.fl-table {
     position: absolute;
     top: 50%;
-    left: 83%;
-    transform: translate(0%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.btn-src{
-    color:white!important;
-    background-color: black!important;
-
-}
-/*=============  MENU LATERAL ==============*/
-
-.linke {
-    text-decoration-line: none;
-}
-
-body.menu-close .imgss {
-    background-image: url();
-}
-body.menu-close .ico1 {
-    display: block!important;
-    position: relative;
-    background-image: url(../img/casa.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 64px;
-    width: 64px;
-    max-width: 64px;
-    max-height: 64px;
-    margin-left: 0.71vw;
-}
-body.menu-close .ico2 {
-    display: block!important;
-    position: relative;
-    background-image: url(../img/cad_list.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 64px;
-    width: 64px;
-    max-width: 64px;
-    max-height: 64px;
-    margin-left: 0.71vw;
-}
-body.menu-close .ico3 {
-    display: block!important;
-    position: relative;
-    background-image: url(../img/plan_list.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 64px;
-    width: 64px;
-    max-width: 64px;
-    max-height: 64px;
-    margin-left: 0.71vw;
-}
-body.menu-close .ico4 {
-    display: block!important;
-    position: relative;
-    background-image: url(../img/back.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 64px;
-    width: 64px;
-    max-width: 64px;
-    max-height: 64px;
-    margin-left: 0.71vw;
-}
-
-
-body.menu-close .forum_menu ul li a .titulo,
-body.menu-close .titulo-menu,
-body.menu-close .a{
-    display: none;
-}
-
-body.menu-close .tabela {
-    margin-left: 6em;
-    transition: 0.5s;
-    width: 90%;
-}
-
-body.menu-close .forum_menu,
-body.menu-close .div-navv,
-body.menu-close .div-navv {
-    min-width: 5vw;
-    max-width: 5vw;
-    background-image: url(../img/adm_ico.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-.forum_menu {
-    top: 0;
-    left: 0;
-    height: 100%;
-    position: absolute;
-    background-color: black;
-    width: 12vw;
-    min-width: 12vw;
-    max-width: 12vw;
-    overflow-x: hidden;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-    background-color: black;
-
-}
-
-.forum_menu ul {
-    position: absolute;
-    top: 2vh;
-    left: 0;
-    padding-left: 5px;
-    padding-top: 45px;
-}
-
-.forum_menu ul li {
-    position: relative;
-    list-style: none;
-    width: 100%;
-    min-width:100px;
-    min-height: 60px;
-}
-
-.forum_menu ul li a {
-    position: relative;
-    display: flex;
-    width: 100%;
-    text-decoration: none;
-    color: #fff;
-    font-size: .92rem;
-}
-
-.forum_menu ul li a .fa-house {
-    position: relative;
-    display: block;
-    height: 50px;
-    text-align: center;
-    line-height: 60px;
-}
-
-.forum_menu ul li a .fa-house {
-    position: relative;
-    top: 2.5rem;
-    font-size: 1.2rem;
-    z-index: 1;
-}
-
-.forum_menu ul li a .titulo {
-    line-height: 60px;
-    font-weight: 600;
-    white-space: nowrap;
-    margin: 25px;
-    padding: 5px;
-}
-
-/*============= SIDE BAR ==============*/
-.titulo-menu {
-    position: absolute;
-    top: 10px;
-    left: 11px;
-    font-size: 18px;
-    color: #8590a5;
-}
-
-.titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    color: #000000;
-}
-
-.imgss {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-image: url(../img/logo.jpg);
-    background-size: cover;
-    background-position: center;
-
-}
-
-.div-navv {
-    width: 12vw;
-    height: 100%;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-    background-color: black;
-}
-
-.div-nav2 {
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: 100%;
-    padding: 0;
-}
-
-.alink {
-    width: 100%;
-}
-
-.d-flex {
-    position: relative;
-    left: -20px;
-}
-
-.d-flex input {
-    position: relative;
-    left: -20px;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: normal;
     border: none;
-    height: 38px;
-    background-color: #f1f5f7 !important;
-    box-shadow: none !important;
-}
-
-/*========== TABELA CADASTROS ===============*/
-
-.tabela {
-    width: 80%;
-    position: absolute;
-    top: 30vh;
-    margin-left: 10vw;
-    padding: 20px;
-    transition: 0.5s;
+    border-collapse: collapse;
+    max-width: 100%;
+    white-space: nowrap;
     color: white;
-    background-color: #000000;
+    background-color: #1a1a1a;
 }
 
-table {
-    color: white !important;
+.fl-table td,
+.fl-table th {
+    text-align: center;
+    padding: 1.5rem;
 }
 
-tr {
-    border: 2px solid #ffff0059 !important;
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
 }
 
-td {
-    border: 1px solid #ffff0059 !important;
+.fl-table thead th {
+    color: #ffffff;
+    background: #000000;
 }
 
-th {
-    border: 1px solid #ffff0059 !important;
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #000000;
 }
 
-.tabela_planos {
-    background-color: #fff;
-    width: 85vw;
-    position: absolute;
-    top: 45vh;
-    margin-left: 15em;
-    padding: 10px;
-    transition: 0.5s;
+.fl-table tr:nth-child(even) {
+    background: #000000;
 }
 
-/*========== TABELA CADASTROS ===============*/
+/* Responsive */
 
-.tabela {
-    width: 80%;
-    position: absolute;
-    top: 30vh;
-    margin-left: 10vw;
-    padding: 20px;
-    transition: 0.5s;
+@media (max-width: 767px) {
 
-    color: white;
-    background-color: #000000;
-}
 
-table {
-    color: white !important;
-}
+    caption {
+        display: inline-grid;
+        place-content: center;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        width: 100%;
+    }
 
-tr {
-    border: 2px solid #ffff0059 !important;
-}
+    .fl-table {
+        position: absolute;
+        top: 50%;
+        left: 16rem;
+        display: block;
+    }
 
-td {
-    border: 1px solid #ffff0059 !important;
-}
+    .table-wrapper:before {
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: rgb(0, 0, 0);
+        padding: 0 0 10px;
+    }
 
-th {
-    border: 1px solid #ffff0059 !important;
-}
+    .fl-table thead,
+    .fl-table tbody,
+    .fl-table thead th {
+        display: block;
+    }
 
-.tabela_planos {
-    background-color: #fff;
-    width: 85vw;
-    position: absolute;
-    top: 45vh;
-    margin-left: 15em;
-    padding: 10px;
-    transition: 0.5s;
+    .fl-table thead th:last-child {
+        border-bottom: none;
+    }
+
+    .fl-table thead {
+        float: left;
+    }
+
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+
+    .fl-table td,
+    .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+
+    .fl-table tr td:nth-child(odd) {
+        background: #000000;
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
 }
 
 /*=================== formulario =====================*/
@@ -347,11 +232,11 @@ th {
     height: auto;
 }
 
-.fa-regular{
+.fa-regular {
     position: relative;
     top: -2vh;
     left: 90%;
-    font-size:35px;
+    font-size: 35px;
 }
 
 .backgroundModal {
@@ -382,35 +267,35 @@ button:hover {
 /*========= INPUTS ===========*/
 /*=====================*/
 
-.form-group{
+.form-group {
     position: relative;
-    height: 50px!important;
+    height: 50px !important;
 }
 
 .form-control {
-    background: #222!important;
-    color: white!important;
-    font-size: 18px!important;
-    height: 100%!important;
-    outline: 0!important;
+    background: #222 !important;
+    color: white !important;
+    font-size: 18px !important;
+    height: 100% !important;
+    outline: 0 !important;
 
 }
 
 .form-control:focus~.cut,
 .form-control:not(:placeholder-shown)~.cut {
-    transform: translateY(8px)!important;
+    transform: translateY(8px) !important;
 }
 
 .placeholder {
-    color: white!important;
-    font-family: sans-serif!important;
-    left: 20px!important;
-    line-height: 14px!important;
-    pointer-events: none!important;
-    position: absolute!important;
-    transform-origin: 0 50%!important;
-    transition: transform 200ms, color 200ms!important;
-    top: 20px!important;
+    color: white !important;
+    font-family: sans-serif !important;
+    left: 20px !important;
+    line-height: 14px !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    transform-origin: 0 50% !important;
+    transition: transform 200ms, color 200ms !important;
+    top: 20px !important;
 }
 
 .form-control:focus~.placeholder,
@@ -419,12 +304,12 @@ button:hover {
 }
 
 .form-control:not(:placeholder-shown)~.placeholder {
-    color: rgb(0, 0, 0)!important;
+    color: rgb(0, 0, 0) !important;
 
 }
 
 .form-control:focus~.placeholder {
-    color: rgb(0, 0, 0)!important;
+    color: rgb(0, 0, 0) !important;
     font-weight: 600;
     font-size: 17px;
 }

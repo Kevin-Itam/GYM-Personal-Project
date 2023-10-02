@@ -1,0 +1,255 @@
+@use 'variables'
+
+body
+    height: 100%
+    width: 100%
+    margin: 0
+    padding: 0
+    font-family: variables.$font-txt
+    background-color: variables.$background
+
+/*MENU LATERAL*/
+
+.side_menu
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    width: 6rem
+    min-width: 5rem
+    border-radius:0 8px 8px 0
+    box-sizing: border-box
+    overflow: hidden
+    box-shadow: 3px 0 0 variables.$red
+    transition-duration: .5s 
+    background-color: variables.$primary-color
+    z-index: 1
+    
+    div > .menu_ico
+        color: black
+        font-size: 56px
+        margin-left: 14px
+
+    span i 
+        color: black
+        font-size: 50px
+        cursor: pointer 
+        margin-left: 8px
+
+    ul
+        position: relative
+        top: 12vh
+        margin: 0
+        padding: 0 
+        display: flex
+        flex-direction: column
+        justify-content: center
+        row-gap: 2rem
+
+    ul li:hover
+        background-color: variables.$red
+
+    ul li
+        height: 100px
+        display: flex
+        flex-direction: row
+        column-gap: 1.5rem
+        align-items: center
+        padding-left: 16px
+        list-style: none
+        transition: .5s
+
+    ul li > a
+        display: flex
+        text-decoration: none
+
+
+    ul li a span > i
+        margin-left: 10px
+        margin-right: 10px
+        color: black  
+        font-size:46px
+
+    ul li a > .menu_txt
+        line-height: 70px
+        white-space: nowrap
+        color: black
+.side_menu:focus-within 
+  width: 14rem
+/* FORMULARIO DO USUARIO*/
+
+    
+.sec-border
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    height: 80%
+    max-height: 70%
+    width: 36rem
+
+    .sec-form
+        height: 100%
+        width: 100%
+        padding: 2rem
+        display: grid
+        column-gap: 1rem
+        grid-template-columns: 47% 50%
+        grid-template-rows: 14% 14% 5% 22% 14% 14% 14% 14%
+        border: 1px solid variables.$red
+        border-bottom: 0
+        border-top: 0
+        border-radius: 30px
+
+
+    #item-1
+        grid-column-start: 1
+        grid-column-end: 3
+    #item-2
+        grid-column-start: 1
+        grid-column-end: 3
+
+    #item-3
+        grid-column-start: 1
+        grid-column-end: 3
+
+    #item-4
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    #item-5
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    #item-10
+        grid-column-start: 1
+        grid-column-end: 3
+    #item-13
+        grid-column-start: 1
+        grid-column-end: 3
+
+.input__field
+    position: relative
+    cursor: text
+    width: 100%
+    outline: 0
+    border: 2px solid variables.$red
+    padding: 5px 0
+    font-size: 1rem
+    border-radius: 6px
+
+    &::placeholder 
+        color: transparent
+  
+
+    &:placeholder-shown ~ .form__label
+        cursor: text
+        font-weight: 600
+        font-size: 1.1rem
+        color: black
+        padding: 6px 10px 6px 10px
+        position: relative
+        top: -38px
+        display: block
+        transition: 0.4s
+.form__label 
+    position: relative
+    top: -70px
+    padding: 6px 10px 6px 10px
+    pointer-events: none
+    font-weight: 600
+    display: block
+    transition: 0.9s
+    font-size: 1.1rem
+    color: white
+
+.input__field:focus
+    ~ .form__label
+        position: relative
+        top: -70px
+        color: white
+
+.select__label
+    color: white
+    
+select 
+    border: 0
+    flex: 1
+    padding: 0 1em
+    color: black
+    background-color: white
+    cursor: pointer
+
+.select 
+    position: relative
+    display: flex
+    width: 12rem
+    height: 2.9rem
+    border: 2px solid variables.$red
+    border-radius: .20em
+    overflow: hidden
+
+.select::after 
+    content: '\25BC'
+    position: absolute
+    top: 0
+    right: 0
+    padding: 0.6em 1em 1em 1em
+    background-color: black
+    transition: .25s all ease
+    pointer-events: none
+    border-top: none
+    border-bottom: 0
+    border-radius: 0 
+    border: 1px solid variables.$red
+
+.select:hover::after 
+    color: white
+
+*,
+*:before,
+*:after
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+input[type="date"]
+    background-color: #000000
+    padding: 8px
+    font-family: "Roboto Mono",monospace
+    color: #ffffff
+    font-size: 18px
+    border: 2px solid variables.$red
+    outline: none
+    border-radius: 5px
+
+::-webkit-calendar-picker-indicator
+    background-color: #ffffff
+    padding: 5px
+    cursor: pointer
+    border-radius: 3px
+
+.btn
+    position: relative
+    top: -50%
+    transform: translate(0%,20%)
+    display: flex
+    align-items: center
+    justify-content: center
+    column-gap: 7rem
+
+.btn__button
+    border-radius: 8px
+    padding: 10px 45px 10px 45px
+    font-weight: 600
+    border: 2px solid variables.$red
+    transition: 0.5s all
+
+.btn__button:hover
+    background-color: black
+    color: white
+    border: 2px solid variables.$primary-color

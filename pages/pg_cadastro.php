@@ -38,8 +38,6 @@
                             <div class="icon d-flex align-items-center justify-content-center">
                                 <span class="fa fa-user-o"></span>
                             </div>
-                            <!-- <img src="../img/logo.jpg" width="30" height="30" style="position:relative;"
-                                class="d-inline-block align-top" style="width: 100px; height: 100px;"> -->
                             <h3 class="text-center mb-4" style="font-size: 25px; color: white;">Preencher os campos para
                                 realizar o seu cadastro</h3>
                             <form action="../inc/cadastro_user.php" method="post" class="login-form">
@@ -105,7 +103,6 @@
                 </div>
             </div>
         </section>
-        <!-- <script src="../js/javaScript.js" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
