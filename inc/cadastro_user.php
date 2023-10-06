@@ -11,8 +11,9 @@ $sexo = $_POST['sexo'];
 $data = $_POST['data'];
 $telefone = $_POST['telefone'];
 $telefone_ad = $_POST['telefone_ad'];
+$img_user = $_POST['user_img'];
 
-if (empty($nome) || empty($cpf) || empty($email) || empty($senha) || empty($senha_conf) || empty($sexo) || empty($data) || empty($telefone)) {
+if (empty($nome) || empty($cpf) || empty($email) || empty($senha) || empty($senha_conf) || empty($sexo) || empty($data) || empty($telefone)||empty($telefone_ed)||empty($img_user)) {
     echo "<script>alert('Favor preencher os campos solicitatos'); </script>";
     echo "<script> window.location='../pages/pg_cadastro.php' </script>";
 } else {
@@ -33,7 +34,7 @@ if (empty($nome) || empty($cpf) || empty($email) || empty($senha) || empty($senh
                 echo "<script> window.location='../pages/pg_cadastro.php' </script>";
             } else {
 
-                $sql = "INSERT INTO tbl_cadastro(nome,cpf,email,senha,sexo,nascimento,telefone,telefone_ad,perm_acesso) VALUES('$nome','$cpf','$email','$senha','$sexo','$data','$telefone','$telefone_ad','1')";
+                $sql = "INSERT INTO tbl_cadastro(nome,cpf,email,senha,sexo,nascimento,telefone,telefone_ad,perm_acesso) VALUES('$nome','$cpf','$email','$senha','$sexo','$data','$telefone','$telefone_ad','$img_user','1')";
                 $conn->query($sql);
                 echo "<script>alert('Cadastrado com sucesso'); </script>";
                 echo "<script> window.location='../pages/pg_login.php' </script>";

@@ -70,14 +70,6 @@ if (!empty($_SESSION['id_usuario'])) {
                 </a>
 
             </li>
-            <li class="menu_pg">
-                <a href="#">
-                    <span class="menu_ico"><i class="bi bi-person-gear"></i></span>
-                </a>
-                <a href="../pages/pg_perfil_config.php" class="menu_link">
-                    <span class="menu_txt">Configuração</span>
-                </a>
-            </li>
             <?php
             if (($permissao) == 2) {
                 echo '<li class="menu_pg">
@@ -97,7 +89,7 @@ if (!empty($_SESSION['id_usuario'])) {
                     <span class="menu_ico"><i class="bi bi-cart-check"></i></span>
                 </a>
                 
-                <a href="./pages/pg_painel_plano_ativos.php" class="menu_link">
+                <a href="../pages/pg_painel_plano_ativos.php" class="menu_link">
                     <span class="menu_txt">Plano Ativo</span>
                 </a>
             </li>';
@@ -125,9 +117,21 @@ if (!empty($_SESSION['id_usuario'])) {
     </nav>
     <!--=========CORPO DA PAGINA==========-->
     <form action="../inc/editar_user.php" id="form" autocomplete="off">
-
         <section class="sec-border">
             <section class="sec-form">
+                <div class="perfil__img">
+                    <div class="item-0">
+                        <div class="our-team">
+                            <div class="picture">
+                                <img class="img-fluid" src="https://picsum.photos/130/130?image=1027">
+                            </div>
+                            <!-- <div class="team-content">
+                                <h3 class="name">Michele Miller</h3>
+                                <h4 class="title">Web Developer</h4>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
                 <div class="input__form" id="item-1">
                     <input id="firstname" name="nome" class="input__field" type="text" placeholder=" ">
                     <label for="firstname" id="item-name" class="form__label">Nome Completo</label>
@@ -188,25 +192,27 @@ if (!empty($_SESSION['id_usuario'])) {
                     <input id="Tel_Re" name="tel_re" class="input__field" type="text" placeholder=" ">
                     <label for="Tel_Re" id="item-cel-cs" class="form__label">telefone casa</label>
                 </div>
-                <div class="input__form" id="item-8">
-                    <input id="Cep" name="CEP" class="input__field" type="text" placeholder=" ">
-                    <label for="Cep" id="item-cep" class="form__label">CEP</label>
-                </div>
-                <div class="input__form" id="item-9">
-                    <input id="loco" name="local" class="input__field" type="text" placeholder=" ">
-                    <label for="loco" id="item-cid_es" class="form__label">Cidade/Estado</label>
-                </div>
-                <div class="input__form" id="item-10">
-                    <input id="bair" name="Bairro" class="input__field" type="text" placeholder=" ">
-                    <label for="bair" id="item-bairro" class="form__label">Bairro</label>
-                </div>
-                <div class="input__form" id="item-11">
-                    <input id="rua" name="Rua" class="input__field" type="text" placeholder=" ">
-                    <label for="rua" id="item-rua" class="form__label">Rua</label>
-                </div>
-                <div class="input__form" id="item-12">
-                    <input id="num" name="Número" class="input__field" type="text" placeholder=" ">
-                    <label for="num" id="item-numero" class="form__label">Número</label>
+                <!-- <div class="colunm">
+                    <div class="input__form" id="item-8">
+                        <input id="Cep" name="CEP" class="input__field" type="text" placeholder=" ">
+                        <label for="Cep" id="item-cep" class="form__label">CEP</label>
+                    </div>
+                    <div class="input__form" id="item-9">
+                        <input id="loco" name="local" class="input__field" type="text" placeholder=" ">
+                        <label for="loco" id="item-cid_es" class="form__label">Cidade/Estado</label>
+                    </div>
+                    <div class="input__form" id="item-10">
+                        <input id="bair" name="Bairro" class="input__field" type="text" placeholder=" ">
+                        <label for="bair" id="item-bairro" class="form__label">Bairro</label>
+                    </div>
+                    <div class="input__form" id="item-11">
+                        <input id="rua" name="Rua" class="input__field" type="text" placeholder=" ">
+                        <label for="rua" id="item-rua" class="form__label">Rua</label>
+                    </div>
+                    <div class="input__form" id="item-12">
+                        <input id="num" name="Número" class="input__field" type="text" placeholder=" ">
+                        <label for="num" id="item-numero" class="form__label">Número</label>
+                    </div> -->
                 </div>
                 <div class="button__form" id="item-13">
                     <div class="btn">

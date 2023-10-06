@@ -9,12 +9,13 @@ $sexo = filter_input(INPUT_GET, 'sexo', FILTER_SANITIZE_STRING);
 $data = filter_input(INPUT_GET, 'data', FILTER_SANITIZE_STRING);
 $telefone = filter_input(INPUT_GET, 'telefone', FILTER_SANITIZE_STRING);
 $telefone_ad = filter_input(INPUT_GET, 'telefone_ad', FILTER_SANITIZE_STRING);
+$img_user == filter_input(INPUT_GET, 'user_img', FILTER_SANITIZE_STRING);
 
-if (empty($nome) || empty($email) || empty($cpf) || empty($sexo) || empty($id) || empty($data) || empty($telefone)) {
+if (empty($nome) || empty($email) || empty($cpf) || empty($sexo) || empty($id) || empty($data) || empty($telefone)||empty($telefone_ed)||empty($img_user)) {
     echo "<script>alert('Erro ao cadastrar usuário! Favor preencher os campos necessários'); </script>";
     echo "<script> window.location='../pages/pg_painel_user.php' </script>";
 } else {
-    $update_cadastro = "UPDATE tbl_cadastro SET nome='$nome', cpf='$cpf', email='$email', sexo='$sexo', nascimento='$data', telefone='$telefone', telefone_ad='$telefone_ad'  WHERE id_cadastro='$id'";
+    $update_cadastro = "UPDATE tbl_cadastro SET nome='$nome', cpf='$cpf', email='$email', sexo='$sexo', nascimento='$data', telefone='$telefone', telefone_ad='$telefone_ad', user_img='$img_user'  WHERE id_cadastro='$id'";
     mysqli_query($conn, $update_cadastro);
     echo "<script>alert('Alterado dados conforme solicitado!'); </script>";
     echo "<script> window.location='../pages/pg_painel_user.php' </script>";

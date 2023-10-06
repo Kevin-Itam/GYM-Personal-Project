@@ -99,14 +99,6 @@ $result = $conn->query($sql);
                     <span class="menu_txt">Perfil </span>
                 </a>
             </li>
-            <li class="menu_pg">
-                <a href="#">
-                    <span class="menu_ico"><i class="bi bi-person-gear"></i></span>
-                </a>
-                <a href="../pages/pg_perfil_config.php" class="menu_link">
-                    <span class="menu_txt">Configuração</span>
-                </a>
-            </li>
             <?php
             if (($permissao) == 2) {
                 echo '<li class="menu_pg">

@@ -50,6 +50,7 @@ if (!empty($_SESSION['id_usuario'])) {
     <link href="../css/SASS/SASS_Perfil/style_PERFIL_sass.css" rel="stylesheet" />
     <title>Página de perfil</title>
 </head>
+
 <body>
     <!--============ LATERAL===========-->
     <nav id="nav" class="side_menu">
@@ -66,14 +67,7 @@ if (!empty($_SESSION['id_usuario'])) {
                     <span class="menu_txt">Perfil </span>
                 </a>
             </li>
-            <li class="menu_pg">
-                <a href="#">
-                    <span class="menu_ico"><i class="bi bi-person-gear"></i></span>
-                </a>
-                <a href="../pages/pg_perfil_config.php" class="menu_link">
-                    <span class="menu_txt">Configuração</span>
-                </a>
-            </li>
+
             <?php
             if (($permissao) == 1) {
                 echo
@@ -122,26 +116,37 @@ if (!empty($_SESSION['id_usuario'])) {
     <!--============CORPO DA PAGINA==========-->
     <form autocomplete="off">
 
-        <section class="sec-border">
-            <section class="sec-form">
-                <div class="input__form" id="item-1">
-                    <input id="firstname" name="nome" class="input__field" type="text" placeholder=" ">
-                    <label for="firstname" id="item-name" class="form__label">Nome Completo</label>
+        <section class="sec__back_1">
+            <section class="sec__form">
+                <div class="perfil__img">
+                    <div class="item-0">
+                        <div class="our-team">
+                            <div class="picture">
+                                <img class="img-fluid" src="https://picsum.photos/130/130?image=1027">
+                                <p class="name"><?php echo $nome ?></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="input__form" id="item-2">
-                    <input id="Cpf" name="cpf" class="input__field" type="text" placeholder=" ">
+                    <input id="Cpf" name="cpf" class="input__field" type="text" placeholder=" "
+                        value="<?php echo $cpf ?>" disabled>
                     <label for="Cpf" id="item-cpf" class="form__label">CPF</label>
                 </div>
                 <div class="input__form" id="item-3">
-                    <input id="Email" name="email" class="input__field" type="text" placeholder=" ">
+                    <input id="Email" name="email" class="input__field" type="text" placeholder=" "
+                        value="<?php echo $email ?>" disabled>
                     <label for="Email" id="item-email" class="form__label">E-mail</label>
                 </div>
                 <div class="input__form" id="item-4">
-                    <input id="Tel_Cel" name="tel_cel" class="input__field" type="text" placeholder=" ">
+                    <input id="Tel_Cel" name="tel_cel" class="input__field" type="text" placeholder=" "
+                        value="<?php echo $telefone ?>" disabled>
                     <label for="Tel_Cel" id="item-cel" class="form__label">telefone celular</label>
                 </div>
                 <div class="input__form" id="item-5">
-                    <input id="Tel_Re" name="tel_re" class="input__field" type="text" placeholder=" ">
+                    <input id="Tel_Re" name="tel_re" class="input__field" type="text" placeholder=" "
+                        value="<?php echo $telefone_ad ?>" disabled>
                     <label for="Tel_Re" id="item-cel-cs" class="form__label">telefone casa</label>
                 </div>
             </section>
